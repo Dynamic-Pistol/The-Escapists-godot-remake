@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dvq4gchwhwfmy"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_6sl8r"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_w1y6d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hk0l"]
+atlas = ExtResource("2_w1y6d")
+region = Rect2(960, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_6sl8r")
+name = &"Comb Shiv"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_5hk0l")
+is_contraband = true

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bqkfnx8ticpnq"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ginte"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_e5ajk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jq7j"]
+atlas = ExtResource("2_e5ajk")
+region = Rect2(576, 384, 64, 64)
+
+[resource]
+script = ExtResource("1_ginte")
+name = &"Lightweight Cutters"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_7jq7j")
+is_contraband = true

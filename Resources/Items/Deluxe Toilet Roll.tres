@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c7rwkhxj8sw8u"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_htskq"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6tfu4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52iyg"]
+atlas = ExtResource("2_6tfu4")
+region = Rect2(512, 512, 64, 64)
+
+[resource]
+script = ExtResource("1_htskq")
+name = &"Deluxe Toilet Roll"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_52iyg")
+is_contraband = false

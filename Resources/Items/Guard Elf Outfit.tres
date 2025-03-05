@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="OutfitItem" load_steps=4 format=3 uid="uid://eayygbhyi2qw"]
+
+[ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_agc6b"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_aea2f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f16pq"]
+atlas = ExtResource("2_aea2f")
+region = Rect2(192, 832, 64, 64)
+
+[resource]
+script = ExtResource("1_agc6b")
+outfit_type = 2
+defense = 1
+name = &"Guard Elf Outfit"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_f16pq")
+is_contraband = true

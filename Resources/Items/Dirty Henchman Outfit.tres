@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bfaaxhhwwytdp"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_mjyax"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_oyovc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijbq4"]
+atlas = ExtResource("2_oyovc")
+region = Rect2(640, 768, 64, 64)
+
+[resource]
+script = ExtResource("1_mjyax")
+name = &"Dirty Henchman Outfit"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_ijbq4")
+is_contraband = true

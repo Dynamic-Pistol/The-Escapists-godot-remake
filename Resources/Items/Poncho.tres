@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dexc1j0c0t17i"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_38bbh"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_mndcg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdg8s"]
+atlas = ExtResource("2_mndcg")
+region = Rect2(576, 576, 64, 64)
+
+[resource]
+script = ExtResource("1_38bbh")
+name = &"Poncho"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_rdg8s")
+is_contraband = false

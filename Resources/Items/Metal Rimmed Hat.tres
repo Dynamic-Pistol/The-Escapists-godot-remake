@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d0ywrcqvxqdve"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_qad4v"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_vyxaa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37018"]
+atlas = ExtResource("2_vyxaa")
+region = Rect2(832, 768, 64, 64)
+
+[resource]
+script = ExtResource("1_qad4v")
+name = &"Metal Rimmed Hat"
+base_price = 0
+opinion_inc = 3
+texture = SubResource("AtlasTexture_37018")
+is_contraband = true

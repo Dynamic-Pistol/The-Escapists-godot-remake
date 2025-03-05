@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://o6b8scmnkyu1"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_pt75h"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_yj5j4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfirp"]
+atlas = ExtResource("2_yj5j4")
+region = Rect2(448, 384, 64, 64)
+
+[resource]
+script = ExtResource("1_pt75h")
+name = &"Lightweight Pickaxe"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_kfirp")
+is_contraband = true

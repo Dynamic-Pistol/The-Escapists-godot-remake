@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ggyeu6yafw5n"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jntba"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_f1uxv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5ooh"]
+atlas = ExtResource("2_f1uxv")
+region = Rect2(192, 896, 64, 64)
+
+[resource]
+script = ExtResource("1_jntba")
+name = &"Nice Letter"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_f5ooh")
+is_contraband = false

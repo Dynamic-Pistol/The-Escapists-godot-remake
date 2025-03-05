@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg2p3oi2u113m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa5eg"]
+bg_color = Color(0.137255, 0.137255, 0.137255, 0.882353)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_n7cad"]
+resource_local_to_scene = true
+font_size = 64
+font_color = Color(0, 1, 0, 1)
+
+[node name="ItemSlotToolTip" type="Label"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 44.0
+grow_horizontal = 0
+pivot_offset = Vector2(128, 0)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xa5eg")
+text = "Cell key"
+label_settings = SubResource("LabelSettings_n7cad")
+horizontal_alignment = 2

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://k0d644ke1rdc"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_hda62"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_h7nku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft5e1"]
+atlas = ExtResource("2_h7nku")
+region = Rect2(960, 256, 64, 64)
+
+[resource]
+script = ExtResource("1_hda62")
+name = &"Small Speaker"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_ft5e1")
+is_contraband = true

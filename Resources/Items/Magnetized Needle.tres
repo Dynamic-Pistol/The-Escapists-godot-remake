@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b288kud5u5xwa"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_87pjb"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_lw854"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo3xx"]
+atlas = ExtResource("2_lw854")
+region = Rect2(832, 896, 64, 64)
+
+[resource]
+script = ExtResource("1_87pjb")
+name = &"Magnetized Needle"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_oo3xx")
+is_contraband = false

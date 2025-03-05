@@ -1,0 +1,122 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[addons]
+
+instance_dock/scene_data_file="res://InstanceDockSceneData.txt"
+instance_dock/preview_resolution=Vector2i(64, 64)
+
+[application]
+
+config/name="The escapists remake"
+run/main_scene="res://Scenes/test.tscn"
+config/features=PackedStringArray("4.4")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://Sprites/icon.png"
+
+[audio]
+
+buses/default_bus_layout="res://Audio/default_bus_layout.tres"
+
+[autoload]
+
+MusicPlayer="*res://Autoloads/music_Player.tscn"
+PlayerManager="*res://Autoloads/player_manager.tscn"
+WorldLayerManager="*res://Autoloads/world_layer_manager.gd"
+TimeManager="*res://Autoloads/time_manager.gd"
+DialogueManager="*res://Autoloads/dialogue_manager.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=960
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+window/stretch/scale_mode="integer"
+mouse_cursor/custom_image="res://Sprites/UI/Cursor/Cursor_Normal.png"
+
+[editor]
+
+movie_writer/movie_file="/media/malek/Main_Disk/Games_in_development/Godot Games/The escapists remake/Videos/output.avi"
+
+[file_customization]
+
+folder_colors={
+"res://Animation/": "purple",
+"res://Audio/": "orange",
+"res://Autoloads/": "yellow",
+"res://Editor Icons/": "gray",
+"res://Objects/": "yellow",
+"res://Resources/": "green",
+"res://Scenes/": "yellow",
+"res://Sprites/": "pink",
+"res://Tilesets/": "green",
+"res://Tools/": "gray",
+"res://Videos/": "gray"
+}
+
+[global_group]
+
+interactable=""
+
+[gui]
+
+timers/tooltip_delay_sec=0.3
+theme/custom="res://escapists.tres"
+theme/custom_font="res://Escapists.ttf"
+theme/default_font_multichannel_signed_distance_field=true
+
+[input]
+
+Back={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+]
+}
+Forward={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
+Left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+]
+}
+Right={
+"deadzone": 0.5,
+"events": [null, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+]
+}
+Interact={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(115, 24),"global_position":Vector2(124, 70),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+Pickup={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(179, 5),"global_position":Vector2(188, 51),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Underground"
+2d_physics/layer_2="Ground"
+2d_physics/layer_3="Vents"
+2d_physics/layer_4="Roof"
+2d_physics/layer_5="Entity"
+avoidance/layer_1="Wall"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

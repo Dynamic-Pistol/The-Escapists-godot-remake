@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ncnmhji8h8a4"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_em4my"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_j0vsf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrc0y"]
+atlas = ExtResource("2_j0vsf")
+region = Rect2(0, 896, 64, 64)
+
+[resource]
+script = ExtResource("1_em4my")
+name = &"Wooden Scooter"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_hrc0y")
+is_contraband = false

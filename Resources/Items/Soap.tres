@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cvqlw6w4xpe5a"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_2grxg"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_vcmgv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02wjw"]
+atlas = ExtResource("2_vcmgv")
+region = Rect2(896, 128, 64, 64)
+
+[resource]
+script = ExtResource("1_2grxg")
+name = &"Soap"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_02wjw")
+is_contraband = false

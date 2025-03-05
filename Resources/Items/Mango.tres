@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c85audex48ntl"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_6cgjh"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_n8fv8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kakns"]
+atlas = ExtResource("2_n8fv8")
+region = Rect2(256, 576, 64, 64)
+
+[resource]
+script = ExtResource("1_6cgjh")
+name = &"Mango"
+base_price = 0
+opinion_inc = 1
+texture = SubResource("AtlasTexture_kakns")
+is_contraband = false

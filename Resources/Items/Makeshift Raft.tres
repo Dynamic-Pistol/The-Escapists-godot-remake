@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dwnyy1nvjlta0"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_yu1pw"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_niw5u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a14g2"]
+atlas = ExtResource("2_niw5u")
+region = Rect2(256, 640, 64, 64)
+
+[resource]
+script = ExtResource("1_yu1pw")
+name = &"Makeshift Raft"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_a14g2")
+is_contraband = true

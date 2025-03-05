@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b365283xmljrk"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_2mjlf"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_lt656"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfyeb"]
+atlas = ExtResource("2_lt656")
+region = Rect2(704, 576, 64, 64)
+
+[resource]
+script = ExtResource("1_2mjlf")
+name = &"Burrito"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_nfyeb")
+is_contraband = false

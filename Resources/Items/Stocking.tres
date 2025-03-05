@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://6elqftjbxrkm"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_8d85i"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_gojhh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5q08"]
+atlas = ExtResource("2_gojhh")
+region = Rect2(768, 832, 64, 64)
+
+[resource]
+script = ExtResource("1_8d85i")
+name = &"Stocking"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_u5q08")
+is_contraband = false

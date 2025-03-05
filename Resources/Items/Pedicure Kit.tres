@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://5ywl4i0iab4a"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_p23gf"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_5yp81"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5yra"]
+atlas = ExtResource("2_5yp81")
+region = Rect2(832, 512, 64, 64)
+
+[resource]
+script = ExtResource("1_p23gf")
+name = &"Pedicure Kit"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_j5yra")
+is_contraband = false

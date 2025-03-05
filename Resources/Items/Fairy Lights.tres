@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cfflgi74b1ysx"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_k57hc"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_72imq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x0ug"]
+atlas = ExtResource("2_72imq")
+region = Rect2(384, 832, 64, 64)
+
+[resource]
+script = ExtResource("1_k57hc")
+name = &"Fairy Lights"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_0x0ug")
+is_contraband = true

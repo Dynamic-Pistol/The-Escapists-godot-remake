@@ -1,0 +1,1547 @@
+[0]
+Name="Cell Key"
+Illegal=1
+Gift=2
+Decay=10
+Info="Unlocks yellow doors"
+
+[1]
+Name="Staff Key"
+Illegal=1
+Gift=2
+Decay=10
+Info="Unlocks red doors"
+
+[2]
+Name="Pack of Mints"
+Desk=1
+Gift=1
+Npc_carry=1
+Fat=5
+
+[3]
+Name="Guard Outfit"
+Illegal=1
+Outfit=2
+Gift=1
+Buy=50
+Craft="50_Overalls, Jar of Ink"
+
+[4]
+Name="Inmate Outfit"
+Outfit=1
+
+[5]
+Name="Sturdy Shovel"
+Illegal=1
+Digging=5
+Chipping=2
+Gift=3
+Decay=3
+Craft="80_Lightweight Shovel, Sheet of Metal, Duct Tape"
+
+[6]
+Name="Entrance Key"
+Illegal=1
+Gift=2
+Decay=10
+Info="Unlocks purple doors"
+
+[7]
+Name="Utility Key"
+Illegal=1
+Gift=2
+Decay=10
+Info="Unlocks orange doors"
+
+[8]
+Name="Lighter"
+Buy=25
+Gift=1
+Desk=1
+Npc_carry=1
+
+[9]
+Name="Watch"
+Buy=25
+Desk=1
+Gift=2
+Npc_carry=1
+
+[10]
+Name="Bottle of Medicine"
+Gift=1
+Buy=20
+Desk=1
+Hp=5
+Npc_carry=1
+
+[11]
+Name="Stun Rod"
+Illegal=1
+
+[12]
+Name="Timber"
+Illegal=1
+Buy=10
+Npc_carry=1
+Gift=1
+Desk=2
+
+[13]
+Name="Roll of Duct Tape"
+Illegal=1
+Camdis=3000
+Buy=30
+Npc_carry=1
+Gift=1
+Desk=2
+
+[14]
+Name="Shaving Cream"
+Decay=20
+Buy=25
+Camdis=1500
+Desk=1
+Npc_carry=1
+
+[15]
+Name="Magazine"
+Gift=2
+Buy=15
+Desk=1
+Npc_carry=1
+
+[16]
+Name="Bottle of Sleeping Pills"
+Illegal=1
+Gift=1
+Buy=25
+Npc_carry=1
+
+[17]
+Name="Comb"
+Desk=1
+Npc_carry=1
+
+[18]
+Name="Glass Shard"
+Illegal=1
+Npc_carry=1
+
+[19]
+Name="Glass Shank"
+Illegal=1
+Weapon=4
+Gift=3
+Decay=1
+Craft="30_Glass shard, duct tape"
+
+[20]
+Name="Dead Rat"
+
+[21]
+Name="Fire Extinguisher"
+Illegal=1
+
+[22]
+Name="Radio Reciever"
+Illegal=1
+Gift=2
+
+[23]
+Name="Plastic Spoon"
+Digging=1
+Desk=1
+Decay=15
+
+[24]
+Name="Screwdriver"
+Illegal=1
+Unscrewing=3
+Chipping=2
+Gift=2
+Decay=10
+Buy=75
+
+[25]
+Name="Crowbar"
+Illegal=1
+Weapon=3
+Chipping=2
+Gift=3
+Decay=5
+Buy=75
+
+[26]
+Name="Dirt"
+Illegal=1
+Desk=2
+
+[27]
+Name="Plastic Knife"
+Weapon=1
+Cutting=1
+Desk=1
+Decay=15
+
+[28]
+Name="Plastic Fork"
+Weapon=1
+Chipping=1
+Decay=15
+Desk=1
+
+[29]
+Name="Baton"
+Illegal=1
+Weapon=3
+Gift=2
+Decay=1
+Buy=60
+
+[30]
+Name="Spatula"
+Illegal=1
+Npc_carry=1
+Desk=2
+
+[31]
+Name="Hoe"
+Weapon=2
+Gift=1
+Decay=5
+
+[32]
+Name="Broom"
+Weapon=2
+Decay=1
+Npc_carry=1
+
+[33]
+Name="Shears"
+Illegal=1
+Gift=10
+Decay=1
+
+[34]
+Name="Hammer"
+Illegal=1
+Weapon=3
+Gift=2
+Decay=1
+Buy=70
+
+[35]
+Name="Mop"
+Weapon=2
+Decay=1
+Npc_carry=1
+
+[36]
+Name="Jar of Ink"
+Desk=1
+Npc_carry=1
+Buy=25
+
+[37]
+Name="Tub of Bleach"
+Npc_carry=1
+Desk=1
+
+[38]
+Name="Infirmary Overalls"
+Illegal=1
+Outfit=1
+Gift=2
+Craft="50_Any Outfit, bleach"
+
+[39]
+Name="Sturdy Pickaxe"
+Illegal=1
+Chipping=5
+Digging=4
+Gift=3
+Decay=3
+Craft="80_Lightweight Pickaxe, timber, duct tape"
+
+[40]
+Name="Trowel"
+Illegal=1
+Digging=3
+Gift=2
+Decay=5
+Npc_carry=1
+
+[41]
+Name="Wall Block"
+Illegal=1
+
+[42]
+Name="Concrete"
+Illegal=1
+
+[43]
+Name="Work Key"
+Illegal=1
+Gift=2
+Decay=10
+Info="Unlocks green doors"
+
+[44]
+Name="Length of Rope"
+Gift=1
+Illegal=1
+Buy=60
+Decay=25
+
+[45]
+Name="Tube of Toothpaste"
+Desk=1
+Camdis=1500
+Decay=50
+
+[46]
+Name="Bar of Chocolate"
+Gift=2
+Buy=15
+Desk=1
+Npc_carry=1
+Fat=15
+
+[47]
+Name="Roll of Toilet Paper"
+Desk=1
+Npc_carry=1
+
+[48]
+Name="Soap"
+Desk=1
+Npc_carry=1
+
+[49]
+Name="Pack of Playing Cards"
+Gift=1
+Desk=1
+Npc_carry=1
+
+[50]
+Name="Book"
+Gift=1
+Desk=1
+Npc_carry=1
+
+[51]
+Name="Tube of Super Glue"
+Npc_carry=1
+Desk=1
+Buy=30
+
+[52]
+Name="Tub of Talcum Powder"
+Gift=1
+Desk=1
+Buy=15
+Npc_carry=1
+
+[53]
+Name="Wad of Putty"
+Illegal=1
+Craft="20_Talcum powder, toothpaste"
+
+[54]
+Name="Candle"
+Gift=1
+Craft="30_Battery, wire"
+
+[55]
+Name="empty"
+
+[56]
+Name="Balsa Wood"
+Illegal=1
+Found="irongate"
+Buy=50
+
+[57]
+Name="Sail"
+Found="irongate"
+Illegal=1
+Craft="80_Timber, Bedsheet"
+
+[58]
+Name="Plastic Work Key"
+Illegal=1
+Decay=20
+Craft="70_Work key mold, molten plastic"
+Info="Can open green doors"
+
+[59]
+Name="Work Key Mold"
+Illegal=1
+Craft="50_Putty, work key"
+
+[60]
+Name="Flashlight"
+Decay=1
+Buy=30
+Gift=2
+Desk=2
+
+[61]
+Name="Sturdy Cutters"
+Illegal=1
+Gift=3
+Cutting=5
+Decay=3
+Craft="80_Lightweight cutters, file, duct tape"
+
+[62]
+Name="File"
+Illegal=1
+Gift=2
+Cutting=2
+Decay=10
+Buy=50
+Npc_carry=1
+Desk=2
+
+[63]
+Name="Dirty Guard Outfit"
+Illegal=1
+
+[64]
+Name="Dirty Inmate Outfit"
+Desk=1
+
+[65]
+Name="Uncooked Food"
+
+[66]
+Name="Cooked Food"
+Gift=3
+Npc_carry=1
+Desk=2
+Fat=10
+
+[67]
+Name="Vent Cover"
+Illegal=1
+
+[68]
+Name="Stepladder"
+Illegal=1
+Buy=60
+Info="Can be placed down and stood on"
+
+[69]
+Name="Bed Sheet"
+Npc_carry=1
+
+[70]
+Name="Woodshop key"
+
+[71]
+Name="Staff Key Mold"
+Illegal=1
+Craft="50_Putty, staff key"
+
+[72]
+Name="Timber Brace"
+Illegal=1
+Craft="20_Timber x2"
+Info="Essential for tunneling"
+
+[73]
+Name="Battery"
+Desk=1
+
+[74]
+Name="Sock"
+Desk=1
+Npc_carry=1
+
+[75]
+Name="Unvarnished Chair"
+Craft="30_Timber x3"
+
+[76]
+Name="Sheet of Metal"
+Illegal=1
+Buy=25
+Desk=2
+
+[77]
+Name="License Plate"
+Illegal=1
+
+[78]
+Name="Metalshop key"
+
+[79]
+Name="Bag of Cement"
+
+[80]
+Name="Plunger"
+Decay=1
+Npc_carry=1
+Desk=1
+Info="Emergencies only"
+
+[81]
+Name="Sheet Rope"
+Illegal=1
+Decay=50
+Craft="30_Bed sheet x 2"
+
+[82]
+Name="Utility Key Mold"
+Illegal=1
+Craft="40_Utility key, putty"
+
+[83]
+Name="Cell Key Mold"
+Illegal=1
+Craft="20_Cell key, putty"
+
+[84]
+Name="Molten Plastic"
+Illegal=1
+Craft="30_Comb / toothbrush, lighter"
+
+[85]
+Name="Plastic Utility Key"
+Illegal=1
+Decay=20
+Craft="70_Utility key mold, molten plastic"
+Info="Can open orange doors"
+
+[86]
+Name="Plastic Staff Key"
+Illegal=1
+Decay=20
+Craft="80_Staff key mold, molten plastic"
+Info="Can open red doors"
+
+[87]
+Name="Plastic Cell Key"
+Illegal=1
+Decay=20
+Craft="50_Cell key mold, molten plastic"
+Info="Can open yellow doors"
+
+[88]
+Name="Plastic Entrance Key"
+Illegal=1
+Decay=20
+Craft="60_Entrance key mold, molten plastic"
+Info="Can open purple doors"
+
+[89]
+Name="Entrance Key Mold"
+Illegal=1
+Craft="30_Entrance key, putty"
+
+[90]
+Name="Cup"
+Desk=1
+
+[91]
+Name="Small Speaker"
+Illegal=1
+
+[92]
+Name="Circuit Board"
+Illegal=1
+
+[93]
+Name="Paper Clip"
+Desk=1
+
+[94]
+Name="Razor Blade"
+Gift=2
+Buy=20
+Desk=1
+Npc_carry=1
+
+[95]
+Name="Pillow"
+Weapon=1
+
+[96]
+Name="Toothbrush"
+Desk=1
+Npc_carry=1
+
+[97]
+Name="Toothbrush Shiv"
+Illegal=1
+Weapon=2
+Gift=2
+
+[98]
+Name="Wire"
+Npc_carry=1
+Buy=25
+Desk=1
+
+[99]
+Name="Poster"
+Gift=2
+Craft="20_Magazine, duct tape"
+
+[100]
+Name="Foil"
+Illegal=1
+Buy=30
+Gift=1
+Desk=2
+
+[101]
+Name="Paper Mache"
+Illegal=1
+Craft="30_Toilet paper, super glue"
+
+[102]
+Name="DIY Tattoo Kit"
+Gift=2
+
+[103]
+Name="Sock Mace"
+Illegal=1
+Weapon=3
+Gift=3
+Craft="30_Soap, sock"
+
+[104]
+Name="Super Sock Mace"
+Illegal=1
+Weapon=3
+Gift=3
+Craft="50_Battery, sock"
+
+[105]
+Name="Cup of Molten Chocolate"
+Illegal=1
+Gift=2
+Craft="40_Chocolate, cup, lighter"
+Info="Throw at someone to drop them"
+
+[106]
+Name="Game Set"
+Gift=2
+
+[107]
+Name="Die"
+Gift=1
+
+[108]
+Name="Nunchuks"
+Illegal=1
+Weapon=5
+Gift=3
+Craft="70_Wire, timber x2"
+
+[109]
+Name="Comb Shiv"
+Illegal=1
+Weapon=2
+Gift=2
+Desk=2
+
+[110]
+Name="Whip"
+Illegal=1
+Weapon=5
+Gift=3
+Craft="80_Timber, wire, razor blade"
+
+[111]
+Name="Knuckle Duster"
+Illegal=1
+Weapon=4
+Gift=3
+Craft="60_Duct tape, razor blade"
+
+[112]
+Name="Grapple Head"
+Illegal=1
+Craft="60_Crowbar x2, duct tape"
+
+[113]
+Name="Grappling Hook"
+Illegal=1
+Decay=20
+Craft="90_Grapple head, rope"
+Info="Used to ascend small elevations"
+
+[114]
+Name="Lightweight Shovel"
+Illegal=1
+Digging=4
+Chipping=2
+Gift=3
+Decay=5
+Craft="60_Flimsy shovel, sheet metal, duct tape"
+
+[115]
+Name="Flimsy Shovel"
+Illegal=1
+Digging=3
+Chipping=2
+Gift=3
+Decay=8
+Craft="40_Tool handle, sheet metal, duct tape"
+
+[116]
+Name="Fake Wall Block"
+Illegal=1
+Decay=10
+Craft="40_Paper mache x2, ink"
+
+[117]
+Name="Fake Vent Cover"
+Illegal=1
+Decay=10
+Craft="30_Paper mache x2"
+
+[118]
+Name="Flimsy Pickaxe"
+Illegal=1
+Digging=2
+Gift=1
+Chipping=3
+Decay=8
+Craft="40_Crowbar, tool handle, duct tape"
+
+[119]
+Name="Lightweight Pickaxe"
+Illegal=1
+Digging=3
+Chipping=4
+Gift=2
+Decay=5
+Craft="60_Flimsy pickaxe, timber, duct tape"
+
+[120]
+Name="Flimsy Cutters"
+Illegal=1
+Gift=1
+Cutting=3
+Decay=8
+Craft="40_File x2, duct tape"
+
+[121]
+Name="Lightweight Cutters"
+Illegal=1
+Gift=2
+Cutting=4
+Decay=5
+Craft="60_Flimsy cutters, duct tape, file"
+
+[122]
+Name="Tool Handle"
+Illegal=1
+Craft="30_File, timber"
+
+[123]
+Name="Crafting Note"
+Illegal=1
+Desk=2
+Npc_carry=1
+Gift=2
+Buy=25
+Info="Information on a craftable item"
+
+[124]
+Name="Comb Blade"
+Illegal=1
+Weapon=2
+Gift=2
+Desk=2
+Craft="20_Comb, razor blade"
+
+[125]
+Name="Contraband Pouch"
+Illegal=1
+Gift=3
+Decay=25
+Craft="50_Foil, duct tape"
+Info="Detectors won't alarm with this in your possession"
+
+[126]
+Name="Bed Dummy"
+Gift=1
+Illegal=1
+Craft="30_Pillow x2, bed sheet"
+Info="Fool the guards with this bed dummy"
+
+[127]
+Name="POW Outfit"
+Outfit=1
+
+[128]
+Name="Cushioned Inmate Outfit"
+Outfit=2
+Illegal=1
+Gift=1
+Craft="30_Inmate outfit, pillow, duct tape"
+
+[129]
+Name="Padded Inmate Outfit"
+Outfit=3
+Illegal=1
+Gift=1
+Craft="60_Inmate outfit, book, duct tape"
+
+[130]
+Name="Plated Inmate Outfit"
+Outfit=4
+Gift=2
+Illegal=1
+Craft="80_Inmate outfit, metal sheet, duct tape"
+
+[131]
+Name="Medikit"
+Gift=2
+Buy=30
+Desk=2
+Hp=15
+
+[132]
+Name="Hat"
+
+[133]
+Name="Vest"
+
+[134]
+Name="Underpants"
+
+[135]
+Name="Shorts"
+
+[136]
+Name="Needle & Thread"
+
+[137]
+Name="Fabric"
+
+[138]
+Name="Package"
+
+[139]
+Name="Package"
+
+[140]
+Name="Package"
+
+[141]
+Name="Letter"
+
+[142]
+Name="Cushioned POW Outfit"
+Outfit=2
+Illegal=1
+Gift=1
+Craft="30_POW outfit, pillow, duct tape"
+
+[143]
+Name="Padded POW Outfit"
+Outfit=3
+Illegal=1
+Gift=1
+Craft="60_POW outfit, book, duct tape"
+
+[144]
+Name="Plated POW Outfit"
+Outfit=4
+Gift=2
+Illegal=1
+Craft="80_POW outfit, metal sheet, duct tape"
+
+[145]
+Name="TV Remote"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[146]
+Name="Sponge"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[147]
+Name="DVD"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[148]
+Name="Cookie"
+Desk=1
+Npc_carry=1
+Found="perks"
+Fat=15
+
+[149]
+Name="Muffin"
+Desk=1
+Npc_carry=1
+Found="perks"
+Fat=15
+
+[150]
+Name="Exotic Feather"
+Buy=30
+Found="jungle"
+
+[151]
+Name="Bananas"
+Desk=1
+Npc_carry=1
+Found="jungle"
+Fat=10
+
+[152]
+Name="Unsigned ID Papers"
+Illegal=1
+Found="jungle"
+
+[153]
+Name="ID Papers"
+Illegal=1
+Found="jungle"
+Craft="60_Exotic Feather, Ink, Unsigned ID Papers"
+Gift=3
+
+[154]
+Name="Green Herb"
+Desk=1
+Hp=5
+Npc_carry=1
+Buy=15
+Found="jungle"
+
+[155]
+Name="Red Herb"
+Desk=2
+Hp=10
+Npc_carry=1
+Buy=25
+Found="jungle"
+
+[156]
+Name="Silk Handkerchief"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[157]
+Name="Deluxe Toilet Roll"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[158]
+Name="Dental Floss"
+Desk=1
+Npc_carry=1
+
+[159]
+Name="Teddy Bear"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[160]
+Name="Hand Cream"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[161]
+Name="Postcard"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[162]
+Name="Pedicure Kit"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[163]
+Name="Hand Fan"
+Desk=1
+Npc_carry=1
+Found="perks"
+
+[164]
+Name="Pocket Watch"
+Desk=1
+Npc_carry=1
+Found="stalagflucht"
+
+[165]
+Name="Family Photo"
+Desk=1
+Npc_carry=1
+Found="stalagflucht"
+
+[166]
+Name="Service Medal"
+Desk=1
+Npc_carry=1
+Found="stalagflucht"
+
+[167]
+Name="Dog Tag"
+Desk=1
+Npc_carry=1
+Found="stalagflucht"
+
+[168]
+Name="Vines"
+Desk=1
+Npc_carry=1
+Found="jungle"
+
+[169]
+Name="Coconut"
+Desk=1
+Fat=10
+Gift=1
+Npc_carry=1
+Found="jungle"
+
+[170]
+Name="Mango"
+Desk=1
+Fat=10
+Gift=1
+Npc_carry=1
+Found="jungle"
+
+[171]
+Name="Red Chili"
+Desk=1
+Npc_carry=1
+Found="sanpancho"
+
+[172]
+Name="Sand"
+Desk=1
+Illegal=1
+Npc_carry=1
+Found="sanpancho"
+
+[173]
+Name="Sombrero"
+Desk=1
+Npc_carry=1
+Found="sanpancho"
+
+[174]
+Name="Fake Fence"
+Illegal=1
+Decay=25
+Craft="50_Wire x3"
+
+[175]
+Name="Poncho"
+Desk=1
+Npc_carry=1
+Found="sanpancho"
+
+[176]
+Name="Uncooked Burrito"
+Found="sanpancho"
+
+[177]
+Name="Burrito"
+Desk=1
+Fat=10
+Gift=2
+Npc_carry=1
+Found="sanpancho"
+
+[178]
+Name="Tribal Drum"
+Desk=1
+Gift=2
+Npc_carry=1
+Found="jungle"
+
+[179]
+Name="Nails"
+Desk=1
+Buy=40
+Gift=1
+Npc_carry=1
+
+[180]
+Name="Stinger Strip"
+Illegal=1
+Gift=1
+Craft="50_Duct Tape, Nails x2"
+
+[181]
+Name="Multitool"
+Illegal=1
+Gift=3
+Digging=5
+Chipping=5
+Craft="90_Sturdy Shovel, Sturdy Pickaxe, Duct Tape"
+Decay=1
+
+[182]
+Name="Wooden Bat"
+Illegal=1
+Weapon=3
+Gift=2
+Craft="40_Timber, Duct Tape"
+
+[183]
+Name="Spiked Bat"
+Illegal=1
+Weapon=4
+Gift=2
+Craft="70_Timber, Duct Tape, Nails"
+
+[184]
+Name="Durable Contraband Pouch"
+Illegal=1
+Gift=3
+Decay=15
+Info="Detectors won't alarm with this in your possession"
+Craft="70_Foil x2, duct tape"
+
+[185]
+Name="Cutting Floss"
+Illegal=1
+Gift=2
+Cutting=3
+Decay=8
+Craft="40_Floss x3"
+
+[186]
+Name="Powered Screwdriver"
+Illegal=1
+Unscrewing=5
+Chipping=3
+Gift=2
+Decay=5
+Craft="80_Screwdriver, Battery, Wire"
+
+[187]
+Name="Raft Base"
+Illegal=1
+Craft="80_Balsa Wood x2, Rope"
+
+[188]
+Name="Makeshift Raft"
+Illegal=1
+Craft="80_Raft Base, Sail, Rope"
+
+[189]
+Name="Zipline Hook"
+Illegal=1
+Craft="60_Timber, Wire"
+
+[190]
+Name="DoDo Donut"
+Desk=1
+Fat=10
+Gift=1
+Npc_carry=1
+
+[191]
+Name="Penarium Barrel"
+Gift=5
+Desk=1
+
+[192]
+Name="Charcoal"
+Illegal=1
+
+[193]
+Name="Mixing Container"
+Illegal=1
+
+[194]
+Name="Corrugated Iron"
+Illegal=1
+
+[195]
+Name="Explosive Mix"
+Illegal=1
+
+[196]
+Name="Fertilizer"
+Illegal=1
+
+[197]
+Name="Makeshift Explosive Round"
+Illegal=1
+
+[198]
+Name="Explosive Compound"
+Illegal=1
+
+[199]
+Name="Makeshift Fuse"
+Illegal=1
+
+[200]
+Name="Makeshift Tank Barrel"
+Illegal=1
+
+[201]
+Name="Makeshift Tank Firing Base"
+Illegal=1
+
+[202]
+Name="Makeshift Tank Turret"
+Illegal=1
+
+[203]
+Name="Metal Cone"
+Illegal=1
+
+[204]
+Name="Metal Tube"
+Illegal=1
+
+[205]
+Name="Potassium"
+Illegal=1
+
+[206]
+Name="Sovereign Ring"
+Desk=1
+Found="escapeteam"
+Gift=2
+
+[207]
+Name="Taper"
+Illegal=1
+
+[208]
+Name="Trash Bag"
+Desk=1
+Found="escapeteam"
+Gift=2
+
+[209]
+Name="Aftershave"
+Desk=1
+Found="escapeteam"
+Gift=2
+
+[210]
+Name="Prisoner Outfit"
+Outfit=1
+
+[211]
+Name="Soldier Outfit"
+Outfit=1
+Illegal=1
+Gift=1
+Buy=50
+
+[212]
+Name="Tape Player"
+Illegal=1
+
+[213]
+Name="Voice Recording"
+Illegal=1
+
+[214]
+Name="Memoir Tapes"
+Illegal=1
+
+[215]
+Name="Tux Outfit"
+Outfit=1
+
+[216]
+Name="Dirty Tux Outfit"
+
+[217]
+Name="Blue Putty"
+
+[218]
+Name="Sticky Tape"
+
+[219]
+Name="Dirty Glass"
+Illegal=1
+
+[220]
+Name="Keycard"
+Illegal=1
+
+[221]
+Name="Fake Fingerprint"
+Illegal=1
+
+[222]
+Name="Bomb Surprise"
+Illegal=1
+Desk=1
+Found="DTAF"
+
+[223]
+Name="empty"
+
+[224]
+Name="Fake Decorated Egg"
+Gift=15
+Npc_carry=1
+Desk=1
+Found="DTAF"
+
+[225]
+Name="Flamethrower"
+Illegal=1
+
+[226]
+Name="Hairspray"
+Desk=1
+Found="DTAF"
+
+[227]
+Name="Fake Shoe"
+Npc_carry=1
+Desk=1
+Found="DTAF"
+Decay=25
+Info="Detectors won't alarm with this in your possession"
+
+[228]
+Name="Henchman Outfit"
+Illegal=1
+Outfit=1
+
+[229]
+Name="Dirty Henchman Outfit"
+Illegal=1
+
+[230]
+Name="Shoe Knife"
+Illegal=1
+Weapon=3
+Gift=2
+Desk=1
+Found="DTAF"
+
+[231]
+Name="Cutting Laser Watch"
+Illegal=1
+Cutting=50
+Decay=100
+Gift=3
+Desk=1
+Found="DTAF"
+
+[232]
+Name="Metal Rimmed Hat"
+Illegal=1
+Weapon=4
+Gift=3
+
+[233]
+Name="Pork Pie Hat"
+Desk=1
+Found="DTAF"
+
+[234]
+Name="Stun Pen"
+Illegal=1
+Weapon=3
+Npc_carry=1
+Desk=1
+Found="DTAF"
+
+[235]
+Name="Garotting Wire Watch"
+Illegal=1
+Desk=1
+Found="DTAF"
+
+[236]
+Name="Weak Fingerprint"
+Illegal=1
+
+[237]
+Name="Sharp Tea Tray"
+Illegal=1
+Desk=1
+Found="DTAF"
+
+[238]
+Name="Elf Outfit"
+Outfit=1
+
+[239]
+Name="Guard Elf Outfit"
+Outfit=1
+Illegal=1
+
+[240]
+Name="Bulbs"
+Illegal=1
+
+[241]
+Name="Cracker"
+Desk=1
+Npc_carry=1
+Found="SS"
+Illegal=1
+
+[242]
+Name="Fairy Lights"
+Illegal=1
+
+[243]
+Name="Glitter"
+Illegal=1
+
+[244]
+Name="Candy Cane Lever"
+Illegal=1
+
+[245]
+Name="Giant Lollipop"
+Desk=1
+Npc_carry=1
+Found="SS"
+Weapon=3
+Illegal=1
+
+[246]
+Name="Mince Pie"
+Desk=1
+Npc_carry=1
+Found="SS"
+Fat=5
+
+[247]
+Name="Presents"
+Illegal=1
+
+[248]
+Name="Stocking"
+Desk=1
+Npc_carry=1
+Found="SS"
+
+[249]
+Name="Tinsel"
+Illegal=1
+
+[250]
+Name="Wooden Ball"
+
+[251]
+Name="Wooden Block"
+
+[252]
+Name="Wooden Doll"
+
+[253]
+Name="Wooden Scooter"
+
+[254]
+Name="Wrapping Paper"
+Illegal=1
+
+[255]
+Name="Naughty Letter"
+
+[256]
+Name="Nice Letter"
+
+[257]
+Name="Chisel"
+Chipping=1
+Illegal=1
+
+[258]
+Name="Wooden Joystick"
+
+[259]
+Name="Worms game"
+
+[260]
+Name="Baseball Bat"
+Illegal=1
+Weapon=4
+Desk=1
+Carry=1
+Gift=1
+Buy=40
+
+[261]
+Name="Magnet"
+
+[262]
+Name="Cork"
+
+[263]
+Name="Empty Bottle"
+
+[264]
+Name="Work Hat"
+
+[265]
+Name="Needle"
+
+[266]
+Name="Magnetized Needle"
+
+[267]
+Name="Fuel"
+Illegal=1
+
+[268]
+Name="High Beam Flashlight"
+Illegal=1
+
+[269]
+Name="Halogen Bulb"
+Illegal=1
+
+[270]
+Name="Navigation Lighting"
+Illegal=1
+
+[271]
+Name="Reindeer Bowl"
+
+[272]
+Name="Bottle of Water"
+
+[273]
+Name="Bowl of Water"
+
+[274]
+Name="Raw Nasty Carrots"
+
+[275]
+Name="Juicy Cooked Carrots"
+
+[276]
+Name="Makeshift Compass"
+Illegal=1
+
+[277]
+Name="Red Herring"
+
+[278]
+Name="Thruster"
+Illegal=1

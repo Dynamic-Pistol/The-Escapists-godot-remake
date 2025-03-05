@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dwtt6ttgimkqe"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_q3dns"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_4h788"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e10xa"]
+atlas = ExtResource("2_4h788")
+region = Rect2(768, 768, 64, 64)
+
+[resource]
+script = ExtResource("1_q3dns")
+name = &"Cutting Laser Watch"
+base_price = 0
+opinion_inc = 3
+texture = SubResource("AtlasTexture_e10xa")
+is_contraband = true

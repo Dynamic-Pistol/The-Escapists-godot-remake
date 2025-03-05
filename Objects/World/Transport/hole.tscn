@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmgufj1occbm1"]
+
+[ext_resource type="Script" uid="uid://diae76gsf86c0" path="res://Objects/World/Transport/transport.gd" id="1_hx5tr"]
+[ext_resource type="Texture2D" uid="uid://wmblxxcyur4h" path="res://Sprites/World/Hole_down.png" id="1_p1tid"]
+[ext_resource type="Texture2D" uid="uid://dv06fc112pe5p" path="res://Sprites/World/Hole_up.png" id="3_ohh0g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgve6"]
+size = Vector2(64, 64)
+
+[node name="Hole" type="Area2D"]
+script = ExtResource("1_hx5tr")
+down_texture = ExtResource("1_p1tid")
+up_texture = ExtResource("3_ohh0g")
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("1_p1tid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wgve6")

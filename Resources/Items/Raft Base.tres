@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d12mb3ejnyd75"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_gpa2s"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_pfttt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fya6k"]
+atlas = ExtResource("2_pfttt")
+region = Rect2(192, 640, 64, 64)
+
+[resource]
+script = ExtResource("1_gpa2s")
+name = &"Raft Base"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_fya6k")
+is_contraband = true

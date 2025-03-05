@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dvgh4ekvlpmw2"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_idh3y"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2rhnu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vih27"]
+atlas = ExtResource("2_2rhnu")
+region = Rect2(128, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_idh3y")
+name = &"Glass Shank"
+base_price = 0
+opinion_inc = 3
+texture = SubResource("AtlasTexture_vih27")
+is_contraband = true

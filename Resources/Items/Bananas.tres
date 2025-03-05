@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://csqp1etudbisq"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_sl2og"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_lkvcm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7758"]
+atlas = ExtResource("2_lkvcm")
+region = Rect2(128, 512, 64, 64)
+
+[resource]
+script = ExtResource("1_sl2og")
+name = &"Bananas"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_s7758")
+is_contraband = false

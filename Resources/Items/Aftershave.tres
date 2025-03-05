@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dum2in0s726il"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_1xaro"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_tua25"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id2h6"]
+atlas = ExtResource("2_tua25")
+region = Rect2(512, 704, 64, 64)
+
+[resource]
+script = ExtResource("1_1xaro")
+name = &"Aftershave"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_id2h6")
+is_contraband = false

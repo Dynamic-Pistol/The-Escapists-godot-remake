@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://oux6iqvyq4x6"]
+
+[ext_resource type="Texture2D" uid="uid://b0mifwtc8qc4a" path="res://Sprites/World/PC Computer - The Escapists - Doors_scaled_4x_pngcrushed.png" id="1_t7ojf"]
+[ext_resource type="Script" uid="uid://bolmkaf5e3wgu" path="res://Objects/World/Doors/door.gd" id="1_x4yke"]
+[ext_resource type="AudioStream" uid="uid://bdldj5tqoukgs" path="res://Audio/Sfx/World/door.wav" id="3_08am3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rqc8"]
+size = Vector2(80, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrid7"]
+size = Vector2(64, 64)
+
+[node name="Door" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_x4yke")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_3rqc8")
+debug_color = Color(0.945098, 0, 0, 0.419608)
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("1_t7ojf")
+hframes = 4
+vframes = 2
+region_rect = Rect2(0, 0, 256, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hrid7")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_08am3")
+bus = &"Sfx"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,94 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://fxrh02yuw8my"]
+
+[ext_resource type="Texture2D" uid="uid://dfsaw6h8dcle3" path="res://Sprites/Entities/Inmates/rabbit.png" id="1_0re6t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73t71"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(456, 0, 76, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u2ov"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(532, 0, 76, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3bhh"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(304, 0, 76, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qmfb"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(380, 0, 76, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yap17"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(304, 684, 76, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnoar"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(152, 0, 76, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvvb1"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(228, 0, 76, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkquk"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(0, 0, 76, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e325n"]
+atlas = ExtResource("1_0re6t")
+region = Rect2(76, 0, 76, 76)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73t71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u2ov")
+}],
+"loop": true,
+"name": &"Backward",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3bhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qmfb")
+}],
+"loop": true,
+"name": &"Forward",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yap17")
+}],
+"loop": true,
+"name": &"Knocked Out",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnoar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvvb1")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkquk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e325n")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 1.0
+}]

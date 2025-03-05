@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d2tg1egx18qb0"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_s32qg"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_seh54"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v2sc"]
+atlas = ExtResource("2_seh54")
+region = Rect2(320, 960, 64, 64)
+
+[resource]
+script = ExtResource("1_s32qg")
+name = &"Juicy Cooked Carrots"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_8v2sc")
+is_contraband = false

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bqjoxe54apwa6"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jlpad"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_j1rjo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjyt6"]
+atlas = ExtResource("2_j1rjo")
+region = Rect2(960, 448, 64, 64)
+
+[resource]
+script = ExtResource("1_jlpad")
+name = &"DVD"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_qjyt6")
+is_contraband = false

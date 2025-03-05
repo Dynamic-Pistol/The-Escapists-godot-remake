@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://6kqj41p5yylv"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_s8ejw"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ncrta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iktb5"]
+atlas = ExtResource("2_ncrta")
+region = Rect2(704, 896, 64, 64)
+
+[resource]
+script = ExtResource("1_s8ejw")
+name = &"Work Hat"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_iktb5")
+is_contraband = false

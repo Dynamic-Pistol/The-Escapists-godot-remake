@@ -1,0 +1,338 @@
+[gd_scene load_steps=28 format=3 uid="uid://coqqrjv4b5hsh"]
+
+[ext_resource type="Script" uid="uid://bkwxb4ep1kk3w" path="res://Objects/Entities/entity.gd" id="1_23wnl"]
+[ext_resource type="Texture2D" uid="uid://dfsaw6h8dcle3" path="res://Sprites/Entities/Inmates/rabbit.png" id="2_xhnix"]
+[ext_resource type="Texture2D" uid="uid://c8idp5g5v314p" path="res://Sprites/Entities/Overlay/inmate_outfit.png" id="3_cjvk8"]
+[ext_resource type="Script" uid="uid://wpru2umhq3q8" path="res://Objects/Entities/interactor.gd" id="4_1d64o"]
+[ext_resource type="Texture2D" uid="uid://ca1m3o10vbs2c" path="res://Sprites/UI/talk.png" id="6_bhi4f"]
+
+[sub_resource type="Animation" id="Animation_f5mcn"]
+resource_name = "Knocked out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [103]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clothes:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [97]
+}
+
+[sub_resource type="Animation" id="Animation_cbghe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clothes:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_xvhxq"]
+resource_name = "move_b"
+length = 0.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clothes:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_0yclc"]
+resource_name = "move_f"
+length = 0.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clothes:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_1ccj5"]
+resource_name = "move_l"
+length = 0.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clothes:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_jaciw"]
+resource_name = "move_r"
+length = 0.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clothes:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1u47"]
+_data = {
+&"Knocked out": SubResource("Animation_f5mcn"),
+&"RESET": SubResource("Animation_cbghe"),
+&"move_b": SubResource("Animation_xvhxq"),
+&"move_f": SubResource("Animation_0yclc"),
+&"move_l": SubResource("Animation_1ccj5"),
+&"move_r": SubResource("Animation_jaciw")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tvuvh"]
+animation = &"Knocked out"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sfxf8"]
+animation = &"move_f"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ubfru"]
+animation = &"move_b"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vsdos"]
+animation = &"move_r"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8cv6f"]
+animation = &"move_l"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_rfvtu"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_sfxf8")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_ubfru")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_vsdos")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_8cv6f")
+blend_point_3/pos = Vector2(-1, 0)
+snap = Vector2(1, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n4rbh"]
+advance_mode = 2
+advance_expression = "not alive"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w3fyx"]
+advance_mode = 2
+advance_expression = "alive"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ske02"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_cbnm3"]
+states/End/position = Vector2(548, 88)
+"states/Knocked out/node" = SubResource("AnimationNodeAnimation_tvuvh")
+"states/Knocked out/position" = Vector2(391, 133)
+states/Movement/node = SubResource("AnimationNodeBlendSpace2D_rfvtu")
+states/Movement/position = Vector2(391, 50)
+states/Start/position = Vector2(162, 88)
+transitions = ["Movement", "Knocked out", SubResource("AnimationNodeStateMachineTransition_n4rbh"), "Knocked out", "Movement", SubResource("AnimationNodeStateMachineTransition_w3fyx"), "Start", "Movement", SubResource("AnimationNodeStateMachineTransition_ske02")]
+graph_offset = Vector2(-311, -13)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ar6wn"]
+radius = 8.5
+height = 32.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cb0ad"]
+texture = ExtResource("6_bhi4f")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_lp1av"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqah8"]
+size = Vector2(48, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n8piu"]
+radius = 40.7922
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 16
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_23wnl")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("2_xhnix")
+hframes = 11
+vframes = 10
+
+[node name="Clothes" type="Sprite2D" parent="."]
+texture = ExtResource("3_cjvk8")
+hframes = 11
+vframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_m1u47")
+}
+autoplay = "move_f"
+
+[node name="EntityTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%EntityTree/..")
+tree_root = SubResource("AnimationNodeStateMachine_cbnm3")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Movement/blend_position = Vector2(0, 0.088)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8.5)
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_ar6wn")
+
+[node name="Interactor" type="RayCast2D" parent="." node_paths=PackedStringArray("entity")]
+target_position = Vector2(-40, 0)
+collision_mask = 2
+hit_from_inside = true
+collide_with_areas = true
+script = ExtResource("4_1d64o")
+entity = NodePath("..")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -78.0
+offset_right = 125.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_cb0ad")
+text = "I downvoted this place online."
+label_settings = SubResource("LabelSettings_lp1av")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("RectangleShape2D_wqah8")
+debug_color = Color(0.937255, 0.176471, 0.443137, 0.290196)
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_n8piu")

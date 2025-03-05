@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dqyoh6sebjykh"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_nhbtn"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_uumnj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogaej"]
+atlas = ExtResource("2_uumnj")
+region = Rect2(0, 768, 64, 64)
+
+[resource]
+script = ExtResource("1_nhbtn")
+name = &"Sticky Tape"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_ogaej")
+is_contraband = false

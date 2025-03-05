@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://26h3yidifuk7"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_bl4oy"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_41tlj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34mpv"]
+atlas = ExtResource("2_41tlj")
+region = Rect2(64, 256, 64, 64)
+
+[resource]
+script = ExtResource("1_bl4oy")
+name = &"Staff Key Mold"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_34mpv")
+is_contraband = true

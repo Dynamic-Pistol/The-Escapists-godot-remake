@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bg7q7j5v1oinl"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ykjaw"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_tc53f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74swm"]
+atlas = ExtResource("2_tc53f")
+region = Rect2(512, 256, 64, 64)
+
+[resource]
+script = ExtResource("1_ykjaw")
+name = &"Bag of Cement"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_74swm")
+is_contraband = false

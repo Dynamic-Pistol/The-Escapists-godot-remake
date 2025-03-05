@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://drrsv5kbwfidp"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_n7o2l"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_qgk3v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_411wb"]
+atlas = ExtResource("2_qgk3v")
+region = Rect2(256, 512, 64, 64)
+
+[resource]
+script = ExtResource("1_n7o2l")
+name = &"ID Papers"
+base_price = 0
+opinion_inc = 3
+texture = SubResource("AtlasTexture_411wb")
+is_contraband = true

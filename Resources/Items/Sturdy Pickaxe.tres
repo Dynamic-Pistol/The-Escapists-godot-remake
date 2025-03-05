@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bacvdrn20ir3c"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_pq5at"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7swrc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh51a"]
+atlas = ExtResource("2_7swrc")
+region = Rect2(320, 128, 64, 64)
+
+[resource]
+script = ExtResource("1_pq5at")
+name = &"Sturdy Pickaxe"
+base_price = 0
+opinion_inc = 3
+texture = SubResource("AtlasTexture_hh51a")
+is_contraband = true

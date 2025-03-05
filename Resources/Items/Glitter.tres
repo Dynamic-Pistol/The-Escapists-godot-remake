@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://3atjuoa5s0i0"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_axd5n"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_8b4bn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdd4c"]
+atlas = ExtResource("2_8b4bn")
+region = Rect2(448, 832, 64, 64)
+
+[resource]
+script = ExtResource("1_axd5n")
+name = &"Glitter"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_vdd4c")
+is_contraband = true

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ba5vnsmkivme2"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_tnpxx"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_8jpv6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl2x3"]
+atlas = ExtResource("2_8jpv6")
+region = Rect2(320, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_tnpxx")
+name = &"Sturdy Shovel"
+base_price = 0
+opinion_inc = 3
+texture = SubResource("AtlasTexture_jl2x3")
+is_contraband = true

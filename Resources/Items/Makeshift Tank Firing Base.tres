@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://emdrhq2hnv3x"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_nw6c5"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_72nx1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf3u7"]
+atlas = ExtResource("2_72nx1")
+region = Rect2(0, 704, 64, 64)
+
+[resource]
+script = ExtResource("1_nw6c5")
+name = &"Makeshift Tank Firing Base"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_lf3u7")
+is_contraband = true

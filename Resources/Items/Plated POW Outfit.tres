@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="OutfitItem" load_steps=4 format=3 uid="uid://tqmbwrwm5c12"]
+
+[ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_b2e8w"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ylunk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuus8"]
+atlas = ExtResource("2_ylunk")
+region = Rect2(768, 448, 64, 64)
+
+[resource]
+script = ExtResource("1_b2e8w")
+outfit_type = 0
+defense = 4
+name = &"Plated POW Outfit"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_yuus8")
+is_contraband = true

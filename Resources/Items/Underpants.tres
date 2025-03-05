@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://4cadvrt8ql7a"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_23cv4"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_oedhr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnw0w"]
+atlas = ExtResource("2_oedhr")
+region = Rect2(128, 448, 64, 64)
+
+[resource]
+script = ExtResource("1_23cv4")
+name = &"Underpants"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_qnw0w")
+is_contraband = false

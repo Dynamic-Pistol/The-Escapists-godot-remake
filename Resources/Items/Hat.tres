@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://do3pachvl7cmk"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_we6qq"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_83dd3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k30yd"]
+atlas = ExtResource("2_83dd3")
+region = Rect2(0, 448, 64, 64)
+
+[resource]
+script = ExtResource("1_we6qq")
+name = &"Hat"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_k30yd")
+is_contraband = false

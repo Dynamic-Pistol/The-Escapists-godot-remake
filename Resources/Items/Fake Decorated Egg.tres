@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bn482n12tckxi"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_r5846"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_wvhby"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct81p"]
+atlas = ExtResource("2_wvhby")
+region = Rect2(384, 768, 64, 64)
+
+[resource]
+script = ExtResource("1_r5846")
+name = &"Fake Decorated Egg"
+base_price = 0
+opinion_inc = 15
+texture = SubResource("AtlasTexture_ct81p")
+is_contraband = false

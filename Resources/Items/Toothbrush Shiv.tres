@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bj2e38d0ksaoh"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ink3p"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_hn7pn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4jk2"]
+atlas = ExtResource("2_hn7pn")
+region = Rect2(256, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_ink3p")
+name = &"Toothbrush Shiv"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_o4jk2")
+is_contraband = true

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bdnqpo11dvmry"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ydhmv"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_jysjm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kttit"]
+atlas = ExtResource("2_jysjm")
+region = Rect2(256, 448, 64, 64)
+
+[resource]
+script = ExtResource("1_ydhmv")
+name = &"Needle & Thread"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_kttit")
+is_contraband = false

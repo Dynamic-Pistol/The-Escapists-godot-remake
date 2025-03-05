@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://5m8lja6rrrh6"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_anqun"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_glmg5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e4tf"]
+atlas = ExtResource("2_glmg5")
+region = Rect2(640, 640, 64, 64)
+
+[resource]
+script = ExtResource("1_anqun")
+name = &"Corrugated Iron"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_4e4tf")
+is_contraband = true

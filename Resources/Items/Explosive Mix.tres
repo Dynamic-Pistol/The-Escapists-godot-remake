@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://k3xmuni185ws"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ef5mf"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_m6wv4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa40s"]
+atlas = ExtResource("2_m6wv4")
+region = Rect2(704, 640, 64, 64)
+
+[resource]
+script = ExtResource("1_ef5mf")
+name = &"Explosive Mix"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_xa40s")
+is_contraband = true

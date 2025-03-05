@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="KeyItem" load_steps=4 format=3 uid="uid://h4cfkkbl8hyk"]
+
+[ext_resource type="Script" uid="uid://c07xtuv08l3cg" path="res://Objects/ItemSystem/ItemTypes/key_item.gd" id="1_ilk61"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_p8sm5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gdei"]
+atlas = ExtResource("2_p8sm5")
+region = Rect2(0, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_ilk61")
+key_type = 0
+fake = false
+decay = 10
+name = &"Cell Key"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_8gdei")
+is_contraband = true

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://o6vmn42gk2t7"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_r3y0a"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_cgm20"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wdxq"]
+atlas = ExtResource("2_cgm20")
+region = Rect2(768, 192, 64, 64)
+
+[resource]
+script = ExtResource("1_r3y0a")
+name = &"Dirty Inmate Outfit"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_8wdxq")
+is_contraband = false

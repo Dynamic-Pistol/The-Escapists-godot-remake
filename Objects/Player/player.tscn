@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://1dyenyr7xqqv"]
+
+[ext_resource type="PackedScene" uid="uid://coqqrjv4b5hsh" path="res://Objects/Entities/entity.tscn" id="1_hie25"]
+[ext_resource type="Script" uid="uid://d4f4uvypapqgv" path="res://Objects/Player/player.gd" id="2_aw2ag"]
+[ext_resource type="Script" uid="uid://bysxbowv1myxs" path="res://Objects/Player/player_interactor.gd" id="3_s05fs"]
+[ext_resource type="Script" uid="uid://gqk8wtcube80" path="res://Objects/InventorySystem/player_inventory.gd" id="5_u717g"]
+
+[node name="Player" node_paths=PackedStringArray("inventory") instance=ExtResource("1_hie25")]
+script = ExtResource("2_aw2ag")
+inventory = NodePath("Inventory")
+
+[node name="EntityTree" parent="." index="3"]
+parameters/Movement/blend_position = Vector2(0, 0)
+
+[node name="Interactor" parent="." index="5"]
+script = ExtResource("3_s05fs")
+
+[node name="Camera2D" type="Camera2D" parent="." index="6"]
+
+[node name="AudioListener2D" type="AudioListener2D" parent="Camera2D" index="0"]
+
+[node name="Inventory" type="Node" parent="." index="7"]
+script = ExtResource("5_u717g")
+
+[node name="Label" parent="." index="8"]
+self_modulate = Color(1, 1, 0.498039, 1)

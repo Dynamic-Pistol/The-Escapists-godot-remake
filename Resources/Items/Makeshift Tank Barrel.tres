@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bdpiflbfsrm5g"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_37xjy"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_oea7j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egx64"]
+atlas = ExtResource("2_oea7j")
+region = Rect2(1024, 640, 64, 64)
+
+[resource]
+script = ExtResource("1_37xjy")
+name = &"Makeshift Tank Barrel"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_egx64")
+is_contraband = true

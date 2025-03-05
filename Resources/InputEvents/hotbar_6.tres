@@ -1,0 +1,6 @@
+[gd_resource type="InputEventKey" format=3 uid="uid://cudlemduc4sx7"]
+
+[resource]
+device = -1
+keycode = 54
+unicode = 54

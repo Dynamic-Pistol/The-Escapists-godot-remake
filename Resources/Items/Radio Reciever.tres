@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dakuhjmcgwb5t"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_v4l6q"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_uwx1v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0kt6"]
+atlas = ExtResource("2_uwx1v")
+region = Rect2(320, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_v4l6q")
+name = &"Radio Reciever"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_b0kt6")
+is_contraband = true

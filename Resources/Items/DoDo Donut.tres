@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://lo7l546h18n"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_12tqq"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_0rtht"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dipwp"]
+atlas = ExtResource("2_0rtht")
+region = Rect2(384, 640, 64, 64)
+
+[resource]
+script = ExtResource("1_12tqq")
+name = &"DoDo Donut"
+base_price = 0
+opinion_inc = 1
+texture = SubResource("AtlasTexture_dipwp")
+is_contraband = false

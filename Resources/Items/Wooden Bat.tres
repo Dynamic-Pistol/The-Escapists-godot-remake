@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cetk0is2s5vnv"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_t6dvl"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_d1dsg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv20b"]
+atlas = ExtResource("2_d1dsg")
+region = Rect2(1024, 576, 64, 64)
+
+[resource]
+script = ExtResource("1_t6dvl")
+name = &"Wooden Bat"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_xv20b")
+is_contraband = true

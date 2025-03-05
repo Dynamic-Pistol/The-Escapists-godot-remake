@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cglvvf05it2bm"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_do8pj"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6sdri"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ywjw"]
+atlas = ExtResource("2_6sdri")
+region = Rect2(640, 384, 64, 64)
+
+[resource]
+script = ExtResource("1_do8pj")
+name = &"Tool Handle"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_2ywjw")
+is_contraband = true

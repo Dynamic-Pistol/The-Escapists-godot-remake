@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ban3cq47u5yp2"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_mple4"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_8pxyr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfala"]
+atlas = ExtResource("2_8pxyr")
+region = Rect2(640, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_mple4")
+name = &"Plastic Knife"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_tfala")
+is_contraband = false

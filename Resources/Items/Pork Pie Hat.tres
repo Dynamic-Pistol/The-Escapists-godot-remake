@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cnwh2ywcbd8ma"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_8k8g4"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ycdfk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywhlf"]
+atlas = ExtResource("2_ycdfk")
+region = Rect2(896, 768, 64, 64)
+
+[resource]
+script = ExtResource("1_8k8g4")
+name = &"Pork Pie Hat"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_ywhlf")
+is_contraband = false

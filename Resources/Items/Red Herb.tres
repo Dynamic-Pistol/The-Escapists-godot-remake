@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://lnd136aktuyw"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_0arh6"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_01yaw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1q1m"]
+atlas = ExtResource("2_01yaw")
+region = Rect2(384, 512, 64, 64)
+
+[resource]
+script = ExtResource("1_0arh6")
+name = &"Red Herb"
+base_price = 25
+opinion_inc = 0
+texture = SubResource("AtlasTexture_x1q1m")
+is_contraband = false

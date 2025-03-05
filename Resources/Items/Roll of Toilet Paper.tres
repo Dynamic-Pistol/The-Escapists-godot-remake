@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cb6k3rohhvu34"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_wkeka"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_1lr4r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f628d"]
+atlas = ExtResource("2_1lr4r")
+region = Rect2(832, 128, 64, 64)
+
+[resource]
+script = ExtResource("1_wkeka")
+name = &"Roll of Toilet Paper"
+base_price = 0
+opinion_inc = 0
+texture = SubResource("AtlasTexture_f628d")
+is_contraband = false

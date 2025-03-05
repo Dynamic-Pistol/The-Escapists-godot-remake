@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dc72tbyv3payy"]
+
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_if31a"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_f1ttf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu737"]
+atlas = ExtResource("2_f1ttf")
+region = Rect2(0, 640, 64, 64)
+
+[resource]
+script = ExtResource("1_if31a")
+name = &"Spiked Bat"
+base_price = 0
+opinion_inc = 2
+texture = SubResource("AtlasTexture_pu737")
+is_contraband = true
