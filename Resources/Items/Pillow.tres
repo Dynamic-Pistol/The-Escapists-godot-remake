@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bdhvamb2tt0eo"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_10fm4"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_imeey"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_qntk7"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_fupdm"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mack1"]
-atlas = ExtResource("2_imeey")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cd8a"]
+atlas = ExtResource("2_fupdm")
 region = Rect2(128, 320, 64, 64)
 
 [resource]
-script = ExtResource("1_10fm4")
+script = ExtResource("1_qntk7")
 name = &"Pillow"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_mack1")
+texture = SubResource("AtlasTexture_8cd8a")
 is_contraband = false

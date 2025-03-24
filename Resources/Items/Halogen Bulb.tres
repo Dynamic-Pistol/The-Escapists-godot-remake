@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dw6y5a6j64fnn"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_xkot0"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_qfyjm"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_8k70v"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_kma7i"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3m6sx"]
-atlas = ExtResource("2_qfyjm")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ux47"]
+atlas = ExtResource("2_kma7i")
 region = Rect2(1024, 896, 64, 64)
 
 [resource]
-script = ExtResource("1_xkot0")
+script = ExtResource("1_8k70v")
 name = &"Halogen Bulb"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_3m6sx")
+texture = SubResource("AtlasTexture_1ux47")
 is_contraband = true

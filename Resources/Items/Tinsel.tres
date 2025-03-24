@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://we026lmekv8i"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_d0vbm"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6fxwg"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_cf1br"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_1xg3g"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2b7po"]
-atlas = ExtResource("2_6fxwg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbabl"]
+atlas = ExtResource("2_1xg3g")
 region = Rect2(832, 832, 64, 64)
 
 [resource]
-script = ExtResource("1_d0vbm")
+script = ExtResource("1_cf1br")
 name = &"Tinsel"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_2b7po")
+texture = SubResource("AtlasTexture_tbabl")
 is_contraband = true

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://l641xro13lk4"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_e6hk2"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_c31y7"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_g2gb3"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_yuapm"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_agb78"]
-atlas = ExtResource("2_c31y7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7bma"]
+atlas = ExtResource("2_yuapm")
 region = Rect2(768, 0, 64, 64)
 
 [resource]
-script = ExtResource("1_e6hk2")
+script = ExtResource("1_g2gb3")
 name = &"Timber"
 base_price = 10
 opinion_inc = 1
-texture = SubResource("AtlasTexture_agb78")
+texture = SubResource("AtlasTexture_r7bma")
 is_contraband = true

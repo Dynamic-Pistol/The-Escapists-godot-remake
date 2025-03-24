@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cd0cjuleak87h"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_n84h1"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_xrmvn"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jt5sk"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_luvhw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qxyyo"]
-atlas = ExtResource("2_xrmvn")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv3py"]
+atlas = ExtResource("2_luvhw")
 region = Rect2(64, 384, 64, 64)
 
 [resource]
-script = ExtResource("1_n84h1")
+script = ExtResource("1_jt5sk")
 name = &"Grapple Head"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_qxyyo")
+texture = SubResource("AtlasTexture_qv3py")
 is_contraband = true

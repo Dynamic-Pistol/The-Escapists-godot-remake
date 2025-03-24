@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cajmd6y5q5sg6"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_hgind"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_vbr1x"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_pcfk3"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_bnbyp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o7hym"]
-atlas = ExtResource("2_vbr1x")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3ede"]
+atlas = ExtResource("2_bnbyp")
 region = Rect2(960, 64, 64, 64)
 
 [resource]
-script = ExtResource("1_hgind")
+script = ExtResource("1_pcfk3")
 name = &"Broom"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_o7hym")
+texture = SubResource("AtlasTexture_r3ede")
 is_contraband = false

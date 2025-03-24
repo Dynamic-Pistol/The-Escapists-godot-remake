@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://3mwwaw2wqvvc"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_b3he1"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6l34w"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rx7p8"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_dv1ak"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_whvkk"]
-atlas = ExtResource("2_6l34w")
+[sub_resource type="AtlasTexture" id="AtlasTexture_62l7n"]
+atlas = ExtResource("2_dv1ak")
 region = Rect2(896, 896, 64, 64)
 
 [resource]
-script = ExtResource("1_b3he1")
+script = ExtResource("1_rx7p8")
 name = &"Fuel"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_whvkk")
+texture = SubResource("AtlasTexture_62l7n")
 is_contraband = true

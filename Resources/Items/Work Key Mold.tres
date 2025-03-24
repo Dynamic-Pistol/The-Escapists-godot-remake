@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://7i7uv3d4ymel"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_gvx4y"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_fjrm4"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_kdgig"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2bosl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hji8a"]
-atlas = ExtResource("2_fjrm4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tstbo"]
+atlas = ExtResource("2_2bosl")
 region = Rect2(448, 192, 64, 64)
 
 [resource]
-script = ExtResource("1_gvx4y")
+script = ExtResource("1_kdgig")
 name = &"Work Key Mold"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_hji8a")
+texture = SubResource("AtlasTexture_tstbo")
 is_contraband = true

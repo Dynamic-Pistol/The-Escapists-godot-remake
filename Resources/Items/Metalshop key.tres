@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d2jw67mcof6ma"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_5gyw5"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_cxiv2"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ktiyg"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_mecio"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xlbye"]
-atlas = ExtResource("2_cxiv2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hah6u"]
+atlas = ExtResource("2_mecio")
 region = Rect2(448, 256, 64, 64)
 
 [resource]
-script = ExtResource("1_5gyw5")
+script = ExtResource("1_ktiyg")
 name = &"Metalshop key"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_xlbye")
+texture = SubResource("AtlasTexture_hah6u")
 is_contraband = false

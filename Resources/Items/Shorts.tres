@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bjed4f6fjnnk"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_72hpp"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_vbsra"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_4um3v"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_eyxg3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0n367"]
-atlas = ExtResource("2_vbsra")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmc8g"]
+atlas = ExtResource("2_eyxg3")
 region = Rect2(192, 448, 64, 64)
 
 [resource]
-script = ExtResource("1_72hpp")
+script = ExtResource("1_4um3v")
 name = &"Shorts"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_0n367")
+texture = SubResource("AtlasTexture_lmc8g")
 is_contraband = false

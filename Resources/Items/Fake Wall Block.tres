@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dxuf6is4kceh5"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_nl7aa"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_rflub"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_12rew"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_wpj2o"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vcu0v"]
-atlas = ExtResource("2_rflub")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8f5b"]
+atlas = ExtResource("2_wpj2o")
 region = Rect2(256, 384, 64, 64)
 
 [resource]
-script = ExtResource("1_nl7aa")
+script = ExtResource("1_12rew")
 name = &"Fake Wall Block"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_vcu0v")
+texture = SubResource("AtlasTexture_f8f5b")
 is_contraband = true

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://vbl8x4rbale7"]
+
+[ext_resource type="AudioStream" uid="uid://c1bb014exrgc1" path="res://Audio/Music/perks.ogg" id="1_2gaob"]
+[ext_resource type="Script" uid="uid://dov5yvqpys64d" path="res://Autoloads/music_player.gd" id="2_cuhtg"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_2gaob")
+bus = &"Music"
+script = ExtResource("2_cuhtg")

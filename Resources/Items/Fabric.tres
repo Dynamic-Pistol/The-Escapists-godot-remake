@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d1ybc5ocqh64j"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_tby6j"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_0hl6y"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_3pohy"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6vj11"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ei5hu"]
-atlas = ExtResource("2_0hl6y")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgw2e"]
+atlas = ExtResource("2_6vj11")
 region = Rect2(320, 448, 64, 64)
 
 [resource]
-script = ExtResource("1_tby6j")
+script = ExtResource("1_3pohy")
 name = &"Fabric"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_ei5hu")
+texture = SubResource("AtlasTexture_kgw2e")
 is_contraband = false

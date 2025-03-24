@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d2tg1egx18qb0"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_s32qg"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_seh54"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_2idkb"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2tt67"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8v2sc"]
-atlas = ExtResource("2_seh54")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm74q"]
+atlas = ExtResource("2_2tt67")
 region = Rect2(320, 960, 64, 64)
 
 [resource]
-script = ExtResource("1_s32qg")
+script = ExtResource("1_2idkb")
 name = &"Juicy Cooked Carrots"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_8v2sc")
+texture = SubResource("AtlasTexture_xm74q")
 is_contraband = false

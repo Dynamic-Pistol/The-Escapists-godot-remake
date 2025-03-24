@@ -28,7 +28,7 @@ buses/default_bus_layout="res://Audio/default_bus_layout.tres"
 
 [autoload]
 
-MusicPlayer="*res://Autoloads/music_Player.tscn"
+MusicPlayer="*res://Autoloads/music_player.tscn"
 PlayerManager="*res://Autoloads/player_manager.tscn"
 WorldLayerManager="*res://Autoloads/world_layer_manager.gd"
 TimeManager="*res://Autoloads/time_manager.gd"
@@ -67,6 +67,7 @@ folder_colors={
 [global_group]
 
 interactable=""
+pickable=""
 
 [gui]
 
@@ -105,6 +106,11 @@ Interact={
 Pickup={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(179, 5),"global_position":Vector2(188, 51),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+Attack={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
 

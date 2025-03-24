@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dl1gi4vcv0go0"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_x62ma"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7c7c6"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_vy6hv"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_n41o4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_512qp"]
-atlas = ExtResource("2_7c7c6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylhdm"]
+atlas = ExtResource("2_n41o4")
 region = Rect2(896, 192, 64, 64)
 
 [resource]
-script = ExtResource("1_x62ma")
+script = ExtResource("1_vy6hv")
 name = &"Cooked Food"
 base_price = 0
 opinion_inc = 3
-texture = SubResource("AtlasTexture_512qp")
+texture = SubResource("AtlasTexture_ylhdm")
 is_contraband = false

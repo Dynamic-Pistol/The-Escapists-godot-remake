@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://deoa1j0gjmxaj"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_y0xcw"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_3a4hq"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_376n2"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_5l0hs"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_74gwk"]
-atlas = ExtResource("2_3a4hq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyb2g"]
+atlas = ExtResource("2_5l0hs")
 region = Rect2(896, 832, 64, 64)
 
 [resource]
-script = ExtResource("1_y0xcw")
+script = ExtResource("1_376n2")
 name = &"Wooden Ball"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_74gwk")
+texture = SubResource("AtlasTexture_cyb2g")
 is_contraband = false

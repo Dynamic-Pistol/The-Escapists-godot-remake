@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://eapompeuanam"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_7faj5"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_bbmwl"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_yg5bi"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ff3rw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5jww5"]
-atlas = ExtResource("2_bbmwl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbxbe"]
+atlas = ExtResource("2_ff3rw")
 region = Rect2(192, 704, 64, 64)
 
 [resource]
-script = ExtResource("1_7faj5")
+script = ExtResource("1_yg5bi")
 name = &"Metal Tube"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_5jww5")
+texture = SubResource("AtlasTexture_tbxbe")
 is_contraband = true

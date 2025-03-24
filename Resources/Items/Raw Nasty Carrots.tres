@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ccsfcfjmajaam"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_s13pf"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_nny68"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rdojt"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_drb5m"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ow4ho"]
-atlas = ExtResource("2_nny68")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0g0m"]
+atlas = ExtResource("2_drb5m")
 region = Rect2(256, 960, 64, 64)
 
 [resource]
-script = ExtResource("1_s13pf")
+script = ExtResource("1_rdojt")
 name = &"Raw Nasty Carrots"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_ow4ho")
+texture = SubResource("AtlasTexture_r0g0m")
 is_contraband = false

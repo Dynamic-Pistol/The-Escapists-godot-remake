@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bjhnjtfd8q8ic"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_1ymyb"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_vo8cj"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_6fvuy"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6mtpw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_72fmm"]
-atlas = ExtResource("2_vo8cj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtxlm"]
+atlas = ExtResource("2_6mtpw")
 region = Rect2(256, 896, 64, 64)
 
 [resource]
-script = ExtResource("1_1ymyb")
+script = ExtResource("1_6fvuy")
 name = &"Chisel"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_72fmm")
+texture = SubResource("AtlasTexture_dtxlm")
 is_contraband = true

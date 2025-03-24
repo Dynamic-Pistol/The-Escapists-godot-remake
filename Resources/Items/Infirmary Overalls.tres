@@ -1,18 +1,18 @@
 [gd_resource type="Resource" script_class="OutfitItem" load_steps=4 format=3 uid="uid://b0tjgylfhkgxt"]
 
-[ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_ofwpb"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2whhw"]
+[ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_f05gk"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_48cyt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gy2gc"]
-atlas = ExtResource("2_2whhw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fic0g"]
+atlas = ExtResource("2_48cyt")
 region = Rect2(256, 128, 64, 64)
 
 [resource]
-script = ExtResource("1_ofwpb")
+script = ExtResource("1_f05gk")
 outfit_type = 1
 defense = 1
 name = &"Infirmary Overalls"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_gy2gc")
+texture = SubResource("AtlasTexture_fic0g")
 is_contraband = true

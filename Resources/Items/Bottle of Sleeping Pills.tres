@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_fi5t8"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_jj5re"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dldrd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki7kv"]
 atlas = ExtResource("2_jj5re")
 region = Rect2(1024, 0, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_fi5t8")
 name = &"Bottle of Sleeping Pills"
 base_price = 25
 opinion_inc = 1
-texture = SubResource("AtlasTexture_dldrd")
+texture = SubResource("AtlasTexture_ki7kv")
 is_contraband = true

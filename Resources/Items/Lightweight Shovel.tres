@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://do34ogfdpm03b"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_6mexk"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_rpwh2"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_mguu6"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2y4w5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fv454"]
-atlas = ExtResource("2_rpwh2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms2ee"]
+atlas = ExtResource("2_2y4w5")
 region = Rect2(128, 384, 64, 64)
 
 [resource]
-script = ExtResource("1_6mexk")
+script = ExtResource("1_mguu6")
 name = &"Lightweight Shovel"
 base_price = 0
 opinion_inc = 3
-texture = SubResource("AtlasTexture_fv454")
+texture = SubResource("AtlasTexture_ms2ee")
 is_contraband = true

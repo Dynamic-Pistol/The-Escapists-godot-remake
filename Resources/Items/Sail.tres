@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://pkg3id7vyp47"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jyely"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_31w76"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_mppp1"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_3j0t3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7gwn0"]
-atlas = ExtResource("2_31w76")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpcmj"]
+atlas = ExtResource("2_3j0t3")
 region = Rect2(384, 192, 64, 64)
 
 [resource]
-script = ExtResource("1_jyely")
+script = ExtResource("1_mppp1")
 name = &"Sail"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_7gwn0")
+texture = SubResource("AtlasTexture_fpcmj")
 is_contraband = true

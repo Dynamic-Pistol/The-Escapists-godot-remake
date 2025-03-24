@@ -1,61 +1,35 @@
 @tool
 extends StaticBody2D
 
-enum KeyType{
-	NONE = 0,
-	CELL,
-	ENTERANCE,
-	UTILITY,
-	WORK,
-	STAFF,
-	GUARD,
-	WARDEN
-}
+const KeyType = PlayerManager.KeyType
 
-@export var door_key_type: KeyType:
+@onready var _visual: Sprite2D = $Visual
+
+@export var key_type: KeyType = KeyType.NONE:
 	set(new_val):
-		door_key_type = new_val
-		$Visual.frame = door_key_type
-
-
-func _ready() -> void:
-	$Visual.frame = door_key_type
+		if not is_node_ready():
+			await ready
+		key_type = new_val
+		_visual.frame = int(log(key_type) / log(2))
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	if not _visual.visible:
+		return
 	if body is not Entity or body.collision_mask != collision_layer:
 		return
-	if body is Player and door_key_type != KeyType.NONE:
-		var inventory :Inventory = body.inventory
-		if door_key_type == KeyType.WARDEN:
-			return
-		elif door_key_type == KeyType.GUARD and inventory.outfit.outfit_type != OutfitItem.OutfitType.Guard:
-			return
-		elif not inventory.has_key(door_key_to_item_key(door_key_type)):
-			return
+	if body is Player and not (body.current_keys & key_type):
+		return
 	$CollisionShape2D.set_deferred(&"disabled", true)
-	$Visual.visible = false
+	_visual.visible = false
 	$Sound.play()
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
+	if _visual.visible:
+		return
 	if body is not Entity or body.collision_mask != collision_layer:
 		return
 	if $Area2D.get_overlapping_bodies().size() > 0:
 		return
 	$CollisionShape2D.set_deferred(&"disabled", false)
-	$Visual.visible = true
+	_visual.visible = true
 	$Sound.play()
-
-func door_key_to_item_key(door_key: KeyType) -> KeyItem.KeyType:
-	const ItemKeyType = KeyItem.KeyType
-	match door_key:
-		KeyType.CELL:
-			return ItemKeyType.CELL
-		KeyType.ENTERANCE:
-			return ItemKeyType.ENTERANCE
-		KeyType.UTILITY:
-			return ItemKeyType.UTILITY
-		KeyType.WORK:
-			return ItemKeyType.WORK
-		KeyType.STAFF:
-			return ItemKeyType.STAFF
-	return ItemKeyType.INVALID

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ddwwbjbgqlbw3"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_l28k7"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_52duj"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_r0ggp"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_bj1dw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e4t3v"]
-atlas = ExtResource("2_52duj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_775tt"]
+atlas = ExtResource("2_bj1dw")
 region = Rect2(320, 832, 64, 64)
 
 [resource]
-script = ExtResource("1_l28k7")
+script = ExtResource("1_r0ggp")
 name = &"Cracker"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_e4t3v")
+texture = SubResource("AtlasTexture_775tt")
 is_contraband = true

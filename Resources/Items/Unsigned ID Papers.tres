@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dr0jyjt2djwra"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ewj7o"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_26m2f"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_43f3g"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_bcb3l"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ksep5"]
-atlas = ExtResource("2_26m2f")
+[sub_resource type="AtlasTexture" id="AtlasTexture_312d2"]
+atlas = ExtResource("2_bcb3l")
 region = Rect2(192, 512, 64, 64)
 
 [resource]
-script = ExtResource("1_ewj7o")
+script = ExtResource("1_43f3g")
 name = &"Unsigned ID Papers"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_ksep5")
+texture = SubResource("AtlasTexture_312d2")
 is_contraband = true

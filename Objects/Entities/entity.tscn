@@ -1,13 +1,13 @@
-[gd_scene load_steps=28 format=3 uid="uid://coqqrjv4b5hsh"]
+[gd_scene load_steps=23 format=3 uid="uid://coqqrjv4b5hsh"]
 
 [ext_resource type="Script" uid="uid://bkwxb4ep1kk3w" path="res://Objects/Entities/entity.gd" id="1_23wnl"]
 [ext_resource type="Texture2D" uid="uid://dfsaw6h8dcle3" path="res://Sprites/Entities/Inmates/rabbit.png" id="2_xhnix"]
 [ext_resource type="Texture2D" uid="uid://c8idp5g5v314p" path="res://Sprites/Entities/Overlay/inmate_outfit.png" id="3_cjvk8"]
-[ext_resource type="Script" uid="uid://wpru2umhq3q8" path="res://Objects/Entities/interactor.gd" id="4_1d64o"]
-[ext_resource type="Texture2D" uid="uid://ca1m3o10vbs2c" path="res://Sprites/UI/talk.png" id="6_bhi4f"]
+[ext_resource type="AudioStream" uid="uid://coy0n166dqeq4" path="res://Audio/Sfx/Combat/lose.wav" id="4_lw7s8"]
 
 [sub_resource type="Animation" id="Animation_f5mcn"]
 resource_name = "Knocked out"
+length = 0.26
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -32,6 +32,21 @@ tracks/1/keys = {
 "update": 1,
 "values": [97]
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitSfx")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_lw7s8")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_cbghe"]
 length = 0.001
@@ -219,7 +234,7 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n4rbh"]
 advance_mode = 2
-advance_expression = "not alive"
+advance_expression = "not health.is_alive()"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w3fyx"]
 advance_mode = 2
@@ -242,24 +257,7 @@ graph_offset = Vector2(-311, -13)
 radius = 8.5
 height = 32.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cb0ad"]
-texture = ExtResource("6_bhi4f")
-texture_margin_left = 8.0
-texture_margin_top = 8.0
-texture_margin_right = 8.0
-texture_margin_bottom = 8.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_lp1av"]
-font_size = 32
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqah8"]
-size = Vector2(48, 64)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_n8piu"]
-radius = 40.7922
-
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Entity" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 16
 collision_mask = 2
@@ -288,51 +286,9 @@ root_node = NodePath("%EntityTree/..")
 tree_root = SubResource("AnimationNodeStateMachine_cbnm3")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Movement/blend_position = Vector2(0, 0.088)
+parameters/Movement/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8.5)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_ar6wn")
-
-[node name="Interactor" type="RayCast2D" parent="." node_paths=PackedStringArray("entity")]
-target_position = Vector2(-40, 0)
-collision_mask = 2
-hit_from_inside = true
-collide_with_areas = true
-script = ExtResource("4_1d64o")
-entity = NodePath("..")
-
-[node name="Label" type="Label" parent="."]
-visible = false
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -125.0
-offset_top = -78.0
-offset_right = 125.0
-offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_cb0ad")
-text = "I downvoted this place online."
-label_settings = SubResource("LabelSettings_lp1av")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HurtBox" type="Area2D" parent="."]
-collision_layer = 16
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-shape = SubResource("RectangleShape2D_wqah8")
-debug_color = Color(0.937255, 0.176471, 0.443137, 0.290196)
-
-[node name="HitBox" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-shape = SubResource("CircleShape2D_n8piu")

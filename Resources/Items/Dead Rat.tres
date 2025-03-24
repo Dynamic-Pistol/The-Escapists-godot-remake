@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cab5c6eo80u8s"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_io8u3"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_lqpj4"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rol4o"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_4m717"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q0gng"]
-atlas = ExtResource("2_lqpj4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjgqi"]
+atlas = ExtResource("2_4m717")
 region = Rect2(192, 64, 64, 64)
 
 [resource]
-script = ExtResource("1_io8u3")
+script = ExtResource("1_rol4o")
 name = &"Dead Rat"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_q0gng")
+texture = SubResource("AtlasTexture_vjgqi")
 is_contraband = false

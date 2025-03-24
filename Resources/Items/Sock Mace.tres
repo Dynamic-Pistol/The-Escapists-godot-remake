@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c3fakiaci8lrf"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_krhh1"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_iwk03"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_nlt5e"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_mv4qb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yrt52"]
-atlas = ExtResource("2_iwk03")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxaan"]
+atlas = ExtResource("2_mv4qb")
 region = Rect2(640, 320, 64, 64)
 
 [resource]
-script = ExtResource("1_krhh1")
+script = ExtResource("1_nlt5e")
 name = &"Sock Mace"
 base_price = 0
 opinion_inc = 3
-texture = SubResource("AtlasTexture_yrt52")
+texture = SubResource("AtlasTexture_mxaan")
 is_contraband = true

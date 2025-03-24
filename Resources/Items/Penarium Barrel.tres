@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ghynwa06p3jj"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_vkbyg"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_f1siq"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_vjm83"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_5cpnw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7u2p6"]
-atlas = ExtResource("2_f1siq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn5rb"]
+atlas = ExtResource("2_5cpnw")
 region = Rect2(448, 640, 64, 64)
 
 [resource]
-script = ExtResource("1_vkbyg")
+script = ExtResource("1_vjm83")
 name = &"Penarium Barrel"
 base_price = 0
 opinion_inc = 5
-texture = SubResource("AtlasTexture_7u2p6")
+texture = SubResource("AtlasTexture_sn5rb")
 is_contraband = false

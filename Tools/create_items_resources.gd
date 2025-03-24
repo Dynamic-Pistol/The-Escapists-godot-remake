@@ -1,4 +1,7 @@
+@tool
 extends Node
+
+const KeyType = PlayerManager.KeyType
 
 @export
 var item_sheet: Texture2D
@@ -10,8 +13,10 @@ var id: String
 
 const OFFSET = 64
 
+@export_tool_button("Create Items") var begin = _begin
+
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _begin() -> void:
 	config.load("res://Tools/items_eng.txt")
 	index.size = Vector2i.ONE * OFFSET
 	for i in 278:
@@ -66,19 +71,19 @@ func setup_basics(item: Item) -> void:
 func save_item(item) -> void:
 	ResourceSaver.save(item, "res://Resources/Items/" + item.name + ".tres")
 
-func get_key_type(info: String) -> KeyItem.KeyType:
+func get_key_type(info: String) -> KeyType:
 	if info.contains("yellow"):
-		return KeyItem.KeyType.CELL
+		return KeyType.CELL
 	elif info.contains("purple"):
-		return KeyItem.KeyType.ENTERANCE
+		return KeyType.ENTERANCE
 	elif info.contains("orange"):
-		return KeyItem.KeyType.UTILITY
+		return KeyType.UTILITY
 	elif info.contains("green"):
-		return KeyItem.KeyType.WORK
+		return KeyType.WORK
 	elif info.contains("red"):
-		return KeyItem.KeyType.STAFF
+		return KeyType.STAFF
 	else:
-		return KeyItem.KeyType.INVALID
+		return KeyType.NONE
 
 func get_outfit_type(item_name: String) -> OutfitItem.OutfitType:
 	if item_name.contains("Guard") or item_name.contains("Henchman") or item_name.contains("Soldier"):

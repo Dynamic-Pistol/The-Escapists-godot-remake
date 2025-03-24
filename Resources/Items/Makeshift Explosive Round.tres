@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cef1nthmr8y4"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ypdnb"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_rjvkg"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_wj7pw"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ltgpt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8dfh"]
-atlas = ExtResource("2_rjvkg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2u0g"]
+atlas = ExtResource("2_ltgpt")
 region = Rect2(832, 640, 64, 64)
 
 [resource]
-script = ExtResource("1_ypdnb")
+script = ExtResource("1_wj7pw")
 name = &"Makeshift Explosive Round"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_x8dfh")
+texture = SubResource("AtlasTexture_a2u0g")
 is_contraband = true

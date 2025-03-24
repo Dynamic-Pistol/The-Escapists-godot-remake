@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cpfkkq0rhx6uc"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_wnu3d"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ftyk0"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_yqyuq"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_k8xfx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ytbbj"]
-atlas = ExtResource("2_ftyk0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_eapmi"]
+atlas = ExtResource("2_k8xfx")
 region = Rect2(1024, 256, 64, 64)
 
 [resource]
-script = ExtResource("1_wnu3d")
+script = ExtResource("1_yqyuq")
 name = &"Circuit Board"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_ytbbj")
+texture = SubResource("AtlasTexture_eapmi")
 is_contraband = true

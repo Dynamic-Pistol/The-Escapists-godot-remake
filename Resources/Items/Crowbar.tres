@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_5i00h"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7chrv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wr0gw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgvcu"]
 atlas = ExtResource("2_7chrv")
 region = Rect2(512, 64, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_5i00h")
 name = &"Crowbar"
 base_price = 75
 opinion_inc = 3
-texture = SubResource("AtlasTexture_wr0gw")
+texture = SubResource("AtlasTexture_jgvcu")
 is_contraband = true

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://t4ndqj4ujii5"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_4vj54"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_tx43p"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_d5kxk"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_fdbnx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c38nv"]
-atlas = ExtResource("2_tx43p")
+[sub_resource type="AtlasTexture" id="AtlasTexture_srrhs"]
+atlas = ExtResource("2_fdbnx")
 region = Rect2(832, 0, 64, 64)
 
 [resource]
-script = ExtResource("1_4vj54")
+script = ExtResource("1_d5kxk")
 name = &"Roll of Duct Tape"
 base_price = 30
 opinion_inc = 1
-texture = SubResource("AtlasTexture_c38nv")
+texture = SubResource("AtlasTexture_srrhs")
 is_contraband = true

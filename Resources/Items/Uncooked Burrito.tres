@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ccryqwcsecf4x"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_26vph"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_4705a"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_l5c1n"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_n2tnk"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_os5jj"]
-atlas = ExtResource("2_4705a")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjv47"]
+atlas = ExtResource("2_n2tnk")
 region = Rect2(640, 576, 64, 64)
 
 [resource]
-script = ExtResource("1_26vph")
+script = ExtResource("1_l5c1n")
 name = &"Uncooked Burrito"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_os5jj")
+texture = SubResource("AtlasTexture_jjv47")
 is_contraband = false

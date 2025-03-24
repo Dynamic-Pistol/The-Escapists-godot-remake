@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dv80ttgal7phu"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_xylph"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6ohve"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jdmj7"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_r10wc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n8bug"]
-atlas = ExtResource("2_6ohve")
+[sub_resource type="AtlasTexture" id="AtlasTexture_q60nl"]
+atlas = ExtResource("2_r10wc")
 region = Rect2(320, 320, 64, 64)
 
 [resource]
-script = ExtResource("1_xylph")
+script = ExtResource("1_jdmj7")
 name = &"Wire"
 base_price = 25
 opinion_inc = 0
-texture = SubResource("AtlasTexture_n8bug")
+texture = SubResource("AtlasTexture_q60nl")
 is_contraband = false

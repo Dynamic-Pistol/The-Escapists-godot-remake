@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dmrmvw283ti4t"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_fk2gl"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_1wprh"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_odsbb"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_xnuel"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sccmx"]
-atlas = ExtResource("2_1wprh")
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe8d2"]
+atlas = ExtResource("2_xnuel")
 region = Rect2(384, 896, 64, 64)
 
 [resource]
-script = ExtResource("1_fk2gl")
+script = ExtResource("1_odsbb")
 name = &"Worms game"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_sccmx")
+texture = SubResource("AtlasTexture_oe8d2")
 is_contraband = false

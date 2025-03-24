@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c5cfyy836vot5"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_uatl4"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_eviig"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_em4rn"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_pvccp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rfo7c"]
-atlas = ExtResource("2_eviig")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwh1v"]
+atlas = ExtResource("2_pvccp")
 region = Rect2(192, 192, 64, 64)
 
 [resource]
-script = ExtResource("1_uatl4")
+script = ExtResource("1_em4rn")
 name = &"Candle"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_rfo7c")
+texture = SubResource("AtlasTexture_lwh1v")
 is_contraband = false

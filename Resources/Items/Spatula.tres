@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dnbawekjii815"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_boiph"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_s4rrj"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_g4c8l"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ckpnc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xghy5"]
-atlas = ExtResource("2_s4rrj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3p5s"]
+atlas = ExtResource("2_ckpnc")
 region = Rect2(832, 64, 64, 64)
 
 [resource]
-script = ExtResource("1_boiph")
+script = ExtResource("1_g4c8l")
 name = &"Spatula"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_xghy5")
+texture = SubResource("AtlasTexture_h3p5s")
 is_contraband = true

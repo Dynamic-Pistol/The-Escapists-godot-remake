@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bty3yisrherc2"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ugkvu"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_248ie"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_bfi1x"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7vk5t"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2frwk"]
-atlas = ExtResource("2_248ie")
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6awo"]
+atlas = ExtResource("2_7vk5t")
 region = Rect2(576, 832, 64, 64)
 
 [resource]
-script = ExtResource("1_ugkvu")
+script = ExtResource("1_bfi1x")
 name = &"Giant Lollipop"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_2frwk")
+texture = SubResource("AtlasTexture_j6awo")
 is_contraband = true

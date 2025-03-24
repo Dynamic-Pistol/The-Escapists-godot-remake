@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ba6pk142iuhe8"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_7sv5a"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_tdmen"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ubj7g"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_373av"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g8by2"]
-atlas = ExtResource("2_tdmen")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktq81"]
+atlas = ExtResource("2_373av")
 region = Rect2(704, 384, 64, 64)
 
 [resource]
-script = ExtResource("1_7sv5a")
+script = ExtResource("1_ubj7g")
 name = &"Comb Blade"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_g8by2")
+texture = SubResource("AtlasTexture_ktq81")
 is_contraband = true

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bg7q7j5v1oinl"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ykjaw"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_tc53f"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_xr1u8"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_elya8"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_74swm"]
-atlas = ExtResource("2_tc53f")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oguh"]
+atlas = ExtResource("2_elya8")
 region = Rect2(512, 256, 64, 64)
 
 [resource]
-script = ExtResource("1_ykjaw")
+script = ExtResource("1_xr1u8")
 name = &"Bag of Cement"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_74swm")
+texture = SubResource("AtlasTexture_4oguh")
 is_contraband = false

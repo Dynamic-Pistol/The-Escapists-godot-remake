@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://toqb62qfujoa"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jge6n"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_nesan"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_vd5ox"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_m42qn"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x4lho"]
-atlas = ExtResource("2_nesan")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hg75"]
+atlas = ExtResource("2_m42qn")
 region = Rect2(384, 384, 64, 64)
 
 [resource]
-script = ExtResource("1_jge6n")
+script = ExtResource("1_vd5ox")
 name = &"Flimsy Pickaxe"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_x4lho")
+texture = SubResource("AtlasTexture_7hg75")
 is_contraband = true

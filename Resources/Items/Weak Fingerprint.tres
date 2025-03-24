@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bgiifqqypbwkh"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_w7j0x"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_c4kcy"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_s16me"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_c4mdu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0c3jq"]
-atlas = ExtResource("2_c4kcy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1m2w8"]
+atlas = ExtResource("2_c4mdu")
 region = Rect2(0, 832, 64, 64)
 
 [resource]
-script = ExtResource("1_w7j0x")
+script = ExtResource("1_s16me")
 name = &"Weak Fingerprint"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_0c3jq")
+texture = SubResource("AtlasTexture_1m2w8")
 is_contraband = true

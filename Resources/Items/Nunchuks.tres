@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://03skeva7kv50"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_u2lbk"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_8llgh"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ti66b"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2dx3r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_13adi"]
-atlas = ExtResource("2_8llgh")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqsnm"]
+atlas = ExtResource("2_2dx3r")
 region = Rect2(896, 320, 64, 64)
 
 [resource]
-script = ExtResource("1_u2lbk")
+script = ExtResource("1_ti66b")
 name = &"Nunchuks"
 base_price = 0
 opinion_inc = 3
-texture = SubResource("AtlasTexture_13adi")
+texture = SubResource("AtlasTexture_bqsnm")
 is_contraband = true

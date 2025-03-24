@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bysufqd3n2pbl"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_4rm7x"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_x0a1n"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rce15"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_noggu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_scv26"]
-atlas = ExtResource("2_x0a1n")
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2hv8"]
+atlas = ExtResource("2_noggu")
 region = Rect2(256, 64, 64, 64)
 
 [resource]
-script = ExtResource("1_4rm7x")
+script = ExtResource("1_rce15")
 name = &"Fire Extinguisher"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_scv26")
+texture = SubResource("AtlasTexture_d2hv8")
 is_contraband = true

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://isdw661a8s4"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rlkyo"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_nlikl"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_dpxsc"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_m1eyf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yy3p1"]
-atlas = ExtResource("2_nlikl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfu6q"]
+atlas = ExtResource("2_m1eyf")
 region = Rect2(1024, 64, 64, 64)
 
 [resource]
-script = ExtResource("1_rlkyo")
+script = ExtResource("1_dpxsc")
 name = &"Shears"
 base_price = 0
 opinion_inc = 10
-texture = SubResource("AtlasTexture_yy3p1")
+texture = SubResource("AtlasTexture_wfu6q")
 is_contraband = true

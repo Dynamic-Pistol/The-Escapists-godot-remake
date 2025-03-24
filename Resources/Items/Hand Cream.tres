@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://0brumy7geid2"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_1t18o"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_gapsh"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_bsiet"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_cbdgj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_avogq"]
-atlas = ExtResource("2_gapsh")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrfyq"]
+atlas = ExtResource("2_cbdgj")
 region = Rect2(704, 512, 64, 64)
 
 [resource]
-script = ExtResource("1_1t18o")
+script = ExtResource("1_bsiet")
 name = &"Hand Cream"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_avogq")
+texture = SubResource("AtlasTexture_yrfyq")
 is_contraband = false

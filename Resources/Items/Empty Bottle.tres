@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dvedkm1w5rfv2"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_licjm"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_1wkd6"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_20o6h"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_c76d6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_47uoj"]
-atlas = ExtResource("2_1wkd6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_sypxo"]
+atlas = ExtResource("2_c76d6")
 region = Rect2(640, 896, 64, 64)
 
 [resource]
-script = ExtResource("1_licjm")
+script = ExtResource("1_20o6h")
 name = &"Empty Bottle"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_47uoj")
+texture = SubResource("AtlasTexture_sypxo")
 is_contraband = false

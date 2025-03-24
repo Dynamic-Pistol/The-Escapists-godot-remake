@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cyomppcagxto4"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_pr434"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_kicv4"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jmngt"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_imncu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cs73q"]
-atlas = ExtResource("2_kicv4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tduoj"]
+atlas = ExtResource("2_imncu")
 region = Rect2(1024, 448, 64, 64)
 
 [resource]
-script = ExtResource("1_pr434")
+script = ExtResource("1_jmngt")
 name = &"Cookie"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_cs73q")
+texture = SubResource("AtlasTexture_tduoj")
 is_contraband = false

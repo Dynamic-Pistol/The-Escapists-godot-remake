@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bthi3hyq7pkqr"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_y311b"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_75iaj"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_q21s4"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_702me"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l52uk"]
-atlas = ExtResource("2_75iaj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg47g"]
+atlas = ExtResource("2_702me")
 region = Rect2(384, 128, 64, 64)
 
 [resource]
-script = ExtResource("1_y311b")
+script = ExtResource("1_q21s4")
 name = &"Trowel"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_l52uk")
+texture = SubResource("AtlasTexture_bg47g")
 is_contraband = true

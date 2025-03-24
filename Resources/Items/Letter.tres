@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cdwpprlghy7aq"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_dqdkc"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_g1qej"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_laned"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_hc10g"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s2kpc"]
-atlas = ExtResource("2_g1qej")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsesc"]
+atlas = ExtResource("2_hc10g")
 region = Rect2(576, 448, 64, 64)
 
 [resource]
-script = ExtResource("1_dqdkc")
+script = ExtResource("1_laned")
 name = &"Letter"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_s2kpc")
+texture = SubResource("AtlasTexture_vsesc")
 is_contraband = false

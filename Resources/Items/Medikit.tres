@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bib4efnkal3qi"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_wcb53"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_1p2fe"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ogf23"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_u113k"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cg5g7"]
-atlas = ExtResource("2_1p2fe")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlpsn"]
+atlas = ExtResource("2_u113k")
 region = Rect2(1024, 384, 64, 64)
 
 [resource]
-script = ExtResource("1_wcb53")
+script = ExtResource("1_ogf23")
 name = &"Medikit"
 base_price = 30
 opinion_inc = 2
-texture = SubResource("AtlasTexture_cg5g7")
+texture = SubResource("AtlasTexture_dlpsn")
 is_contraband = false

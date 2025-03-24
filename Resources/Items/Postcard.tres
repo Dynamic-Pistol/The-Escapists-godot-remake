@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c32v5bmmbmaoy"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_bujxx"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_5kai2"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_paj6i"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_5rvqs"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lce8o"]
-atlas = ExtResource("2_5kai2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rxs5"]
+atlas = ExtResource("2_5rvqs")
 region = Rect2(768, 512, 64, 64)
 
 [resource]
-script = ExtResource("1_bujxx")
+script = ExtResource("1_paj6i")
 name = &"Postcard"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_lce8o")
+texture = SubResource("AtlasTexture_1rxs5")
 is_contraband = false

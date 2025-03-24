@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bektrhlxk31oq"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_74gyy"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_00lei"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_gpngh"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_nl00u"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sv6xp"]
-atlas = ExtResource("2_00lei")
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1wtk"]
+atlas = ExtResource("2_nl00u")
 region = Rect2(640, 0, 64, 64)
 
 [resource]
-script = ExtResource("1_74gyy")
+script = ExtResource("1_gpngh")
 name = &"Bottle of Medicine"
 base_price = 20
 opinion_inc = 1
-texture = SubResource("AtlasTexture_sv6xp")
+texture = SubResource("AtlasTexture_d1wtk")
 is_contraband = false

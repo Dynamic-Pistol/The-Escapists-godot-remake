@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b6f1jcxapr7bn"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_td3q3"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_f6kww"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_a8m70"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_dafii"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4jili"]
-atlas = ExtResource("2_f6kww")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsb5y"]
+atlas = ExtResource("2_dafii")
 region = Rect2(256, 704, 64, 64)
 
 [resource]
-script = ExtResource("1_td3q3")
+script = ExtResource("1_a8m70")
 name = &"Potassium"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_4jili")
+texture = SubResource("AtlasTexture_bsb5y")
 is_contraband = true

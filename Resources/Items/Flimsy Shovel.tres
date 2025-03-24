@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cmxlqjn3a73ag"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ycubp"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6p31i"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_r6nh6"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_4cc2s"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ao7qm"]
-atlas = ExtResource("2_6p31i")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cydwv"]
+atlas = ExtResource("2_4cc2s")
 region = Rect2(192, 384, 64, 64)
 
 [resource]
-script = ExtResource("1_ycubp")
+script = ExtResource("1_r6nh6")
 name = &"Flimsy Shovel"
 base_price = 0
 opinion_inc = 3
-texture = SubResource("AtlasTexture_ao7qm")
+texture = SubResource("AtlasTexture_cydwv")
 is_contraband = true

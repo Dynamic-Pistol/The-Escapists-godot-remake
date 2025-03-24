@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://du7t80saq28ht"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_f2lv1"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_x4q6n"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_idrvt"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_3e31b"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wnufe"]
-atlas = ExtResource("2_x4q6n")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc0sd"]
+atlas = ExtResource("2_3e31b")
 region = Rect2(448, 896, 64, 64)
 
 [resource]
-script = ExtResource("1_f2lv1")
+script = ExtResource("1_idrvt")
 name = &"Baseball Bat"
 base_price = 40
 opinion_inc = 1
-texture = SubResource("AtlasTexture_wnufe")
+texture = SubResource("AtlasTexture_kc0sd")
 is_contraband = true

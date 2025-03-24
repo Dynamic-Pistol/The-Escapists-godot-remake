@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dvq4gchwhwfmy"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_6sl8r"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_w1y6d"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_6i7l2"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_fn8hp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5hk0l"]
-atlas = ExtResource("2_w1y6d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cpax"]
+atlas = ExtResource("2_fn8hp")
 region = Rect2(960, 320, 64, 64)
 
 [resource]
-script = ExtResource("1_6sl8r")
+script = ExtResource("1_6i7l2")
 name = &"Comb Shiv"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_5hk0l")
+texture = SubResource("AtlasTexture_2cpax")
 is_contraband = true

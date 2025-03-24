@@ -479,6 +479,7 @@ Count=229
 39="I used to be a con man you know"
 40="After that I opted for good times"
 41="So I switched gender"
+42="I used to be a guard you know"
 43="Ended up ending him in the end"
 44="He actually flew after that uppercut"
 45="Ended up in the gutter"

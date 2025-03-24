@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://dkh4nl36qtsj3"]
+
+[ext_resource type="AudioStream" uid="uid://b8umwwsxc0yvy" path="res://Audio/Sfx/Combat/hit1.wav" id="1_lr308"]
+[ext_resource type="AudioStream" uid="uid://cur8vb7v5k1ha" path="res://Audio/Sfx/Combat/hit2.wav" id="2_gbxe8"]
+[ext_resource type="AudioStream" uid="uid://df3olgbjgnmwf" path="res://Audio/Sfx/Combat/hit.wav" id="3_kn41n"]
+[ext_resource type="AudioStream" uid="uid://6jjshc3qji4w" path="res://Audio/Sfx/Combat/punch_new.wav" id="4_gc8l3"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_lr308")
+stream_1/stream = ExtResource("2_gbxe8")
+stream_2/stream = ExtResource("3_kn41n")
+stream_3/stream = ExtResource("4_gc8l3")

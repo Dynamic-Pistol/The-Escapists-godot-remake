@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c1f3my1wgv66v"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_8qxvm"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_saquf"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_glafu"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_wa0m2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tueli"]
-atlas = ExtResource("2_saquf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol17y"]
+atlas = ExtResource("2_wa0m2")
 region = Rect2(384, 576, 64, 64)
 
 [resource]
-script = ExtResource("1_8qxvm")
+script = ExtResource("1_glafu")
 name = &"Sand"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_tueli")
+texture = SubResource("AtlasTexture_ol17y")
 is_contraband = true

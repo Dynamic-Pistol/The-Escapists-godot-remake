@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dqcsrfi7nhtib"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_6e8vg"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2qgtt"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_41qsi"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_rm3x0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6u5nn"]
-atlas = ExtResource("2_2qgtt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhttg"]
+atlas = ExtResource("2_rm3x0")
 region = Rect2(64, 768, 64, 64)
 
 [resource]
-script = ExtResource("1_6e8vg")
+script = ExtResource("1_41qsi")
 name = &"Dirty Glass"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_6u5nn")
+texture = SubResource("AtlasTexture_hhttg")
 is_contraband = true

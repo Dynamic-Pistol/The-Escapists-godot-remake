@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdv41mykm3b5e"]
+
+[ext_resource type="Texture2D" uid="uid://ca1m3o10vbs2c" path="res://Sprites/UI/talk.png" id="1_sbeh5"]
+[ext_resource type="Script" uid="uid://cylf3555l07of" path="res://Objects/Entities/Visuals/dialogue_box.gd" id="2_dlk2w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cb0ad"]
+texture = ExtResource("1_sbeh5")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_lp1av"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="Dialogue Box" type="Label"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -78.0
+offset_right = 125.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_cb0ad")
+text = "I downvoted this place online."
+label_settings = SubResource("LabelSettings_lp1av")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_dlk2w")
+
+[node name="BanterTimer" type="Timer" parent="."]
+autostart = true

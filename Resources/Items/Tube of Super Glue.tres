@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cqo71qj1hfrj"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_pa1q7"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_wdsna"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_pkls1"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_w2oyk"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3626d"]
-atlas = ExtResource("2_wdsna")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wui4q"]
+atlas = ExtResource("2_w2oyk")
 region = Rect2(0, 192, 64, 64)
 
 [resource]
-script = ExtResource("1_pa1q7")
+script = ExtResource("1_pkls1")
 name = &"Tube of Super Glue"
 base_price = 30
 opinion_inc = 0
-texture = SubResource("AtlasTexture_3626d")
+texture = SubResource("AtlasTexture_wui4q")
 is_contraband = false

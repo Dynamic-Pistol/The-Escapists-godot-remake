@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://j3b6j3bvn7d2"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_y67pi"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_d8uey"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_8vhqi"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_fh3nt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r6p4a"]
-atlas = ExtResource("2_d8uey")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0n37"]
+atlas = ExtResource("2_fh3nt")
 region = Rect2(832, 256, 64, 64)
 
 [resource]
-script = ExtResource("1_y67pi")
+script = ExtResource("1_8vhqi")
 name = &"Entrance Key Mold"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_r6p4a")
+texture = SubResource("AtlasTexture_r0n37")
 is_contraband = true

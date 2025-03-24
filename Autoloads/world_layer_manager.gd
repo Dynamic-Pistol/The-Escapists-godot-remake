@@ -13,7 +13,7 @@ func switch_layer(layer_idx: int, target_pos: Vector2) -> void:
 		current_layer.visible = false
 	current_layer = layers[layer_idx]
 	current_layer.visible = true
-	var player := PlayerManager.player
+	var player:Player = PlayerManager.player
 	player.reparent(current_layer)
 	player.switch_layer(layer_idx)
 	player.global_position = target_pos

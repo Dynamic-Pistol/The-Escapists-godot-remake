@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://w37ulr327p20"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_stknf"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_b5alt"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_cakat"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_psywk"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ldo8p"]
-atlas = ExtResource("2_b5alt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rn6a"]
+atlas = ExtResource("2_psywk")
 region = Rect2(128, 960, 64, 64)
 
 [resource]
-script = ExtResource("1_stknf")
+script = ExtResource("1_cakat")
 name = &"Bottle of Water"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_ldo8p")
+texture = SubResource("AtlasTexture_1rn6a")
 is_contraband = false

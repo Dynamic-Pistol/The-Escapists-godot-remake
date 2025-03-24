@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvmc1dmtk52ie"]
+
+[ext_resource type="PackedScene" uid="uid://coqqrjv4b5hsh" path="res://Objects/Entities/entity.tscn" id="1_tiueb"]
+[ext_resource type="Script" uid="uid://ee4hjw0fnd4k" path="res://Objects/Entities/interactable_entity.gd" id="2_xaydd"]
+[ext_resource type="Script" uid="uid://c58h43x0v55mu" path="res://Objects/Entities/Components/hurt_box.gd" id="3_tsooo"]
+[ext_resource type="Script" uid="uid://biwehqk6yigj3" path="res://Objects/Entities/Components/stats.gd" id="4_kayq2"]
+[ext_resource type="Texture2D" uid="uid://cstmna8k1u172" path="res://Sprites/Entities/Effects/spritesheet.png" id="4_ljogn"]
+[ext_resource type="Script" uid="uid://b7j08gbbp81sa" path="res://Objects/Entities/Visuals/hit_vfx.gd" id="7_2kuld"]
+[ext_resource type="Script" uid="uid://rgwqec3igro8" path="res://Objects/Entities/Components/health.gd" id="7_dwwrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tiueb"]
+size = Vector2(48, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddnnr"]
+radius = 40.7922
+
+[node name="NPC" instance=ExtResource("1_tiueb")]
+script = ExtResource("2_xaydd")
+
+[node name="Stats" type="Node" parent="." index="0"]
+script = ExtResource("4_kayq2")
+metadata/_custom_type_script = "uid://biwehqk6yigj3"
+
+[node name="Health" type="Node" parent="." index="6" node_paths=PackedStringArray("stats")]
+script = ExtResource("7_dwwrq")
+stats = NodePath("../Stats")
+metadata/_custom_type_script = "uid://rgwqec3igro8"
+
+[node name="HurtBox" type="Area2D" parent="." index="7"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("3_tsooo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" index="0"]
+shape = SubResource("RectangleShape2D_tiueb")
+debug_color = Color(0.937255, 0.176471, 0.443137, 0.290196)
+
+[node name="HitVfX" type="Sprite2D" parent="HurtBox" index="1"]
+visible = false
+modulate = Color(1, 1, 1, 0.498039)
+texture = ExtResource("4_ljogn")
+hframes = 5
+script = ExtResource("7_2kuld")
+
+[node name="HitBox" type="Area2D" parent="." index="8"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("CircleShape2D_ddnnr")
+
+[node name="HitSfx" type="AudioStreamPlayer2D" parent="." index="9"]
+
+[connection signal="damaged" from="Health" to="HurtBox/HitVfX" method="_on_health_damaged"]

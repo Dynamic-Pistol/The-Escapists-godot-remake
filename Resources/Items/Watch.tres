@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b1h72g6ym0i2u"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_pldrm"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2fqqv"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_3wufb"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_0ui06"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qmixt"]
-atlas = ExtResource("2_2fqqv")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ffgr"]
+atlas = ExtResource("2_0ui06")
 region = Rect2(576, 0, 64, 64)
 
 [resource]
-script = ExtResource("1_pldrm")
+script = ExtResource("1_3wufb")
 name = &"Watch"
 base_price = 25
 opinion_inc = 2
-texture = SubResource("AtlasTexture_qmixt")
+texture = SubResource("AtlasTexture_1ffgr")
 is_contraband = false

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://7qdco6xfv0ci"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jqltb"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_3gioe"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_x76sp"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_cfqqh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0wfq3"]
-atlas = ExtResource("2_3gioe")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kfr5"]
+atlas = ExtResource("2_cfqqh")
 region = Rect2(768, 576, 64, 64)
 
 [resource]
-script = ExtResource("1_jqltb")
+script = ExtResource("1_x76sp")
 name = &"Tribal Drum"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_0wfq3")
+texture = SubResource("AtlasTexture_8kfr5")
 is_contraband = false

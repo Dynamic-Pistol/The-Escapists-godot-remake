@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bhf1v0yjk852f"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rmc0p"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_p7dna"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_h605f"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_0tirh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r1td7"]
-atlas = ExtResource("2_p7dna")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hq8i"]
+atlas = ExtResource("2_0tirh")
 region = Rect2(512, 384, 64, 64)
 
 [resource]
-script = ExtResource("1_rmc0p")
+script = ExtResource("1_h605f")
 name = &"Flimsy Cutters"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_r1td7")
+texture = SubResource("AtlasTexture_4hq8i")
 is_contraband = true

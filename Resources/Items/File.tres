@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cnokerf2834x3"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_lyk81"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_pmgj2"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jimu4"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_vytmc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kq18y"]
-atlas = ExtResource("2_pmgj2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0aoj"]
+atlas = ExtResource("2_vytmc")
 region = Rect2(640, 192, 64, 64)
 
 [resource]
-script = ExtResource("1_lyk81")
+script = ExtResource("1_jimu4")
 name = &"File"
 base_price = 50
 opinion_inc = 2
-texture = SubResource("AtlasTexture_kq18y")
+texture = SubResource("AtlasTexture_t0aoj")
 is_contraband = true

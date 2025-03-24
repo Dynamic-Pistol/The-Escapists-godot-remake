@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cxj478yk6iiwc"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_76pvt"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_03gei"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_w4teg"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_q3v1u"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aoxvx"]
-atlas = ExtResource("2_03gei")
+[sub_resource type="AtlasTexture" id="AtlasTexture_elgvp"]
+atlas = ExtResource("2_q3v1u")
 region = Rect2(768, 704, 64, 64)
 
 [resource]
-script = ExtResource("1_76pvt")
+script = ExtResource("1_w4teg")
 name = &"Voice Recording"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_aoxvx")
+texture = SubResource("AtlasTexture_elgvp")
 is_contraband = true

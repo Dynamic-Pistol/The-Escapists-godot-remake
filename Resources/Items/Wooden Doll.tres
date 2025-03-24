@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c02flmh0xuve1"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_xqxen"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_qlgs3"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jdk47"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_kte02"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hd3rt"]
-atlas = ExtResource("2_qlgs3")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f8re"]
+atlas = ExtResource("2_kte02")
 region = Rect2(1024, 832, 64, 64)
 
 [resource]
-script = ExtResource("1_xqxen")
+script = ExtResource("1_jdk47")
 name = &"Wooden Doll"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_hd3rt")
+texture = SubResource("AtlasTexture_6f8re")
 is_contraband = false

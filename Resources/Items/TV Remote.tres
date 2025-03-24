@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b5jjglhv7xbwq"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_jrj2u"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ckusc"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_aoxoy"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_mf55b"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_014yw"]
-atlas = ExtResource("2_ckusc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsmvy"]
+atlas = ExtResource("2_mf55b")
 region = Rect2(832, 448, 64, 64)
 
 [resource]
-script = ExtResource("1_jrj2u")
+script = ExtResource("1_aoxoy")
 name = &"TV Remote"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_014yw")
+texture = SubResource("AtlasTexture_fsmvy")
 is_contraband = false

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dmd8jutuxmyjn"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_xuj5x"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_712hr"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ey4qv"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_gec5s"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3r2ak"]
-atlas = ExtResource("2_712hr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rn4h"]
+atlas = ExtResource("2_gec5s")
 region = Rect2(128, 192, 64, 64)
 
 [resource]
-script = ExtResource("1_xuj5x")
+script = ExtResource("1_ey4qv")
 name = &"Wad of Putty"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_3r2ak")
+texture = SubResource("AtlasTexture_8rn4h")
 is_contraband = true

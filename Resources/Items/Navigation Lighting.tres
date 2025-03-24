@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://n5p2b8auv54r"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_wo4r3"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_32elq"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_dywwp"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_5hn8b"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7aeeg"]
-atlas = ExtResource("2_32elq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipl30"]
+atlas = ExtResource("2_5hn8b")
 region = Rect2(0, 960, 64, 64)
 
 [resource]
-script = ExtResource("1_wo4r3")
+script = ExtResource("1_dywwp")
 name = &"Navigation Lighting"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_7aeeg")
+texture = SubResource("AtlasTexture_ipl30")
 is_contraband = true

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cgykqkevxdlr7"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_3kpoo"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7qfoh"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_5gftg"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ugmow"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4kive"]
-atlas = ExtResource("2_7qfoh")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln7o2"]
+atlas = ExtResource("2_ugmow")
 region = Rect2(768, 896, 64, 64)
 
 [resource]
-script = ExtResource("1_3kpoo")
+script = ExtResource("1_5gftg")
 name = &"Needle"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_4kive")
+texture = SubResource("AtlasTexture_ln7o2")
 is_contraband = false

@@ -9,6 +9,7 @@
 focus_mode = 0
 disabled = true
 toggle_mode = true
+button_mask = 0
 shortcut = SubResource("Shortcut_s2u7i")
 shortcut_in_tooltip = false
 texture_normal = ExtResource("1_cvycy")

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bdshboufrwxdh"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_hrvk8"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_0yepk"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_665qv"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_r3tdg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0kdms"]
-atlas = ExtResource("2_0yepk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ab4u"]
+atlas = ExtResource("2_r3tdg")
 region = Rect2(960, 512, 64, 64)
 
 [resource]
-script = ExtResource("1_hrvk8")
+script = ExtResource("1_665qv")
 name = &"Pocket Watch"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_0kdms")
+texture = SubResource("AtlasTexture_3ab4u")
 is_contraband = false

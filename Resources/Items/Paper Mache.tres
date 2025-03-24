@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ijouqu3gtw5w"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_w7f1v"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_3egel"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_hfqvg"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_1nd5j"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f064w"]
-atlas = ExtResource("2_3egel")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxhg4"]
+atlas = ExtResource("2_1nd5j")
 region = Rect2(512, 320, 64, 64)
 
 [resource]
-script = ExtResource("1_w7f1v")
+script = ExtResource("1_hfqvg")
 name = &"Paper Mache"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_f064w")
+texture = SubResource("AtlasTexture_cxhg4")
 is_contraband = true

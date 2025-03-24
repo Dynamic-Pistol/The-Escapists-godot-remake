@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_fcghp"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ir0mw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ubh1p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dxiv"]
 atlas = ExtResource("2_ir0mw")
 region = Rect2(704, 256, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_fcghp")
 name = &"Cell Key Mold"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_ubh1p")
+texture = SubResource("AtlasTexture_4dxiv")
 is_contraband = true

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c5qhehf5tevqu"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_hv7jf"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6xo7a"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_42p48"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_o7548"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wq7ru"]
-atlas = ExtResource("2_6xo7a")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgqyf"]
+atlas = ExtResource("2_o7548")
 region = Rect2(320, 576, 64, 64)
 
 [resource]
-script = ExtResource("1_hv7jf")
+script = ExtResource("1_42p48")
 name = &"Red Chili"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_wq7ru")
+texture = SubResource("AtlasTexture_kgqyf")
 is_contraband = false

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_8wm6q"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_up4br"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hsbwh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcbdx"]
 atlas = ExtResource("2_up4br")
 region = Rect2(640, 128, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_8wm6q")
 name = &"Length of Rope"
 base_price = 60
 opinion_inc = 1
-texture = SubResource("AtlasTexture_hsbwh")
+texture = SubResource("AtlasTexture_lcbdx")
 is_contraband = true

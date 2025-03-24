@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://k7m2l5agwkay"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_wfnbe"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7y12f"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ctif2"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_qwyqo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xni6e"]
-atlas = ExtResource("2_7y12f")
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbmeo"]
+atlas = ExtResource("2_qwyqo")
 region = Rect2(0, 576, 64, 64)
 
 [resource]
-script = ExtResource("1_wfnbe")
+script = ExtResource("1_ctif2")
 name = &"Service Medal"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_xni6e")
+texture = SubResource("AtlasTexture_sbmeo")
 is_contraband = false

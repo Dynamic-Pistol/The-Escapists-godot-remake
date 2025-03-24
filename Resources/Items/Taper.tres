@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c1k1pqiu8l3k8"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rrr2b"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_lgulq"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_fn0uf"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_owwqt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kchd4"]
-atlas = ExtResource("2_lgulq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_whu5b"]
+atlas = ExtResource("2_owwqt")
 region = Rect2(384, 704, 64, 64)
 
 [resource]
-script = ExtResource("1_rrr2b")
+script = ExtResource("1_fn0uf")
 name = &"Taper"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_kchd4")
+texture = SubResource("AtlasTexture_whu5b")
 is_contraband = true

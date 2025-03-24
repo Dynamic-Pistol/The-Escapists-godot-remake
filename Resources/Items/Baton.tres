@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b74boya4o1ha2"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_o4hrn"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_5a6sl"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_481rg"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ds5oa"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iyh27"]
-atlas = ExtResource("2_5a6sl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m656"]
+atlas = ExtResource("2_ds5oa")
 region = Rect2(768, 64, 64, 64)
 
 [resource]
-script = ExtResource("1_o4hrn")
+script = ExtResource("1_481rg")
 name = &"Baton"
 base_price = 60
 opinion_inc = 2
-texture = SubResource("AtlasTexture_iyh27")
+texture = SubResource("AtlasTexture_5m656")
 is_contraband = true

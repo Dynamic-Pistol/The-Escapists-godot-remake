@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://ca8vd64g3d876"]
+[gd_scene load_steps=61 format=3 uid="uid://ca8vd64g3d876"]
 
 [ext_resource type="Script" uid="uid://gswqp0qx56n6" path="res://Autoloads/player_manager.gd" id="1_ep4iw"]
 [ext_resource type="Texture2D" uid="uid://b4ymmponqjvn5" path="res://Sprites/UI/Menus/Animation-0 Direction-0 Frame-0.png" id="1_ttp2y"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cioj6ymhymakb" path="res://Sprites/UI/Slots/slot_2.png" id="12_lex0w"]
 [ext_resource type="InputEventKey" uid="uid://bln0ecc1g4pi8" path="res://Resources/InputEvents/hotbar_5.tres" id="13_7xphl"]
 [ext_resource type="Texture2D" uid="uid://bi3dhj3off6rx" path="res://Sprites/UI/Slots/slot_2_h1.png" id="13_a4l6y"]
+[ext_resource type="Texture2D" uid="uid://c061ixf5of458" path="res://Sprites/UI/Slots/slot_1_h2.png" id="13_cmt6n"]
 [ext_resource type="InputEventKey" uid="uid://cudlemduc4sx7" path="res://Resources/InputEvents/hotbar_6.tres" id="14_hn5vg"]
 [ext_resource type="Texture2D" uid="uid://dho7slrklgv31" path="res://Sprites/UI/Slots/slot_2_h2.png" id="14_kdenk"]
 [ext_resource type="Texture2D" uid="uid://biql85n3qcamx" path="res://Sprites/UI/Slots/slot_3.png" id="15_jq5hi"]
@@ -137,8 +138,11 @@ font_size = 80
 events = [ExtResource("9_gp2u6")]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_70v7n"]
+frames = 2
 frame_0/texture = ExtResource("10_e15dm")
 frame_0/duration = 0.5
+frame_1/texture = ExtResource("13_cmt6n")
+frame_1/duration = 0.5
 
 [sub_resource type="Shortcut" id="Shortcut_ovanq"]
 events = [ExtResource("10_g4d4j")]

@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bgg7nhusy24im"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_0d3g3"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_oubif"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_njyv7"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_rlnt5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h6gus"]
-atlas = ExtResource("2_oubif")
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4dtn"]
+atlas = ExtResource("2_rlnt5")
 region = Rect2(0, 512, 64, 64)
 
 [resource]
-script = ExtResource("1_0d3g3")
+script = ExtResource("1_njyv7")
 name = &"Muffin"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_h6gus")
+texture = SubResource("AtlasTexture_t4dtn")
 is_contraband = false

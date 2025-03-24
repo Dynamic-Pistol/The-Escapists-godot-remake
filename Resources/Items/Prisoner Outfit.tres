@@ -1,18 +1,18 @@
 [gd_resource type="Resource" script_class="OutfitItem" load_steps=4 format=3 uid="uid://bv2jnix2wl6am"]
 
-[ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_1mrp6"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_3guc4"]
+[ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_5t4q5"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_bil5f"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cl63a"]
-atlas = ExtResource("2_3guc4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g4c0"]
+atlas = ExtResource("2_bil5f")
 region = Rect2(576, 704, 64, 64)
 
 [resource]
-script = ExtResource("1_1mrp6")
+script = ExtResource("1_5t4q5")
 outfit_type = 0
 defense = 1
 name = &"Prisoner Outfit"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_cl63a")
+texture = SubResource("AtlasTexture_8g4c0")
 is_contraband = false
