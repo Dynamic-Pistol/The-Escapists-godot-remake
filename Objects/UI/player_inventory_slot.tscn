@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3dfu3d7j1uh6"]
 
-[ext_resource type="Texture2D" uid="uid://fhkakpqnl6f1" path="res://Sprites/UI/Slots/Animation-1 Direction-0 Frame-0_scaled_4x_pngcrushed.png" id="1_cvycy"]
+[ext_resource type="Texture2D" uid="uid://bxg2r3ejwn1e5" path="res://Sprites/UI/Menus/Slots/slot_1.png" id="1_vk64m"]
 [ext_resource type="Script" uid="uid://ndlvmhpbqj5s" path="res://Objects/InventorySystem/slots/player_item_slot.gd" id="3_7xhkd"]
 
 [sub_resource type="Shortcut" id="Shortcut_s2u7i"]
@@ -9,10 +9,9 @@
 focus_mode = 0
 disabled = true
 toggle_mode = true
-button_mask = 0
 shortcut = SubResource("Shortcut_s2u7i")
 shortcut_in_tooltip = false
-texture_normal = ExtResource("1_cvycy")
+texture_normal = ExtResource("1_vk64m")
 stretch_mode = 5
 script = ExtResource("3_7xhkd")
 

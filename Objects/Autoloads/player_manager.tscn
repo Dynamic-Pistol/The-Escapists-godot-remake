@@ -1,0 +1,464 @@
+[gd_scene load_steps=72 format=3 uid="uid://ca8vd64g3d876"]
+
+[ext_resource type="Script" uid="uid://gswqp0qx56n6" path="res://Objects/Autoloads/player_manager.gd" id="1_ep4iw"]
+[ext_resource type="Texture2D" uid="uid://b4ymmponqjvn5" path="res://Sprites/UI/Menus/Animation-0 Direction-0 Frame-0.png" id="1_ttp2y"]
+[ext_resource type="Texture2D" uid="uid://bvngx4ug4vgjx" path="res://Sprites/UI/Menus/Animation-1 Direction-0 Frame-0.png" id="2_fn3vl"]
+[ext_resource type="Texture2D" uid="uid://dayxgry6yxlce" path="res://Sprites/UI/Menus/Animation-1 Direction-0 Frame-1.png" id="3_o8rpl"]
+[ext_resource type="AudioStream" uid="uid://bfrvnd61k5qgi" path="res://Audio/Sfx/UI/bell.wav" id="4_k2352"]
+[ext_resource type="Texture2D" uid="uid://bdtljy3q666ti" path="res://Sprites/UI/Menus/Animation-0 Direction-0 Frame-0_scaled_4x_pngcrushed.png" id="5_ugo76"]
+[ext_resource type="Script" uid="uid://bhn3sgguivtho" path="res://Objects/UI/player_inventory_manager.gd" id="6_vw7nn"]
+[ext_resource type="PackedScene" uid="uid://d3dfu3d7j1uh6" path="res://Objects/UI/player_inventory_slot.tscn" id="9_c26gc"]
+[ext_resource type="InputEventKey" uid="uid://brl6fu6xb7y0i" path="res://Resources/InputEvents/hotbar_1.tres" id="9_gp2u6"]
+[ext_resource type="Texture2D" uid="uid://wcv8ng8ytaat" path="res://Sprites/UI/Menus/Slots/slot_1_h1.png" id="10_e15dm"]
+[ext_resource type="InputEventKey" uid="uid://cyyq7fehavuji" path="res://Resources/InputEvents/hotbar_2.tres" id="10_g4d4j"]
+[ext_resource type="ButtonGroup" uid="uid://2ndsbv7jpe5u" path="res://Resources/player_inventory_button_group.tres" id="10_nxx3o"]
+[ext_resource type="InputEventKey" uid="uid://cea4ape7fg4p6" path="res://Resources/InputEvents/hotbar_3.tres" id="11_1acll"]
+[ext_resource type="InputEventKey" uid="uid://btjeuua8c41sf" path="res://Resources/InputEvents/hotbar_4.tres" id="12_acbbt"]
+[ext_resource type="Texture2D" uid="uid://cioj6ymhymakb" path="res://Sprites/UI/Menus/Slots/slot_2.png" id="12_lex0w"]
+[ext_resource type="InputEventKey" uid="uid://bln0ecc1g4pi8" path="res://Resources/InputEvents/hotbar_5.tres" id="13_7xphl"]
+[ext_resource type="Texture2D" uid="uid://bi3dhj3off6rx" path="res://Sprites/UI/Menus/Slots/slot_2_h1.png" id="13_a4l6y"]
+[ext_resource type="Texture2D" uid="uid://c061ixf5of458" path="res://Sprites/UI/Menus/Slots/slot_1_h2.png" id="13_cmt6n"]
+[ext_resource type="InputEventKey" uid="uid://cudlemduc4sx7" path="res://Resources/InputEvents/hotbar_6.tres" id="14_hn5vg"]
+[ext_resource type="Texture2D" uid="uid://dho7slrklgv31" path="res://Sprites/UI/Menus/Slots/slot_2_h2.png" id="14_kdenk"]
+[ext_resource type="Texture2D" uid="uid://biql85n3qcamx" path="res://Sprites/UI/Menus/Slots/slot_3.png" id="15_jq5hi"]
+[ext_resource type="Texture2D" uid="uid://dhb2g0307om7c" path="res://Sprites/UI/Menus/Slots/slot_3_h1.png" id="16_mua4i"]
+[ext_resource type="Texture2D" uid="uid://cppfyywmg2ah3" path="res://Sprites/UI/Menus/Slots/slot_3_h2.png" id="17_d7lud"]
+[ext_resource type="Texture2D" uid="uid://bepae732flexi" path="res://Sprites/UI/Menus/Slots/slot_4.png" id="18_7piym"]
+[ext_resource type="Texture2D" uid="uid://gg3h30j8db7j" path="res://Sprites/UI/Menus/Slots/slot_4_h1.png" id="19_ulm0f"]
+[ext_resource type="Texture2D" uid="uid://di33qionb1msk" path="res://Sprites/UI/Menus/Slots/slot_4_h2.png" id="20_lqwk4"]
+[ext_resource type="Texture2D" uid="uid://j20sbcacconm" path="res://Sprites/UI/Menus/Slots/slot_5.png" id="21_3unov"]
+[ext_resource type="Texture2D" uid="uid://cvec82sftog1" path="res://Sprites/UI/Menus/Slots/slot_6.png" id="24_t7g3l"]
+[ext_resource type="Texture2D" uid="uid://bnj7jx4vkxrl" path="res://Sprites/UI/Menus/Slots/slot_5_h1.png" id="28_q7ahs"]
+[ext_resource type="Texture2D" uid="uid://dqf221ao4o4oc" path="res://Sprites/UI/Menus/Slots/slot_5_h2.png" id="29_01ea2"]
+[ext_resource type="Texture2D" uid="uid://dxf57048k6p7w" path="res://Sprites/UI/Menus/ActionButtons/Crafting.png" id="30_kyn2h"]
+[ext_resource type="Script" uid="uid://ck8ugyadn84an" path="res://Objects/UI/time_label.gd" id="30_nyu1q"]
+[ext_resource type="Texture2D" uid="uid://dppnnccdahxbd" path="res://Sprites/UI/Menus/ActionButtons/Self.png" id="30_om4ia"]
+[ext_resource type="Texture2D" uid="uid://loa63ih0stgd" path="res://Sprites/UI/Menus/ActionButtons/Self-Pressed.png" id="31_2k83k"]
+[ext_resource type="Texture2D" uid="uid://bfipfn6xmdl6r" path="res://Sprites/UI/Menus/ActionButtons/Save.png" id="31_d022m"]
+[ext_resource type="Texture2D" uid="uid://btug1xmnjxh43" path="res://Sprites/UI/Menus/ActionButtons/Tasks.png" id="31_onejo"]
+[ext_resource type="Texture2D" uid="uid://cjcytp087gpd3" path="res://Sprites/UI/Menus/ActionButtons/Self-Hover.png" id="32_0o0ee"]
+[ext_resource type="Texture2D" uid="uid://jrctmw5akrox" path="res://Sprites/UI/Menus/ActionButtons/Save_dis.png" id="32_7dpbp"]
+[ext_resource type="Texture2D" uid="uid://xo2rgmod3ib2" path="res://Sprites/UI/Menus/Slots/slot_6_h1.png" id="32_nlpx5"]
+[ext_resource type="Texture2D" uid="uid://dcdrsnbefwbni" path="res://Sprites/UI/Menus/Slots/slot_6_h2.png" id="33_u68mv"]
+[ext_resource type="Texture2D" uid="uid://rdyb0my462bf" path="res://Sprites/UI/Menus/ActionButtons/Tasks-Pressed.png" id="34_1y6hh"]
+[ext_resource type="Texture2D" uid="uid://jomgjk240h5g" path="res://Sprites/UI/Menus/ActionButtons/Tasks-Hover.png" id="35_g88si"]
+[ext_resource type="Texture2D" uid="uid://21jg4odjs2pp" path="res://Sprites/UI/Menus/ActionButtons/Crafting-Pressed.png" id="37_glkv4"]
+[ext_resource type="Texture2D" uid="uid://dye6b8agctgnf" path="res://Sprites/UI/Menus/ActionButtons/Crafting-Hover.png" id="38_jyvf2"]
+[ext_resource type="Texture2D" uid="uid://dn45g3x4p4qj0" path="res://Sprites/UI/Menus/ActionButtons/Save-Pressed.png" id="40_0moxi"]
+[ext_resource type="Texture2D" uid="uid://csxyh5dc5ote" path="res://Sprites/UI/Menus/ActionButtons/Save-Hover.png" id="41_im7hc"]
+[ext_resource type="Script" uid="uid://bxakq5s0ujlcy" path="res://Objects/UI/ui_hide.gd" id="45_01ea2"]
+[ext_resource type="Texture2D" uid="uid://5jmwrbdll0c5" path="res://Sprites/UI/Menus/PlayerInfo.png" id="45_jjxgc"]
+[ext_resource type="Script" uid="uid://c324uirbas8ao" path="res://Objects/UI/player_info.gd" id="46_01ea2"]
+[ext_resource type="Texture2D" uid="uid://c1vtsibq4vo8" path="res://Sprites/UI/ProgressBarFill.png" id="46_q7ahs"]
+[ext_resource type="Script" uid="uid://dwicj5anhg0ad" path="res://Objects/UI/radial_menu.gd" id="46_uhbjh"]
+
+[sub_resource type="Animation" id="Animation_m5ve4"]
+resource_name = "Bell_Ring"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_fn3vl"), ExtResource("3_o8rpl"), ExtResource("2_fn3vl"), ExtResource("3_o8rpl"), ExtResource("2_fn3vl"), ExtResource("3_o8rpl"), ExtResource("2_fn3vl"), ExtResource("3_o8rpl"), ExtResource("5_ugo76")]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_k2352")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/Time:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(120, 893), Vector2(8, 893)]
+}
+
+[sub_resource type="Animation" id="Animation_iawn3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ttp2y")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Time:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8, 893)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4b21u"]
+_data = {
+&"Bell_Ring": SubResource("Animation_m5ve4"),
+&"RESET": SubResource("Animation_iawn3")
+}
+
+[sub_resource type="GDScript" id="GDScript_uf7xn"]
+script/source = "extends AnimationPlayer
+
+func _ready() -> void:
+	TimeManager.routine_changed.connect(period_change)
+
+func period_change() -> void:
+	play(&\"Bell_Ring\")
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_1akma"]
+font_size = 80
+
+[sub_resource type="Shortcut" id="Shortcut_7fd5t"]
+events = [ExtResource("9_gp2u6")]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_70v7n"]
+frames = 2
+frame_0/texture = ExtResource("10_e15dm")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("13_cmt6n")
+frame_1/duration = 0.5
+
+[sub_resource type="Shortcut" id="Shortcut_ovanq"]
+events = [ExtResource("10_g4d4j")]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_dpog3"]
+frames = 2
+frame_0/texture = ExtResource("13_a4l6y")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("14_kdenk")
+frame_1/duration = 0.5
+
+[sub_resource type="Shortcut" id="Shortcut_4onuy"]
+events = [ExtResource("11_1acll")]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_hx0lu"]
+frames = 2
+frame_0/texture = ExtResource("16_mua4i")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("17_d7lud")
+frame_1/duration = 0.5
+
+[sub_resource type="Shortcut" id="Shortcut_hfnq5"]
+events = [ExtResource("12_acbbt")]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ad13o"]
+frames = 2
+frame_0/texture = ExtResource("19_ulm0f")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("20_lqwk4")
+frame_1/duration = 0.5
+
+[sub_resource type="Shortcut" id="Shortcut_mjyeg"]
+events = [ExtResource("13_7xphl")]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_co6br"]
+frames = 2
+frame_0/texture = ExtResource("28_q7ahs")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("29_01ea2")
+frame_1/duration = 0.5
+
+[sub_resource type="Shortcut" id="Shortcut_gq0kj"]
+events = [ExtResource("14_hn5vg")]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_cmaoa"]
+frames = 2
+frame_0/texture = ExtResource("32_nlpx5")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("33_u68mv")
+frame_1/duration = 0.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_cmt6n"]
+font_size = 100
+
+[sub_resource type="GDScript" id="GDScript_cmt6n"]
+script/source = "extends Label
+
+func _ready() -> void:
+	while PlayerManager.player == null:
+		await get_tree().process_frame
+	PlayerManager.player.health.health_changed.connect(health_changed)
+
+func health_changed(new_health: int) -> void:
+	text = str(new_health)
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_uhbjh"]
+font_size = 40
+
+[node name="PlayerManager" type="Node"]
+script = ExtResource("1_ep4iw")
+
+[node name="Player UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="TextureRect" parent="Player UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_ttp2y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player UI/Panel"]
+
+[node name="BellPlayer" type="AnimationPlayer" parent="Player UI/Panel"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_4b21u")
+}
+script = SubResource("GDScript_uf7xn")
+
+[node name="Time" type="Label" parent="Player UI/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -67.0
+offset_right = 200.0
+offset_bottom = -3.0
+grow_vertical = 0
+text = "10:30"
+label_settings = SubResource("LabelSettings_1akma")
+vertical_alignment = 1
+script = ExtResource("30_nyu1q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Player UI/Panel"]
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_right = 96.0
+grow_vertical = 2
+script = ExtResource("6_vw7nn")
+button_group = ExtResource("10_nxx3o")
+metadata/_edit_group_ = true
+
+[node name="Slot 1" parent="Player UI/Panel/VBoxContainer" instance=ExtResource("9_c26gc")]
+layout_mode = 2
+size_flags_horizontal = 4
+button_group = ExtResource("10_nxx3o")
+shortcut = SubResource("Shortcut_7fd5t")
+texture_pressed = SubResource("AnimatedTexture_70v7n")
+
+[node name="Slot 2" parent="Player UI/Panel/VBoxContainer" instance=ExtResource("9_c26gc")]
+layout_mode = 2
+size_flags_horizontal = 4
+button_group = ExtResource("10_nxx3o")
+shortcut = SubResource("Shortcut_ovanq")
+texture_normal = ExtResource("12_lex0w")
+texture_pressed = SubResource("AnimatedTexture_dpog3")
+
+[node name="Slot 3" parent="Player UI/Panel/VBoxContainer" instance=ExtResource("9_c26gc")]
+layout_mode = 2
+size_flags_horizontal = 4
+button_group = ExtResource("10_nxx3o")
+shortcut = SubResource("Shortcut_4onuy")
+texture_normal = ExtResource("15_jq5hi")
+texture_pressed = SubResource("AnimatedTexture_hx0lu")
+
+[node name="Slot 4" parent="Player UI/Panel/VBoxContainer" instance=ExtResource("9_c26gc")]
+layout_mode = 2
+size_flags_horizontal = 4
+button_group = ExtResource("10_nxx3o")
+shortcut = SubResource("Shortcut_hfnq5")
+texture_normal = ExtResource("18_7piym")
+texture_pressed = SubResource("AnimatedTexture_ad13o")
+
+[node name="Slot 5" parent="Player UI/Panel/VBoxContainer" instance=ExtResource("9_c26gc")]
+layout_mode = 2
+size_flags_horizontal = 4
+button_group = ExtResource("10_nxx3o")
+shortcut = SubResource("Shortcut_mjyeg")
+texture_normal = ExtResource("21_3unov")
+texture_pressed = SubResource("AnimatedTexture_co6br")
+
+[node name="Slot 6" parent="Player UI/Panel/VBoxContainer" instance=ExtResource("9_c26gc")]
+layout_mode = 2
+size_flags_horizontal = 4
+button_group = ExtResource("10_nxx3o")
+shortcut = SubResource("Shortcut_gq0kj")
+texture_normal = ExtResource("24_t7g3l")
+texture_pressed = SubResource("AnimatedTexture_cmaoa")
+
+[node name="Self" type="TextureButton" parent="Player UI/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Self"
+texture_normal = ExtResource("30_om4ia")
+texture_pressed = ExtResource("31_2k83k")
+texture_hover = ExtResource("32_0o0ee")
+stretch_mode = 4
+
+[node name="Tasks" type="TextureButton" parent="Player UI/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("31_onejo")
+texture_pressed = ExtResource("34_1y6hh")
+texture_hover = ExtResource("35_g88si")
+stretch_mode = 4
+
+[node name="Crafting" type="TextureButton" parent="Player UI/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("30_kyn2h")
+texture_pressed = ExtResource("37_glkv4")
+texture_hover = ExtResource("38_jyvf2")
+stretch_mode = 4
+
+[node name="Save" type="TextureButton" parent="Player UI/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("31_d022m")
+texture_pressed = ExtResource("40_0moxi")
+texture_hover = ExtResource("41_im7hc")
+texture_disabled = ExtResource("32_7dpbp")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Player UI/Panel"]
+layout_mode = 0
+offset_right = 175.0
+offset_bottom = 70.0
+text = "Hp:100"
+label_settings = SubResource("LabelSettings_cmt6n")
+script = SubResource("GDScript_cmt6n")
+
+[node name="ColorRect" type="ColorRect" parent="Player UI/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -96.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25, 0.25, 0.25, 0.764706)
+script = ExtResource("45_01ea2")
+
+[node name="PlayerInfo" type="TextureRect" parent="Player UI/Panel/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -268.0
+offset_right = 300.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("45_jjxgc")
+script = ExtResource("46_01ea2")
+
+[node name="INT Bar" type="TextureProgressBar" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 135.5
+offset_right = 500.0
+offset_bottom = 155.5
+value = 50.0
+rounded = true
+texture_progress = ExtResource("46_q7ahs")
+
+[node name="STR Bar" type="TextureProgressBar" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 179.5
+offset_right = 500.0
+offset_bottom = 199.5
+value = 50.0
+rounded = true
+texture_progress = ExtResource("46_q7ahs")
+
+[node name="SPD Bar" type="TextureProgressBar" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 224.5
+offset_right = 500.0
+offset_bottom = 244.5
+value = 50.0
+rounded = true
+texture_progress = ExtResource("46_q7ahs")
+
+[node name="INT Text" type="Label" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 132.5
+offset_right = 256.0
+offset_bottom = 160.5
+text = "Intelligence:"
+label_settings = SubResource("LabelSettings_uhbjh")
+
+[node name="STR Text" type="Label" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 177.0
+offset_right = 256.0
+offset_bottom = 205.0
+text = "Strength:"
+label_settings = SubResource("LabelSettings_uhbjh")
+
+[node name="SPD Text" type="Label" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 220.5
+offset_right = 256.0
+offset_bottom = 248.5
+text = "Speed:"
+label_settings = SubResource("LabelSettings_uhbjh")
+
+[node name="RadialMenu" type="Control" parent="Player UI/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("46_uhbjh")
+metadata/_custom_type_script = "uid://dwicj5anhg0ad"
+
+[connection signal="pressed" from="Player UI/Panel/VBoxContainer/Self" to="Player UI/Panel/ColorRect" method="show_player_info"]

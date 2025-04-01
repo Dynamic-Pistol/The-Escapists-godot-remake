@@ -1,31 +1,32 @@
 extends Area2D
 class_name HitBox
 
-var can_attack:= true
-@export var stats: Stats
+@onready var health: Health = $"../Health"
+@onready var stats: Stats = $"../Stats"
+@onready var own_hurt_box: HurtBox = $"../HurtBox"
 @export var just_attacked:= false
-@onready var entity = get_parent()
 var target: HurtBox
+var attack_timer: SceneTreeTimer
 
-func _on_enemy_entered(area: Area2D) -> void:
-	#if not body.is_in_group(&"attackable"):
-		#return
+func can_attack() -> bool:
+	if not attack_timer:
+		return true
+	return attack_timer.time_left <= 0 and health.is_alive()
+
+func filter_enemies(area: Area2D) -> bool:
 	if area is not HurtBox:
-		return
-	if not can_attack:
-		return
+		return false
+	if area == own_hurt_box:
+		return false
+	if not area.get_parent().collision_mask & get_parent().collision_mask:
+		return false
 	if not area.health.is_alive():
-		return
-	if target != area:
-		return
-	while area.health.is_alive() and overlaps_area(area):
-		can_attack = false
-		attack(area)
-		await $AttackTimer.timeout
-		can_attack = true
+		return false
+	return true
 
 func attack(enemy: HurtBox) -> void:
-	just_attacked = true
-	%HitSfx.play()
-	$AttackTimer.start()
-	enemy.damage(stats.get_strength())
+	just_attacked = true 
+	attack_timer = get_tree().create_timer(stats.get_attack_speed())
+	if enemy:
+		enemy.damage(stats.get_attack_power())
+		enemy.get_node(^"../HitBox").target = get_node(^"../HurtBox")

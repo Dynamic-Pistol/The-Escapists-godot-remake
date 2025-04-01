@@ -1,102 +1,147 @@
 extends Area2D
-const NORMAL_CURSOR_TEX = preload("res://Sprites/UI/Cursor/Cursor_Normal.png")
-const USE_CURSOR_TEXS = [
-	preload("res://Sprites/UI/Cursor/Cursor_Use_1.png"),
-	preload("res://Sprites/UI/Cursor/Cursor_Use_2.png"),
-	preload("res://Sprites/UI/Cursor/Cursor_Use_3.png"),
-	preload("res://Sprites/UI/Cursor/Cursor_Use_4.png"),
-]
-const ATTACK_CURSOR_TEXS = [
-	preload("res://Sprites/UI/Cursor/Cursor_Attack_1.png"),
-	preload("res://Sprites/UI/Cursor/Cursor_Attack_2.png"),
-	preload("res://Sprites/UI/Cursor/Cursor_Attack_3.png"),
-	preload("res://Sprites/UI/Cursor/Cursor_Attack_4.png"),
-]
-
-enum CursorState{
-	NORMAL,
-	USE,
-	ATTACK,
-}
 
 
-var cursor_state := CursorState.NORMAL:
-	set(new_value):
-		if cursor_state == CursorState.ATTACK:
-			%"Target Visual".target = null
-			player.hit_box.target = null
-		cursor_state = new_value
-		match cursor_state:
-			CursorState.NORMAL:
-				Input.set_custom_mouse_cursor(NORMAL_CURSOR_TEX)
-			CursorState.USE:
-				var cursor_index: int = 0
-				while cursor_state == CursorState.USE:
-					Input.set_custom_mouse_cursor(USE_CURSOR_TEXS[cursor_index])
-					for i in 15:
-						await get_tree().process_frame
-					cursor_index = wrapi(cursor_index + 1, 0, 4)
-			CursorState.ATTACK:
-				var cursor_index: int = 0
-				while cursor_state == CursorState.ATTACK:
-					Input.set_custom_mouse_cursor(ATTACK_CURSOR_TEXS[cursor_index])
-					for i in 15:
-						await get_tree().process_frame
-					cursor_index = wrapi(cursor_index + 1, 0, 4)
+const PlayerMode = preload("res://Objects/Autoloads/player_manager.gd").PlayerMode;
 
-@onready var player:Player = get_parent()
+func _ready() -> void:
+	PlayerManager.player_mode_changed.connect(_on_player_mode_changed)
+
+func _on_player_mode_changed(new_mode: PlayerMode):
+	%"Target Visual".target = null
+	PlayerManager.player.hit_box.target = null
+	match new_mode:
+		PlayerMode.NORMAL:
+			const NORMAL_CURSOR_TEX = preload("res://Sprites/UI/Cursor/Cursor_Normal.png")
+			Input.set_custom_mouse_cursor(NORMAL_CURSOR_TEX)
+		PlayerMode.USE_ITEM:
+			const USE_CURSOR_TEXS = [
+					preload("res://Sprites/UI/Cursor/Cursor_Use_1.png"),
+					preload("res://Sprites/UI/Cursor/Cursor_Use_2.png"),
+					preload("res://Sprites/UI/Cursor/Cursor_Use_3.png"),
+					preload("res://Sprites/UI/Cursor/Cursor_Use_4.png"),
+			]
+			_draw_cursor(new_mode, USE_CURSOR_TEXS)
+		PlayerMode.ATTACK:
+			const ATTACK_CURSOR_TEXS = [
+				preload("res://Sprites/UI/Cursor/Cursor_Attack_1.png"),
+				preload("res://Sprites/UI/Cursor/Cursor_Attack_2.png"),
+				preload("res://Sprites/UI/Cursor/Cursor_Attack_3.png"),
+				preload("res://Sprites/UI/Cursor/Cursor_Attack_4.png"),
+			]
+			_draw_cursor(new_mode, ATTACK_CURSOR_TEXS)
+
+func _draw_cursor(player_mode: PlayerMode, textures: Array) -> void:
+	const FRAME_RATE = 15
+	const FRAMES_PER_SECOND = FRAME_RATE / 60.0
+	var cursor_index: int = 0
+	while PlayerManager.player_mode == player_mode:
+		Input.set_custom_mouse_cursor(textures[cursor_index])
+		#for i in 15:
+				#await get_tree().process_frame
+		await get_tree().create_timer(FRAMES_PER_SECOND).timeout 
+		cursor_index = wrapi(cursor_index + 1, 0, 4)
 
 func _process(_delta: float) -> void:
 	global_position = get_global_mouse_position()
 
-func _ready() -> void:
-	pass
-
-func _input(event: InputEvent) -> void:
-	if event.is_pressed():
-		if event.is_action(&"Attack"):
-			cursor_state = CursorState.ATTACK if cursor_state == CursorState.NORMAL else CursorState.NORMAL
-		if event is InputEventMouseButton and event.button_mask == MOUSE_BUTTON_MASK_MIDDLE:
-			var layer := WorldLayerManager.current_layer
-			if layer.tile_is_destroyed(global_position):
-				layer.fix_tile(global_position)
-			else:
-				layer.destroy_tile(global_position)
-		if event.is_action(&"Interact"):
-			for area in get_overlapping_areas():
-				match cursor_state:
-					CursorState.NORMAL:
-						if not player.interaction_range.overlaps_area(area):
-							return
-						if area.has_method(&"interact"):
-							area.interact(player)
-					CursorState.USE:
-						pass
-					CursorState.ATTACK:
-						if not area.get_parent() == player and area is HurtBox and area.health.is_alive():
-							player.hit_box.target = area
-							%"Target Visual".target = area
-							return
-		if event.is_action(&"Pickup") and cursor_state == CursorState.NORMAL:
+func _unhandled_input(event: InputEvent) -> void:
+	if not event.is_pressed():
+		return
+	var player_mode = PlayerManager.player_mode
+	var player = PlayerManager.player
+	var selected_item := PlayerManager.get_selected_item() as Item
+	if event.is_action(&"Interact"):
+		match  player_mode:
+			PlayerMode.NORMAL:
+				pass
+			PlayerMode.USE_ITEM:
+				if selected_item is ToolItem and selected_item.tool_type == selected_item.ToolType.DIG and not has_overlapping_bodies():
+					_dig_hole(selected_item)
+			PlayerMode.ATTACK:
+				pass
+			
+		for area in get_overlapping_areas():
+			match player_mode:
+				PlayerMode.NORMAL:
+					if not player.interaction_range.overlaps_area(area):
+						continue
+					if area.has_method(&"interact"):
+						area.interact(player)
+				PlayerMode.ATTACK:
+					if not area.get_parent() == player and area is HurtBox and area.health.is_alive():
+						player.hit_box.target = area
+						%"Target Visual".target = area
+						return
+		for body in get_overlapping_bodies():
+			match player_mode:
+				PlayerMode.NORMAL:
+					if not player.interaction_range.overlaps_body(body):
+						continue
+					if body.has_method(&"interact"):
+						body.interact(player)
+				PlayerMode.USE_ITEM:
+					if selected_item is ToolItem:
+						if body is WorldLayer:
+							if selected_item.tool_type == selected_item.ToolType.CHIP and\
+								body.layer == WorldLayer.WorldLayerType.GROUND:
+								var pos = body.to_local(global_position)
+								pos = body.local_to_map(pos)
+								body.set_cell(pos, 1, Vector2i(3, 2))
+								selected_item.degrade()
+							elif selected_item.tool_type == selected_item.ToolType.DIG and\
+								body.layer == WorldLayer.WorldLayerType.UNDERGROUND:
+								var pos = body.to_local(global_position)
+								pos = body.local_to_map(pos)
+								body.set_cell(pos, 2, Vector2i(0, 0))
+								selected_item.degrade()
+	if event.is_action(&"Pickup") and player_mode == PlayerMode.NORMAL:
 			if player.picked_up_item != null and player.interaction_range.overlaps_area(self):
 				player.picked_up_item.reparent(WorldLayerManager.current_layer)
 				player.picked_up_item.global_position = (round(global_position / 32) * 32)
 				
+				for shape in player.picked_up_item.get_shape_owners():
+					player.picked_up_item.shape_owner_set_disabled(shape, false)
 				player.picked_up_item = null
 				return
 			for area in get_overlapping_areas():
 				if not player.interaction_range.overlaps_area(area):
 					continue
 				if area.is_in_group(&"pickable"):
-					if area is HurtBox:
-						area.get_parent().pick_up(player)
-					else:
-						area.pick_up(player)
+					area.pick_up(player)
 					break
 			for body in get_overlapping_bodies():
 				if not player.interaction_range.overlaps_body(body) or body == player:
 					continue
 				if body.is_in_group(&"pickable"):
-					body.pick_up(player)
+					for shape in body.get_shape_owners():
+						body.shape_owner_set_disabled(shape, true)
+					body.reparent(player)
+					body.position = Vector2.ZERO
+					player.picked_up_item = body
 					break
-		
+
+func _dig_hole(dig_tool: ToolItem) -> void:
+	dig_tool.degrade()
+	const LayerType = WorldLayer.WorldLayerType
+				
+	const HOLE = preload("res://Objects/World/Transport/hole.tscn")
+			
+	var underground_layer = WorldLayerManager.layers[LayerType.UNDERGROUND]
+	var cell_pos = underground_layer.to_local(global_position)
+	cell_pos = underground_layer.local_to_map(cell_pos)
+	var world_pos = underground_layer.map_to_local(cell_pos)
+	world_pos = underground_layer.to_global(world_pos)
+			
+	var up_hole = HOLE.instantiate()
+	up_hole.global_position = world_pos
+	up_hole.go_down = false
+	up_hole.progress = 100
+			
+	underground_layer.add_child(up_hole)
+	underground_layer.set_cell(cell_pos, 2, Vector2i(0, 0))
+			
+	var down_hole = HOLE.instantiate()
+	down_hole.global_position = world_pos
+	down_hole.go_down = true
+	down_hole.progress = 100
+	WorldLayerManager.layers[LayerType.GROUND].add_child(down_hole)

@@ -1,13 +1,17 @@
 extends Node
 class_name Stats
 
-#region
-#endregion
 
-var intellect: int = 50
-var strength: int = 50
-var speed: int = 50
+@export_range(1, 100) var intellect: int = 50
+@export_range(1, 100) var strength: int = 50
+@export_range(1, 100) var speed: int = 50
 
-func get_strength() -> int:
+func get_attack_power() -> int:
 	@warning_ignore("integer_division")
-	return strength / 10
+	return strength / 15
+
+func get_attack_speed() -> float:
+	return 10.0 / speed
+
+func get_move_speed() -> float:
+	return speed * 6

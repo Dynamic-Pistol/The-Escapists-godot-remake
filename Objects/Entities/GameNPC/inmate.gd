@@ -1,54 +1,53 @@
 extends InteractableEntity
 
-@onready var own_layer = WorldLayerManager.layers[WorldLayer.WorldLayerType.GROUND]
-var path: PackedVector2Array
-var way_points: Array[Node2D]
-var current_point: int
+@onready var stats: NpcStats = $Stats
+@onready var health: Health = $Health
+@onready var hit_box: NPCHitBox = $HitBox
 
 @export var nav_agent: NavigationAgent2D
-var map_rid: RID
+var current_point: Vector2
+var move_again: bool = true
 
+@export var enemy_target: InteractableEntity
+@export var player_opinion: int = -1
 
 func _ready() -> void:
-	var way_points_nodes := get_tree().get_nodes_in_group(&"waypoint")
-	way_points.assign(way_points_nodes)
-	#super()
-	#map_rid = nav_agent.get_navigation_map()
-	#set_physics_process(false)
-	#call_deferred(&"setup_nav")
-#
-#func setup_nav() -> void:
-	#await NavigationServer2D.map_changed
-	#set_physics_process(true)
+	if enemy_target:
+		hit_box.target = enemy_target.get_node(^"HurtBox")
+	if player_opinion >= 0:
+		stats.player_opinion = player_opinion
+	TimeManager.routine_changed.connect(_on_routine_changed)
 
 func _physics_process(_delta: float) -> void:
 	if not health.is_alive():
 		return
 	move()
+	if stats.hates_player():
+		hit_box.target = PlayerManager.player.get_node(^"HurtBox")
 
 func move() -> void:
-	if not own_layer:
-		own_layer = WorldLayerManager.layers[WorldLayer.WorldLayerType.GROUND]
+	var dir:= Vector2()
+	if hit_box.target:
+		nav_agent.target_position = hit_box.target.global_position
+	else:
+		nav_agent.target_position = current_point
+	if not nav_agent.is_navigation_finished():
+		dir = global_position.direction_to(nav_agent.get_next_path_position())
 		
-	#if nav_agent.is_navigation_finished():
-		#nav_agent.target_position = NavigationServer2D.map_get_random_point(map_rid, nav_agent.navigation_layers, false)
-	#var dir = global_position.direction_to(nav_agent.get_next_path_position())
-	if path.is_empty():
-		path = own_layer.get_desintation(global_position, way_points.pick_random().global_position)
-		current_point = 0
-		
-	if global_position.distance_to(path[current_point]) <= 5:
-		current_point += 1
-		if current_point >= path.size():
-			path = own_layer.get_desintation(global_position, way_points.pick_random().global_position)
-			current_point = 0
-	
-	
-	var dir = global_position.direction_to(path[current_point])
 	if dir:
-		const SPEED = 300.0
-		#nav_agent.velocity = velocity
-		velocity = dir * SPEED
-		move_and_slide()
+		nav_agent.velocity = dir
 		anim_tree[&"parameters/Movement/blend_position"] = dir
-	
+		anim_tree[&"parameters/Attack/blend_position"] = dir
+
+func _on_routine_changed() -> void:
+	current_point = WayPointManager.get_waypoint()
+
+func _on_health_knocked_out() -> void:
+	add_to_group(&"pickable")
+
+func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
+	if not health.is_alive():
+		return
+	var speed = stats.get_move_speed()
+	velocity = safe_velocity * speed
+	move_and_slide()

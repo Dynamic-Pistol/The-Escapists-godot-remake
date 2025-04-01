@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://nvv25mjj4r0f"]
+
+[ext_resource type="Texture2D" uid="uid://djb11tyxd31rf" path="res://Sprites/World/Desk.png" id="1_jetf5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jetf5"]
+size = Vector2(64, 64)
+
+[node name="Desk" type="AnimatableBody2D" groups=["pickable"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("1_jetf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jetf5")

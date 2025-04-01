@@ -12,7 +12,6 @@ script = ExtResource("1_ax3st")
 key_type = 4
 fake = false
 decay = 10
-durability = 100
 name = &"Entrance Key"
 base_price = 0
 opinion_inc = 2

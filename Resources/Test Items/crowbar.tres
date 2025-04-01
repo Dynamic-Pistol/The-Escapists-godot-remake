@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ToolItem" load_steps=4 format=3 uid="uid://dobg6sf8v6me1"]
+
+[ext_resource type="Script" uid="uid://dj802pk4lp2ut" path="res://Objects/ItemSystem/ItemTypes/tool_item.gd" id="1_rcwqm"]
+[ext_resource type="Texture2D" uid="uid://du3mer5d34ced" path="res://Sprites/legacy/items.png" id="2_3j5od"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt75m"]
+atlas = ExtResource("2_3j5od")
+region = Rect2(128, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_rcwqm")
+power = 10
+tool_type = 0
+decay = 20
+name = &"CrowBar"
+base_price = 50
+opinion_inc = 50
+texture = SubResource("AtlasTexture_jt75m")
+is_contraband = true
+metadata/_custom_type_script = "uid://dj802pk4lp2ut"

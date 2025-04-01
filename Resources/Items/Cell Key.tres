@@ -12,7 +12,6 @@ script = ExtResource("1_ilk61")
 key_type = 2
 fake = false
 decay = 10
-durability = 100
 name = &"Cell Key"
 base_price = 0
 opinion_inc = 2

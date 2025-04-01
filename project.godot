@@ -28,11 +28,12 @@ buses/default_bus_layout="res://Audio/default_bus_layout.tres"
 
 [autoload]
 
-MusicPlayer="*res://Autoloads/music_player.tscn"
-PlayerManager="*res://Autoloads/player_manager.tscn"
-WorldLayerManager="*res://Autoloads/world_layer_manager.gd"
-TimeManager="*res://Autoloads/time_manager.gd"
-DialogueManager="*res://Autoloads/dialogue_manager.gd"
+MusicPlayer="*res://Objects/Autoloads/music_player.tscn"
+PlayerManager="*res://Objects/Autoloads/player_manager.tscn"
+WorldLayerManager="*res://Objects/Autoloads/world_layer_manager.gd"
+TimeManager="*res://Objects/Autoloads/time_manager.gd"
+DialogueManager="*res://Objects/Autoloads/dialogue_manager.gd"
+WayPointManager="*res://Objects/Autoloads/waypoint_manager.gd"
 
 [display]
 
@@ -48,14 +49,18 @@ mouse_cursor/custom_image="res://Sprites/UI/Cursor/Cursor_Normal.png"
 
 movie_writer/movie_file="/media/malek/Main_Disk/Games_in_development/Godot Games/The escapists remake/Videos/output.avi"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ActionIcon/plugin.cfg", "res://addons/plenticons/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
 "res://Animation/": "purple",
 "res://Audio/": "orange",
-"res://Autoloads/": "yellow",
-"res://Editor Icons/": "gray",
 "res://Objects/": "yellow",
+"res://Objects/Autoloads/": "yellow",
+"res://Other Sprites/": "pink",
 "res://Resources/": "green",
 "res://Scenes/": "yellow",
 "res://Sprites/": "pink",
@@ -113,6 +118,21 @@ Attack={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
+Punch={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+Inventory={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+"Show Info"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -122,6 +142,7 @@ Attack={
 2d_physics/layer_4="Roof"
 2d_physics/layer_5="Entity"
 avoidance/layer_1="Wall"
+avoidance/layer_2="Guard Only"
 
 [rendering]
 
