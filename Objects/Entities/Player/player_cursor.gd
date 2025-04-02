@@ -53,33 +53,27 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action(&"Interact"):
 		match  player_mode:
 			PlayerMode.NORMAL:
-				pass
-			PlayerMode.USE_ITEM:
-				if selected_item is ToolItem and selected_item.tool_type == selected_item.ToolType.DIG and not has_overlapping_bodies():
-					_dig_hole(selected_item)
-			PlayerMode.ATTACK:
-				pass
-			
-		for area in get_overlapping_areas():
-			match player_mode:
-				PlayerMode.NORMAL:
-					if not player.interaction_range.overlaps_area(area):
-						continue
-					if area.has_method(&"interact"):
-						area.interact(player)
-				PlayerMode.ATTACK:
-					if not area.get_parent() == player and area is HurtBox and area.health.is_alive():
-						player.hit_box.target = area
-						%"Target Visual".target = area
-						return
-		for body in get_overlapping_bodies():
-			match player_mode:
-				PlayerMode.NORMAL:
+				for body in get_overlapping_bodies():
 					if not player.interaction_range.overlaps_body(body):
 						continue
 					if body.has_method(&"interact"):
 						body.interact(player)
-				PlayerMode.USE_ITEM:
+						return
+				for area in get_overlapping_areas():
+					if not player.interaction_range.overlaps_area(area):
+						continue
+					if area.has_method(&"interact"):
+						area.interact(player)
+						return
+			PlayerMode.USE_ITEM:
+				for area in get_overlapping_areas():
+					if selected_item is ToolItem:
+						if area is Hole:
+							if area.can_go_down():
+								continue
+							area.owning_point.progress += 10
+							return
+				for body in get_overlapping_bodies():
 					if selected_item is ToolItem:
 						if body is WorldLayer:
 							if selected_item.tool_type == selected_item.ToolType.CHIP and\
@@ -88,12 +82,26 @@ func _unhandled_input(event: InputEvent) -> void:
 								pos = body.local_to_map(pos)
 								body.set_cell(pos, 1, Vector2i(3, 2))
 								selected_item.degrade()
+								return
 							elif selected_item.tool_type == selected_item.ToolType.DIG and\
 								body.layer == WorldLayer.WorldLayerType.UNDERGROUND:
 								var pos = body.to_local(global_position)
 								pos = body.local_to_map(pos)
 								body.set_cell(pos, 2, Vector2i(0, 0))
 								selected_item.degrade()
+								return
+				if selected_item is ToolItem and selected_item.tool_type == selected_item.ToolType.DIG:
+					if has_overlapping_areas() or has_overlapping_bodies():
+						return
+					_dig_hole(selected_item)
+					return
+			PlayerMode.ATTACK:
+				for area in get_overlapping_areas():
+					if not area.get_parent() == player and area is HurtBox and area.health.is_alive():
+						player.hit_box.target = area
+						%"Target Visual".target = area
+						return
+			
 	if event.is_action(&"Pickup") and player_mode == PlayerMode.NORMAL:
 			if player.picked_up_item != null and player.interaction_range.overlaps_area(self):
 				player.picked_up_item.reparent(WorldLayerManager.current_layer)
@@ -122,26 +130,13 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _dig_hole(dig_tool: ToolItem) -> void:
 	dig_tool.degrade()
-	const LayerType = WorldLayer.WorldLayerType
-				
-	const HOLE = preload("res://Objects/World/Transport/hole.tscn")
-			
-	var underground_layer = WorldLayerManager.layers[LayerType.UNDERGROUND]
-	var cell_pos = underground_layer.to_local(global_position)
-	cell_pos = underground_layer.local_to_map(cell_pos)
-	var world_pos = underground_layer.map_to_local(cell_pos)
-	world_pos = underground_layer.to_global(world_pos)
-			
-	var up_hole = HOLE.instantiate()
-	up_hole.global_position = world_pos
-	up_hole.go_down = false
-	up_hole.progress = 100
-			
-	underground_layer.add_child(up_hole)
-	underground_layer.set_cell(cell_pos, 2, Vector2i(0, 0))
-			
-	var down_hole = HOLE.instantiate()
-	down_hole.global_position = world_pos
-	down_hole.go_down = true
-	down_hole.progress = 100
-	WorldLayerManager.layers[LayerType.GROUND].add_child(down_hole)
+	var hole_point := HolePoint.new()
+	var layer := WorldLayerManager.current_layer
+	
+	var target_pos := layer.to_local(global_position)
+	target_pos = layer.local_to_map(target_pos)
+	target_pos = layer.map_to_local(target_pos)
+	target_pos = layer.to_global(target_pos)
+	
+	hole_point.global_position = target_pos
+	get_tree().root.add_child(hole_point)

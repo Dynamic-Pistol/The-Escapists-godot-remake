@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmgufj1occbm1"]
+
+[ext_resource type="Texture2D" uid="uid://r63k1t3ypjkt" path="res://Sprites/World/Hole_up.png" id="1_0tuu1"]
+[ext_resource type="Script" uid="uid://ud6l7ap23roe" path="res://Objects/World/Transport/hole.gd" id="1_xi13v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgve6"]
+size = Vector2(64, 64)
+
+[node name="UpHole" type="Area2D"]
+collision_mask = 0
+script = ExtResource("1_xi13v")
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("1_0tuu1")
+vframes = 5
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wgve6")

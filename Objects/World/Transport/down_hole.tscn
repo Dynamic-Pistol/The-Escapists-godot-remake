@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0qjeuxu1tdv8"]
+
+[ext_resource type="Texture2D" uid="uid://cmeiw1s2x5664" path="res://Sprites/World/Hole_down.png" id="1_o0e7h"]
+[ext_resource type="Script" uid="uid://ud6l7ap23roe" path="res://Objects/World/Transport/hole.gd" id="1_ywlp6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywlp6"]
+size = Vector2(64, 64)
+
+[node name="DownHole" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_ywlp6")
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("1_o0e7h")
+vframes = 5
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ywlp6")

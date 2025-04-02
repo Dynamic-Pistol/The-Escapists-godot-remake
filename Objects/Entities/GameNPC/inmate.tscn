@@ -575,7 +575,7 @@ root_node = NodePath("%EntityTree/..")
 tree_root = SubResource("AnimationNodeStateMachine_frngm")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Attack/blend_position = Vector2(0, 0)
+parameters/Attack/blend_position = Vector2(-0.00912863, -0.747253)
 parameters/Movement/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -595,6 +595,9 @@ debug_enabled = true
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("7_frngm")
+intellect = 10
+strength = 100
+speed = 1
 metadata/_custom_type_script = "uid://biwehqk6yigj3"
 
 [node name="Health" type="Node" parent="." node_paths=PackedStringArray("stats")]
