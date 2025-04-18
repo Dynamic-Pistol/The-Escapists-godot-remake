@@ -15,10 +15,10 @@ func _on_player_mode_changed(new_mode: PlayerMode):
 			Input.set_custom_mouse_cursor(NORMAL_CURSOR_TEX)
 		PlayerMode.USE_ITEM:
 			const USE_CURSOR_TEXS = [
-					preload("res://Sprites/UI/Cursor/Cursor_Use_1.png"),
-					preload("res://Sprites/UI/Cursor/Cursor_Use_2.png"),
-					preload("res://Sprites/UI/Cursor/Cursor_Use_3.png"),
-					preload("res://Sprites/UI/Cursor/Cursor_Use_4.png"),
+				preload("res://Sprites/UI/Cursor/Cursor_Use_1.png"),
+				preload("res://Sprites/UI/Cursor/Cursor_Use_2.png"),
+				preload("res://Sprites/UI/Cursor/Cursor_Use_3.png"),
+				preload("res://Sprites/UI/Cursor/Cursor_Use_4.png"),
 			]
 			_draw_cursor(new_mode, USE_CURSOR_TEXS)
 		PlayerMode.ATTACK:
@@ -36,13 +36,20 @@ func _draw_cursor(player_mode: PlayerMode, textures: Array) -> void:
 	var cursor_index: int = 0
 	while PlayerManager.player_mode == player_mode:
 		Input.set_custom_mouse_cursor(textures[cursor_index])
-		#for i in 15:
-				#await get_tree().process_frame
-		await get_tree().create_timer(FRAMES_PER_SECOND).timeout 
+		await get_tree().create_timer(FRAMES_PER_SECOND).timeout
 		cursor_index = wrapi(cursor_index + 1, 0, 4)
 
 func _process(_delta: float) -> void:
 	global_position = get_global_mouse_position()
+
+func _physics_process(_delta: float) -> void:
+	var found_item := false
+	for area in get_overlapping_areas():
+		if area.is_in_group(&"hintable"):
+			$Label.text = area.name
+			found_item = true
+			break
+	$Label.visible = found_item
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not event.is_pressed():
@@ -50,9 +57,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	var player_mode = PlayerManager.player_mode
 	var player = PlayerManager.player
 	var selected_item := PlayerManager.get_selected_item() as Item
-	if event.is_action(&"Interact"):
-		match  player_mode:
-			PlayerMode.NORMAL:
+	match  player_mode:
+		PlayerMode.NORMAL:
+			if event.is_action(&"Interact"):
 				for body in get_overlapping_bodies():
 					if not player.interaction_range.overlaps_body(body):
 						continue
@@ -65,7 +72,8 @@ func _unhandled_input(event: InputEvent) -> void:
 					if area.has_method(&"interact"):
 						area.interact(player)
 						return
-			PlayerMode.USE_ITEM:
+		PlayerMode.USE_ITEM:
+			if event.is_action(&"Interact"):
 				for area in get_overlapping_areas():
 					if selected_item is ToolItem:
 						if area is Hole:
@@ -88,14 +96,15 @@ func _unhandled_input(event: InputEvent) -> void:
 								var pos = body.to_local(global_position)
 								pos = body.local_to_map(pos)
 								body.set_cell(pos, 2, Vector2i(0, 0))
-								selected_item.degrade()
-								return
+							selected_item.degrade()
+							return
 				if selected_item is ToolItem and selected_item.tool_type == selected_item.ToolType.DIG:
 					if has_overlapping_areas() or has_overlapping_bodies():
 						return
 					_dig_hole(selected_item)
 					return
-			PlayerMode.ATTACK:
+		PlayerMode.ATTACK:
+			if Input.is_action_just_pressed(&"Target"):
 				for area in get_overlapping_areas():
 					if not area.get_parent() == player and area is HurtBox and area.health.is_alive():
 						player.hit_box.target = area
@@ -103,30 +112,30 @@ func _unhandled_input(event: InputEvent) -> void:
 						return
 			
 	if event.is_action(&"Pickup") and player_mode == PlayerMode.NORMAL:
-			if player.picked_up_item != null and player.interaction_range.overlaps_area(self):
-				player.picked_up_item.reparent(WorldLayerManager.current_layer)
-				player.picked_up_item.global_position = (round(global_position / 32) * 32)
+		if player.picked_up_item != null and player.interaction_range.overlaps_area(self):
+			player.picked_up_item.reparent(WorldLayerManager.current_layer)
+			player.picked_up_item.global_position = (round(global_position / 32) * 32)
 				
-				for shape in player.picked_up_item.get_shape_owners():
-					player.picked_up_item.shape_owner_set_disabled(shape, false)
-				player.picked_up_item = null
-				return
-			for area in get_overlapping_areas():
-				if not player.interaction_range.overlaps_area(area):
-					continue
-				if area.is_in_group(&"pickable"):
-					area.pick_up(player)
-					break
-			for body in get_overlapping_bodies():
-				if not player.interaction_range.overlaps_body(body) or body == player:
-					continue
-				if body.is_in_group(&"pickable"):
-					for shape in body.get_shape_owners():
-						body.shape_owner_set_disabled(shape, true)
-					body.reparent(player)
-					body.position = Vector2.ZERO
-					player.picked_up_item = body
-					break
+			for shape in player.picked_up_item.get_shape_owners():
+				player.picked_up_item.shape_owner_set_disabled(shape, false)
+			player.picked_up_item = null
+			return
+		for area in get_overlapping_areas():
+			if not player.interaction_range.overlaps_area(area):
+				continue
+			if area.is_in_group(&"pickable"):
+				area.pick_up(player)
+				break
+		for body in get_overlapping_bodies():
+			if not player.interaction_range.overlaps_body(body) or body == player:
+				continue
+			if body.is_in_group(&"pickable"):
+				for shape in body.get_shape_owners():
+					body.shape_owner_set_disabled(shape, true)
+				body.reparent(player)
+				body.position = Vector2.ZERO
+				player.picked_up_item = body
+				break
 
 func _dig_hole(dig_tool: ToolItem) -> void:
 	dig_tool.degrade()

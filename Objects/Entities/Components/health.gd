@@ -1,3 +1,4 @@
+@icon("res://addons/plenticons/icons/64x-hidpi/creatures/heart-gray.png")
 extends Node
 class_name Health
 
@@ -15,11 +16,14 @@ func is_alive() -> bool:
 	return health > 0
 
 func get_max_health() -> int:
-	return floori(stats.strength / 2.0)
+	return maxi(floori(stats.strength / 2.0), 5)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed() and event.keycode == KEY_O and owner.name == &"Player":
 		health = get_max_health()
+
+func revive() -> void:
+	health = get_max_health()
 
 func damage(amount: int) -> void:
 	health -= amount

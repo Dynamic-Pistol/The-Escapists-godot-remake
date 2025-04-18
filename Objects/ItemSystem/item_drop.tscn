@@ -10,7 +10,7 @@ region = Rect2(12, 4, 36, 56)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lussk"]
 size = Vector2(64, 64)
 
-[node name="ItemDrop" type="Area2D" groups=["pickable"]]
+[node name="ItemDrop" type="Area2D" groups=["hintable", "pickable"]]
 collision_layer = 2
 collision_mask = 0
 monitoring = false

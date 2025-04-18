@@ -31,9 +31,15 @@ var player_mode: PlayerMode = PlayerMode.NORMAL:
 func _unhandled_input(event: InputEvent) -> void:
 	if not event.is_pressed():
 		return
-	if event.is_action(&"Attack"):
+	if event.is_action(&"To Attack"):
 		player_mode = PlayerMode.ATTACK if player_mode == PlayerMode.NORMAL else PlayerMode.NORMAL
 
+
+#region Stats
+
+var guard_heat := 0
+
+#endregion
 
 #region Inventory
 
@@ -96,6 +102,9 @@ func remove_illegals() -> void:
 	for i in items.size():
 		if items[i].is_contraband:
 			remove_item(i)
+
+func has_illegals() -> bool:
+	return items.any(func(i: Item): return i.is_contraband)
 
 func select_item(index: int) -> void:
 	selected_item = index

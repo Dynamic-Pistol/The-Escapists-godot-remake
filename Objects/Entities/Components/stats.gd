@@ -11,7 +11,7 @@ func get_attack_power() -> int:
 	return strength / 15
 
 func get_attack_speed() -> float:
-	return 10.0 / speed
+	return maxf(20.0 / speed, 1.0)
 
-func get_move_speed() -> float:
-	return speed * 6
+func get_move_speed() -> float: 
+	return maxf(speed * 6, 250.0)

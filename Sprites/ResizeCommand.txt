@@ -1,0 +1,1 @@
+magick in.png -filter point -resize 400% out.png

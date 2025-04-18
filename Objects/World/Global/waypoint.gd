@@ -7,6 +7,7 @@ enum WayPointType{
 	WORK_OUT,
 	SHOWER,
 	FREE_PERIOD,
+	WARDEN
 }
 
 @export var waypoint_type: WayPointType

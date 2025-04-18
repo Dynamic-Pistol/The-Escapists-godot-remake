@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://bjb4wwmkxk6fw"]
+[gd_scene load_steps=47 format=3 uid="uid://bjb4wwmkxk6fw"]
 
 [ext_resource type="Script" uid="uid://cerjb8xgvgu6f" path="res://Objects/Entities/GameNPC/inmate.gd" id="2_2kc1r"]
 [ext_resource type="Texture2D" uid="uid://dfsaw6h8dcle3" path="res://Sprites/Entities/Inmates/rabbit.png" id="2_frngm"]
@@ -9,9 +9,11 @@
 [ext_resource type="AudioStream" uid="uid://dkh4nl36qtsj3" path="res://Audio/Sfx/Combat/combat_hit.tres" id="6_o5wn3"]
 [ext_resource type="Script" uid="uid://uk1ekgceibbg" path="res://Objects/Entities/GameNPC/npc_stats.gd" id="7_frngm"]
 [ext_resource type="Script" uid="uid://rgwqec3igro8" path="res://Objects/Entities/Components/health.gd" id="8_dx83p"]
+[ext_resource type="Script" uid="uid://cxqnrkbup5f30" path="res://Objects/Entities/GameNPC/interactable_range.gd" id="9_f2pbd"]
 [ext_resource type="Script" uid="uid://c58h43x0v55mu" path="res://Objects/Entities/Components/hurt_box.gd" id="9_j3whk"]
 [ext_resource type="Texture2D" uid="uid://cstmna8k1u172" path="res://Sprites/Entities/Effects/spritesheet.png" id="10_w7mkk"]
 [ext_resource type="Script" uid="uid://b7j08gbbp81sa" path="res://Objects/Entities/Visuals/hit_vfx.gd" id="11_annox"]
+[ext_resource type="Texture2D" uid="uid://cc0k3vo8d64ve" path="res://Sprites/UI/Icons/Icon-1.png" id="13_fn8jg"]
 
 [sub_resource type="Animation" id="Animation_f5mcn"]
 resource_name = "Knocked out"
@@ -449,52 +451,52 @@ _data = {
 &"move_r": SubResource("Animation_jaciw")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_35es6"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_our84"]
 animation = &"attack_u"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3c52p"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8liiy"]
 animation = &"attack_d"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_df1xx"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c6fom"]
 animation = &"attack_l"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_msdba"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iy3gf"]
 animation = &"attack_r"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_kmwgw"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_35es6")
+blend_point_0/node = SubResource("AnimationNodeAnimation_our84")
 blend_point_0/pos = Vector2(0, -1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_3c52p")
+blend_point_1/node = SubResource("AnimationNodeAnimation_8liiy")
 blend_point_1/pos = Vector2(0, 1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_df1xx")
+blend_point_2/node = SubResource("AnimationNodeAnimation_c6fom")
 blend_point_2/pos = Vector2(-1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_msdba")
+blend_point_3/node = SubResource("AnimationNodeAnimation_iy3gf")
 blend_point_3/pos = Vector2(1, 0)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tvuvh"]
 animation = &"Knocked out"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sfxf8"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r5t77"]
 animation = &"move_f"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ubfru"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hgcsj"]
 animation = &"move_b"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vsdos"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qyj0f"]
 animation = &"move_r"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8cv6f"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1274m"]
 animation = &"move_l"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_rfvtu"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_sfxf8")
+blend_point_0/node = SubResource("AnimationNodeAnimation_r5t77")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_ubfru")
+blend_point_1/node = SubResource("AnimationNodeAnimation_hgcsj")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_vsdos")
+blend_point_2/node = SubResource("AnimationNodeAnimation_qyj0f")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_8cv6f")
+blend_point_3/node = SubResource("AnimationNodeAnimation_1274m")
 blend_point_3/pos = Vector2(-1, 0)
 snap = Vector2(1, 1)
 blend_mode = 1
@@ -534,6 +536,9 @@ graph_offset = Vector2(-216, -56)
 radius = 8.5
 height = 32.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fn8jg"]
+radius = 40.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tiueb"]
 size = Vector2(48, 64)
 
@@ -554,15 +559,16 @@ texture = ExtResource("2_frngm")
 hframes = 11
 vframes = 10
 
-[node name="Dialogue Box" parent="." node_paths=PackedStringArray("health") instance=ExtResource("4_48rc6")]
-health = NodePath("../Health")
-
 [node name="Clothes" type="Sprite2D" parent="."]
 texture = ExtResource("4_fn8jg")
 hframes = 11
 vframes = 10
 
+[node name="Dialogue Box" parent="." node_paths=PackedStringArray("health") instance=ExtResource("4_48rc6")]
+health = NodePath("../Health")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+active = false
 libraries = {
 &"": SubResource("AnimationLibrary_ohttv")
 }
@@ -587,23 +593,26 @@ shape = SubResource("CapsuleShape2D_ar6wn")
 target_desired_distance = 15.0
 path_postprocessing = 1
 simplify_path = true
-avoidance_enabled = true
-radius = 48.0
-avoidance_layers = 0
-avoidance_mask = 2
 debug_enabled = true
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("7_frngm")
-intellect = 10
-strength = 100
-speed = 1
 metadata/_custom_type_script = "uid://biwehqk6yigj3"
 
 [node name="Health" type="Node" parent="." node_paths=PackedStringArray("stats")]
 script = ExtResource("8_dx83p")
 stats = NodePath("../Stats")
 metadata/_custom_type_script = "uid://rgwqec3igro8"
+
+[node name="InteractableRange" type="Area2D" parent="." groups=["hintable"]]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("9_f2pbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableRange"]
+shape = SubResource("CircleShape2D_fn8jg")
+debug_color = Color(0.684632, 0.499866, 0.0905798, 0.42)
 
 [node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 16
@@ -633,7 +642,11 @@ shape = SubResource("CircleShape2D_ddnnr")
 
 [node name="HitSfx" type="AudioStreamPlayer2D" parent="."]
 
+[node name="InteractionIcon" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -16)
+texture = ExtResource("13_fn8jg")
+
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
 [connection signal="damaged" from="Health" to="HurtBox/HitVfX" method="_on_health_damaged"]
 [connection signal="knocked_out" from="Health" to="." method="_on_health_knocked_out"]
-[connection signal="knocked_out" from="Health" to="HitBox" method="set_monitoring" binds= [false]]

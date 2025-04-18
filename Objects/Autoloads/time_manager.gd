@@ -1,3 +1,4 @@
+@icon("res://addons/plenticons/icons/64x-hidpi/objects/clock-gray.png")
 extends Node
 
 enum Routine{

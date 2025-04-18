@@ -584,6 +584,10 @@ rotation = 1.57079
 shape = SubResource("CapsuleShape2D_ar6wn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -2176
+limit_top = -2240
+limit_right = 1408
+limit_bottom = 1280
 
 [node name="AudioListener2D" type="AudioListener2D" parent="Camera2D"]
 
@@ -615,7 +619,7 @@ metadata/_custom_type_script = "uid://c58h43x0v55mu"
 shape = SubResource("RectangleShape2D_no2i2")
 
 [node name="PlayerCursor" parent="." instance=ExtResource("5_t45n6")]
-collision_layer = 16
+monitorable = true
 
 [node name="HitSfx" type="AudioStreamPlayer2D" parent="."]
 bus = &"Sfx"
@@ -635,5 +639,9 @@ metadata/_custom_type_script = "uid://biwehqk6yigj3"
 [node name="Target Visual" parent="." instance=ExtResource("12_no2i2")]
 unique_name_in_owner = true
 visible = false
+
+[node name="EscapedNotifier" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-4.76837e-07, -1.90735e-06)
+scale = Vector2(2.4, 3.2)
 
 [connection signal="knocked_out" from="Health" to="Health" method="set_process_input" binds= [false]]

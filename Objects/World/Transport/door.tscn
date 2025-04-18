@@ -38,9 +38,20 @@ bus = &"Sfx"
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
 vertices = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-affect_navigation_mesh = true
-carve_navigation_mesh = true
+avoidance_enabled = false
 avoidance_layers = 0
+
+[node name="NavigationLink2D" type="NavigationLink2D" parent="."]
+enabled = false
+navigation_layers = 0
+start_position = Vector2(0, -32)
+end_position = Vector2(0, 32)
+
+[node name="NavigationLink2D2" type="NavigationLink2D" parent="."]
+enabled = false
+navigation_layers = 0
+start_position = Vector2(-32, 0)
+end_position = Vector2(32, 0)
 
 [connection signal="body_entered" from="EntityCheck" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="EntityCheck" to="." method="_on_area_2d_body_exited"]

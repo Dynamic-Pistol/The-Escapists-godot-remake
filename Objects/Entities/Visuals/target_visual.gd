@@ -13,13 +13,13 @@ var target: HurtBox:
 			visible = false
 
 func _on_visibility_changed() -> void:
+	const FRAME_RATE = 15
+	const FRAMES_PER_SECOND = FRAME_RATE / 60.0
 	while visible:
 		texture = TARGET_1
-		for i in 15:
-			await get_tree().process_frame
+		await get_tree().create_timer(FRAMES_PER_SECOND).timeout
 		texture = TARGET_2
-		for i in 15:
-			await get_tree().process_frame
+		await get_tree().create_timer(FRAMES_PER_SECOND).timeout
 		if not target or not target.health.is_alive():
 			target = null
 

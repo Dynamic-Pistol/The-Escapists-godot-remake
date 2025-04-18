@@ -1,15 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://byy2hnx1mjxxy"]
+[gd_scene load_steps=5 format=3 uid="uid://byy2hnx1mjxxy"]
 
 [ext_resource type="Script" uid="uid://clj4y1xvg2t76" path="res://Objects/Entities/Player/player_cursor.gd" id="1_2hlnv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g5lpu"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lklg"]
+bg_color = Color(0.18, 0.18, 0.18, 0.662745)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0lklg"]
+font_size = 60
+
 [node name="PlayerCursor" type="Area2D"]
 top_level = true
 collision_layer = 0
 collision_mask = 18
+monitorable = false
 script = ExtResource("1_2hlnv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_g5lpu")
 debug_color = Color(0.766667, 1, 0, 0.364706)
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+offset_top = -48.0
+offset_right = 120.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0lklg")
+text = "Michael"
+label_settings = SubResource("LabelSettings_0lklg")

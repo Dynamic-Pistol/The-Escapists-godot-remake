@@ -12,8 +12,6 @@ const HIGHTLIGHT_COLOR := Color(Color.AQUA, 0.75)
 
 const LINE_WIDTH  = 4
 
-const CLEAR_TEXTURE = preload("res://Sprites/UI/Cancel.png")
-
 var selection := 0
 
 #
@@ -42,8 +40,9 @@ func _draw() -> void:
 		LINE_COLOR,
 		LINE_WIDTH,
 		true)
-			
-	draw_texture(CLEAR_TEXTURE, Vector2(-16, -16))
+		
+	const CLEAR_TEXTURE = preload("res://Sprites/UI/Icons/Cancel.png")
+	draw_texture(CLEAR_TEXTURE, Vector2(-26, -26))
 	
 	for i in items_count + 1:
 		const OFFSET = SPRITE_SIZE / -2

@@ -1,3 +1,4 @@
+@icon("res://addons/plenticons/icons/64x-hidpi/objects/swords-crossed-blue.png")
 extends Area2D
 class_name HitBox
 

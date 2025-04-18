@@ -388,6 +388,7 @@ texture = ExtResource("45_jjxgc")
 script = ExtResource("46_01ea2")
 
 [node name="INT Bar" type="TextureProgressBar" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+self_modulate = Color(0.15, 1, 0, 1)
 layout_mode = 0
 offset_left = 260.0
 offset_top = 135.5
@@ -398,6 +399,7 @@ rounded = true
 texture_progress = ExtResource("46_q7ahs")
 
 [node name="STR Bar" type="TextureProgressBar" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+self_modulate = Color(0.15, 1, 0, 1)
 layout_mode = 0
 offset_left = 260.0
 offset_top = 179.5
@@ -408,6 +410,7 @@ rounded = true
 texture_progress = ExtResource("46_q7ahs")
 
 [node name="SPD Bar" type="TextureProgressBar" parent="Player UI/Panel/ColorRect/PlayerInfo"]
+self_modulate = Color(0.15, 1, 0, 1)
 layout_mode = 0
 offset_left = 260.0
 offset_top = 224.5
