@@ -28,6 +28,9 @@ var player_mode: PlayerMode = PlayerMode.NORMAL:
 		player_mode = new_val
 		player_mode_changed.emit(player_mode)
 
+func _ready() -> void:
+	pass
+
 func _unhandled_input(event: InputEvent) -> void:
 	if not event.is_pressed():
 		return
@@ -104,7 +107,7 @@ func remove_illegals() -> void:
 			remove_item(i)
 
 func has_illegals() -> bool:
-	return items.any(func(i: Item): return i.is_contraband)
+	return items.any(func(i: Item): return i and i.is_contraband)
 
 func select_item(index: int) -> void:
 	selected_item = index

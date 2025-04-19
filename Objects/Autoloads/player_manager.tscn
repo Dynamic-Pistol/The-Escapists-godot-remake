@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://ca8vd64g3d876"]
+[gd_scene load_steps=74 format=3 uid="uid://ca8vd64g3d876"]
 
 [ext_resource type="Script" uid="uid://gswqp0qx56n6" path="res://Objects/Autoloads/player_manager.gd" id="1_ep4iw"]
 [ext_resource type="Texture2D" uid="uid://b4ymmponqjvn5" path="res://Sprites/UI/Menus/Animation-0 Direction-0 Frame-0.png" id="1_ttp2y"]
@@ -51,6 +51,8 @@
 [ext_resource type="Script" uid="uid://c324uirbas8ao" path="res://Objects/UI/player_info.gd" id="46_01ea2"]
 [ext_resource type="Texture2D" uid="uid://c1vtsibq4vo8" path="res://Sprites/UI/ProgressBarFill.png" id="46_q7ahs"]
 [ext_resource type="Script" uid="uid://dwicj5anhg0ad" path="res://Objects/UI/radial_menu.gd" id="46_uhbjh"]
+[ext_resource type="Script" uid="uid://bu34fuw8kbum7" path="res://Objects/UI/mini_map.gd" id="52_co6br"]
+[ext_resource type="Texture2D" uid="uid://bn7usv2sbsapt" path="res://Sprites/World/minimap.png" id="52_u68mv"]
 
 [sub_resource type="Animation" id="Animation_m5ve4"]
 resource_name = "Bell_Ring"
@@ -463,5 +465,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("46_uhbjh")
 metadata/_custom_type_script = "uid://dwicj5anhg0ad"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Player UI/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("52_co6br")
+
+[node name="SubViewport" type="SubViewport" parent="Player UI/Panel/SubViewportContainer"]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(1280, 960)
+size_2d_override = Vector2i(128, 0)
+size_2d_override_stretch = true
+render_target_update_mode = 0
+
+[node name="PrisonMap" type="Sprite2D" parent="Player UI/Panel/SubViewportContainer/SubViewport"]
+scale = Vector2(16, 16)
+texture = ExtResource("52_u68mv")
+
+[node name="MiniMapCamera" type="Camera2D" parent="Player UI/Panel/SubViewportContainer/SubViewport"]
+zoom = Vector2(5, 5)
 
 [connection signal="pressed" from="Player UI/Panel/VBoxContainer/Self" to="Player UI/Panel/ColorRect" method="show_player_info"]
