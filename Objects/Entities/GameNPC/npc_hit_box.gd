@@ -11,3 +11,7 @@ func _physics_process(_delta: float) -> void:
 		return
 	if overlaps_area(target):
 		attack(target)
+
+
+func _on_health_knocked_out() -> void:
+	target = null

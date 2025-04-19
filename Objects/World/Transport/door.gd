@@ -21,7 +21,7 @@ const KeyType = PlayerManager.KeyType
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if not _visual.visible:
 		return
-	if body is not Entity or body.collision_mask != collision_layer:
+	if not (body.collision_mask & collision_layer):
 		return
 	if body is Player and key_type != KeyType.NONE:
 		const Routine = TimeManager.Routine
@@ -42,7 +42,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if _visual.visible:
 		return
-	if body is not Entity or body.collision_mask != collision_layer:
+	if not (body.collision_mask & collision_layer):
 		return
 	if $EntityCheck.get_overlapping_bodies().size() > 0:
 		return

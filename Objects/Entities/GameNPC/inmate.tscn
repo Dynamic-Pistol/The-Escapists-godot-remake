@@ -650,3 +650,4 @@ texture = ExtResource("13_fn8jg")
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
 [connection signal="damaged" from="Health" to="HurtBox/HitVfX" method="_on_health_damaged"]
 [connection signal="knocked_out" from="Health" to="." method="_on_health_knocked_out"]
+[connection signal="knocked_out" from="Health" to="HitBox" method="_on_health_knocked_out"]
