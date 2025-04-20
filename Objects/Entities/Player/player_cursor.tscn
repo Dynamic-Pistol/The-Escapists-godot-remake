@@ -13,7 +13,7 @@ font_size = 60
 [node name="PlayerCursor" type="Area2D"]
 top_level = true
 collision_layer = 0
-collision_mask = 18
+collision_mask = 3
 monitorable = false
 script = ExtResource("1_2hlnv")
 

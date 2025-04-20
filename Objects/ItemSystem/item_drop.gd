@@ -10,9 +10,8 @@ var item:Item:
 		$"Visual".texture = item.texture
 		name = item.name
 
-
 func pick_up(picker: Entity) -> bool:
-	if not picker.collision_mask & collision_layer:
+	if not WorldLayerManager.both_on_same_layer(picker, self):
 		return false
 	if PlayerManager.add_item(item):
 		queue_free()

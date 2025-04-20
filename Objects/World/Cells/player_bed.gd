@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+@export var drop_off: Node2D
 
 func interact(player: Player) -> void:
 	player.sleeping = not player.sleeping
@@ -13,4 +14,4 @@ func interact(player: Player) -> void:
 			await get_tree().process_frame
 	else:
 		TimeManager.time_speed = 1
-		player.global_position = $"DropOff".global_position
+		player.global_position = drop_off.global_position

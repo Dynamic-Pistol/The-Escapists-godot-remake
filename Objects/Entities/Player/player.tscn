@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://1dyenyr7xqqv"]
+[gd_scene load_steps=45 format=3 uid="uid://1dyenyr7xqqv"]
 
 [ext_resource type="Script" uid="uid://d4f4uvypapqgv" path="res://Objects/Entities/Player/player.gd" id="2_aw2ag"]
 [ext_resource type="Texture2D" uid="uid://dfsaw6h8dcle3" path="res://Sprites/Entities/Inmates/rabbit.png" id="2_kmwgw"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://c58h43x0v55mu" path="res://Objects/Entities/Components/hurt_box.gd" id="8_no2i2"]
 [ext_resource type="Script" uid="uid://rgwqec3igro8" path="res://Objects/Entities/Components/health.gd" id="10_df1xx"]
 [ext_resource type="Script" uid="uid://dmi8w0rhb5016" path="res://Objects/Entities/Player/player_stats.gd" id="10_msdba"]
+[ext_resource type="Texture2D" uid="uid://c37b0mcfyyo2i" path="res://Sprites/Entities/Minimap/player_mini_icon.png" id="12_8rwlj"]
 [ext_resource type="PackedScene" uid="uid://b7yn5omkiopxr" path="res://Objects/Entities/Visuals/target.tscn" id="12_no2i2"]
 
 [sub_resource type="Animation" id="Animation_f5mcn"]
@@ -547,8 +548,7 @@ size = Vector2(48, 64)
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("anim_tree") groups=["player"]]
 z_index = 1
 y_sort_enabled = true
-collision_layer = 16
-collision_mask = 2
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("2_aw2ag")
 anim_tree = NodePath("EntityTree")
@@ -584,16 +584,12 @@ rotation = 1.57079
 shape = SubResource("CapsuleShape2D_ar6wn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_left = -2176
-limit_top = -2240
-limit_right = 1408
-limit_bottom = 1280
 
 [node name="AudioListener2D" type="AudioListener2D" parent="Camera2D"]
 
 [node name="InteractionRange" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 18
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionRange"]
 shape = SubResource("RectangleShape2D_8rwlj")
@@ -601,7 +597,7 @@ debug_color = Color(0, 1, 0.416667, 0.419608)
 
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 16
+collision_mask = 2
 script = ExtResource("8_msdba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
@@ -609,7 +605,7 @@ shape = SubResource("CircleShape2D_u7612")
 debug_color = Color(0.707071, 0.485471, 0.131149, 0.42)
 
 [node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
-collision_layer = 16
+collision_layer = 2
 collision_mask = 0
 script = ExtResource("8_no2i2")
 health = NodePath("../Health")
@@ -643,5 +639,9 @@ visible = false
 [node name="EscapedNotifier" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-4.76837e-07, -1.90735e-06)
 scale = Vector2(2.4, 3.2)
+
+[node name="PlayerMiniIcon" type="Sprite2D" parent="."]
+visibility_layer = 2
+texture = ExtResource("12_8rwlj")
 
 [connection signal="knocked_out" from="Health" to="Health" method="set_process_input" binds= [false]]

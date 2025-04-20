@@ -1,7 +1,7 @@
 extends Area2D
 
-
 const PlayerMode = preload("res://Objects/Autoloads/player_manager.gd").PlayerMode;
+
 
 func _ready() -> void:
 	PlayerManager.player_mode_changed.connect(_on_player_mode_changed)
@@ -56,18 +56,23 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	var player_mode = PlayerManager.player_mode
 	var player = PlayerManager.player
-	var selected_item := PlayerManager.get_selected_item() as Item
+	var selected_item :Item = PlayerManager.get_selected_item()
+	var current_layer :WorldLayer = WorldLayerManager.current_layer
 	match  player_mode:
 		PlayerMode.NORMAL:
 			if event.is_action(&"Interact"):
 				for body in get_overlapping_bodies():
 					if not player.interaction_range.overlaps_body(body):
 						continue
+					if not WorldLayerManager.both_on_same_layer(body, self):
+						continue
 					if body.has_method(&"interact"):
 						body.interact(player)
 						return
 				for area in get_overlapping_areas():
 					if not player.interaction_range.overlaps_area(area):
+						continue
+					if not WorldLayerManager.both_on_same_layer(area, self):
 						continue
 					if area.has_method(&"interact"):
 						area.interact(player)
@@ -106,7 +111,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		PlayerMode.ATTACK:
 			if Input.is_action_just_pressed(&"Target"):
 				for area in get_overlapping_areas():
-					if not area.get_parent() == player and area is HurtBox and area.health.is_alive():
+					if area.owner == owner:
+						continue
+					if not WorldLayerManager.both_on_same_layer(area, self):
+						continue
+					if area is HurtBox and area.health.is_alive():
 						player.hit_box.target = area
 						%"Target Visual".target = area
 						return

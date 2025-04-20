@@ -1,6 +1,7 @@
 extends HitBox
 class_name NPCHitBox
 
+
 func _physics_process(_delta: float) -> void:
 	if not target or not can_attack():
 		return

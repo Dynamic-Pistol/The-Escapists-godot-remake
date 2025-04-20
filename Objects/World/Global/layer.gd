@@ -24,6 +24,7 @@ func _ready() -> void:
 		var source = get_cell_source_id(cell)
 		base_tiles[cell] = Vector3i(coords.x, coords.y, source)
 
+
 func get_cell_position(cell_position: Vector2) -> Vector2i:
 	return local_to_map(to_local(cell_position))
 
@@ -41,3 +42,14 @@ func destroy_tile(cell_position: Vector2) -> void:
 	var pos := get_cell_position(cell_position)
 	set_cell(pos, 1, Vector2i(3, 2))
 	destroyed_tiles.append(pos)
+
+func _on_child_entered_tree(node: Node) -> void:
+	_set_group_for_node(node)
+
+func _set_group_for_node(node: Node) -> void:
+	const LAYERS_2_GROUPS = WorldLayerManager.LAYERS_2_GROUP
+	for group in LAYERS_2_GROUPS:
+		node.remove_from_group(group)
+	node.add_to_group(LAYERS_2_GROUPS[layer])
+	for child in node.get_children():
+		_set_group_for_node(child)

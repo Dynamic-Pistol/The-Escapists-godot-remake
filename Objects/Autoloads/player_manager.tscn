@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://ca8vd64g3d876"]
+[gd_scene load_steps=76 format=3 uid="uid://ca8vd64g3d876"]
 
 [ext_resource type="Script" uid="uid://gswqp0qx56n6" path="res://Objects/Autoloads/player_manager.gd" id="1_ep4iw"]
 [ext_resource type="Texture2D" uid="uid://b4ymmponqjvn5" path="res://Sprites/UI/Menus/Animation-0 Direction-0 Frame-0.png" id="1_ttp2y"]
@@ -47,10 +47,11 @@
 [ext_resource type="Texture2D" uid="uid://dn45g3x4p4qj0" path="res://Sprites/UI/Menus/ActionButtons/Save-Pressed.png" id="40_0moxi"]
 [ext_resource type="Texture2D" uid="uid://csxyh5dc5ote" path="res://Sprites/UI/Menus/ActionButtons/Save-Hover.png" id="41_im7hc"]
 [ext_resource type="Script" uid="uid://bxakq5s0ujlcy" path="res://Objects/UI/ui_hide.gd" id="45_01ea2"]
-[ext_resource type="Texture2D" uid="uid://5jmwrbdll0c5" path="res://Sprites/UI/Menus/PlayerInfo.png" id="45_jjxgc"]
 [ext_resource type="Script" uid="uid://c324uirbas8ao" path="res://Objects/UI/player_info.gd" id="46_01ea2"]
 [ext_resource type="Texture2D" uid="uid://c1vtsibq4vo8" path="res://Sprites/UI/ProgressBarFill.png" id="46_q7ahs"]
 [ext_resource type="Script" uid="uid://dwicj5anhg0ad" path="res://Objects/UI/radial_menu.gd" id="46_uhbjh"]
+[ext_resource type="PackedScene" uid="uid://dkb5lw15a1ibs" path="res://Objects/UI/desk_inventory_slot.tscn" id="50_co6br"]
+[ext_resource type="Script" uid="uid://ddjr7sorspuib" path="res://Objects/UI/desk_inventory.gd" id="50_tcs1y"]
 [ext_resource type="Script" uid="uid://bu34fuw8kbum7" path="res://Objects/UI/mini_map.gd" id="52_co6br"]
 [ext_resource type="Texture2D" uid="uid://bn7usv2sbsapt" path="res://Sprites/World/minimap.png" id="52_u68mv"]
 
@@ -221,6 +222,9 @@ func health_changed(new_health: int) -> void:
 [sub_resource type="LabelSettings" id="LabelSettings_uhbjh"]
 font_size = 40
 
+[sub_resource type="LabelSettings" id="LabelSettings_54fuh"]
+font_size = 65
+
 [node name="PlayerManager" type="Node"]
 script = ExtResource("1_ep4iw")
 
@@ -373,7 +377,8 @@ grow_vertical = 2
 color = Color(0.25, 0.25, 0.25, 0.764706)
 script = ExtResource("45_01ea2")
 
-[node name="PlayerInfo" type="TextureRect" parent="Player UI/Panel/ColorRect"]
+[node name="PlayerInfo" type="Panel" parent="Player UI/Panel/ColorRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -386,7 +391,6 @@ offset_right = 300.0
 offset_bottom = 268.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("45_jjxgc")
 script = ExtResource("46_01ea2")
 
 [node name="INT Bar" type="TextureProgressBar" parent="Player UI/Panel/ColorRect/PlayerInfo"]
@@ -449,6 +453,132 @@ offset_bottom = 248.5
 text = "Speed:"
 label_settings = SubResource("LabelSettings_uhbjh")
 
+[node name="DeskInventory" type="Panel" parent="Player UI/Panel/ColorRect"]
+visible = false
+layout_mode = 0
+offset_left = 292.0
+offset_top = 180.0
+offset_right = 892.0
+offset_bottom = 715.0
+script = ExtResource("50_tcs1y")
+
+[node name="GridContainer" type="GridContainer" parent="Player UI/Panel/ColorRect/DeskInventory"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -208.0
+offset_right = 250.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 6
+
+[node name="Slot 1" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 2" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 3" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 4" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 5" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 6" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 7" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 8" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 9" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 10" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 11" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 12" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 13" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 14" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 15" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 16" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 17" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 18" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 19" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 20" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 21" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 22" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 23" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 24" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 25" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 26" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 27" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 28" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 29" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Slot 30" parent="Player UI/Panel/ColorRect/DeskInventory/GridContainer" instance=ExtResource("50_co6br")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player UI/Panel/ColorRect/DeskInventory"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 11.0
+grow_horizontal = 2
+text = "Player's Desk"
+label_settings = SubResource("LabelSettings_54fuh")
+horizontal_alignment = 1
+
 [node name="RadialMenu" type="Control" parent="Player UI/Panel"]
 visible = false
 layout_mode = 1
@@ -491,4 +621,7 @@ texture = ExtResource("52_u68mv")
 [node name="MiniMapCamera" type="Camera2D" parent="Player UI/Panel/SubViewportContainer/SubViewport"]
 zoom = Vector2(5, 5)
 
+[connection signal="desk_opened" from="." to="Player UI/Panel/ColorRect/DeskInventory" method="_on_player_manager_desk_opened"]
 [connection signal="pressed" from="Player UI/Panel/VBoxContainer/Self" to="Player UI/Panel/ColorRect" method="show_player_info"]
+[connection signal="visibility_changed" from="Player UI/Panel/ColorRect/PlayerInfo" to="Player UI/Panel/ColorRect/PlayerInfo" method="_on_visibility_changed"]
+[connection signal="visibility_changed" from="Player UI/Panel/ColorRect/DeskInventory" to="Player UI/Panel/ColorRect/DeskInventory" method="_on_visibility_changed"]

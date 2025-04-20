@@ -3,11 +3,12 @@ class_name Hole
 
 @onready var visual = $Visual
 var owning_point: HolePoint
+var is_down := false
 
 func interact(_entity: Entity) -> void:
 	if not can_go_down():
 		return
-	if collision_layer & (1 << 1):
+	if is_down:
 		WorldLayerManager.switch_layer(0, global_position)
 	else:
 		WorldLayerManager.switch_layer(1, global_position)

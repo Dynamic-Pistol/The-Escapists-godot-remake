@@ -14,12 +14,14 @@ func _enter_tree() -> void:
 	up_hole = preload("res://Objects/World/Transport/up_hole.tscn").instantiate()
 	up_hole.global_position = global_position
 	up_hole.owning_point = self
+	up_hole.is_down = false
 	
 	underground_layer.add_child(up_hole)
 	
 	down_hole = preload("res://Objects/World/Transport/down_hole.tscn").instantiate()
 	down_hole.global_position = global_position
 	down_hole.owning_point = self
+	down_hole.is_down = true
 	
 	WorldLayerManager.layers[LayerType.GROUND].add_child(down_hole)
 

@@ -88,9 +88,9 @@ func _input(event: InputEvent) -> void:
 			selection = ceili((mouse_rads / TAU) * PlayerManager.items.size())
 		queue_redraw()
 		
-	if event.is_action_pressed(&"Inventory"):
+	if event.is_action_pressed(&"Quick Wheel"):
 		show()
-	elif event.is_action_released(&"Inventory"):
+	elif event.is_action_released(&"Quick Wheel"):
 		hide()
 		if PlayerManager.has_item_at(selection - 1):
 			PlayerManager.drop_item(selection - 1)

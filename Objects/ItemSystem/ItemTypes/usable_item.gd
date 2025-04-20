@@ -4,7 +4,7 @@ class_name UsableItem
 signal item_used(new_durability: int)
 
 @export var decay: int
-var durability := 100
+var durability :int = 100
 
 func degrade() -> void:
 	durability -= decay

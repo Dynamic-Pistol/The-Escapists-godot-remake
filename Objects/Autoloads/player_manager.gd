@@ -49,6 +49,12 @@ var guard_heat := 0
 signal inventory_changed(index: int, item: Item)
 signal item_added(item: Item)
 signal item_removed(item: Item)
+signal desk_opened(desk: Desk)
+signal desk_closed
+
+@onready var desk_inventory: Panel = $"Player UI/Panel/ColorRect/DeskInventory"
+@onready var panel: ColorRect = $"Player UI/Panel/ColorRect"
+
 
 var items: Array[Item] = [null, null, null, null, null, null]
 var weapon: WeaponItem
@@ -117,6 +123,13 @@ func get_selected_item() -> Item:
 
 func has_item_at(index: int) -> bool:
 	return items[index] != null
+
+func open_desk(desk: Desk) -> void:
+	desk_opened.emit(desk)
+	panel.show_desk_inventory()
+
+func close_desk() -> void:
+	desk_closed.emit()
 
 func _durability_changed(new_durability: int, item_idx: int) -> void:
 	if new_durability <= 0:

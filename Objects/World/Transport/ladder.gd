@@ -23,8 +23,6 @@ func _ready() -> void:
 		queue_free()
 		return
 	own_layer = world_layer.layer
-	collision_layer = 1 << own_layer
-
 
 func interact(_entity: Entity) -> void:
 	WorldLayerManager.switch_layer(target_layer as int , global_position)

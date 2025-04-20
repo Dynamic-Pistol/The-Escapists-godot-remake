@@ -126,8 +126,7 @@ radius = 12.0
 size = Vector2(34, 56)
 
 [node name="Warden" type="CharacterBody2D"]
-collision_layer = 16
-collision_mask = 2
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_nan7u")
 
@@ -166,7 +165,7 @@ debug_use_custom = true
 debug_path_custom_color = Color(0, 1, 0.15, 1)
 
 [node name="Warden Boolean" type="Area2D" parent="." groups=["hintable"]]
-collision_layer = 16
+collision_layer = 2
 collision_mask = 0
 monitoring = false
 

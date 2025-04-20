@@ -1,5 +1,7 @@
 extends TextureButton
-class_name PlayerItemSlot
+class_name DeskItemSlot
+
+signal item_taken(index: int)
 
 var item: Item:
 	set(new_value):
@@ -8,8 +10,7 @@ var item: Item:
 			$ItemVisual.texture = new_value.texture
 			disabled = false
 			if item is UsableItem:
-				item.item_used.connect(_durability_changed)
-				_durability_changed(item.durability)
+				tooltip_text = item.name + "(%d%%)" % item.durability
 			else:
 				tooltip_text = item.name
 		else:
@@ -19,18 +20,13 @@ var item: Item:
 				button_pressed = false
 			tooltip_text = ""
 
-func _toggled(toggled_on: bool) -> void:
-	if toggled_on:
-		print("Selected Item: ", item.name)
-
+func _pressed() -> void:
+	if PlayerManager.add_item(item):
+		item_taken.emit(get_index())
+		item = null
 
 func _make_custom_tooltip(for_text: String) -> Object:
 	var tool_tip := preload("res://Objects/UI/Tooltips/item_slot_tooltip.tscn").instantiate()
 	tool_tip.text = for_text
 	tool_tip.label_settings.font_color = Color.RED if item and item.is_contraband else Color.GREEN
 	return tool_tip
-
-func _durability_changed(new_durability: int) -> void:
-	if not item:
-		return
-	tooltip_text = item.name + "(%d%%)" % new_durability

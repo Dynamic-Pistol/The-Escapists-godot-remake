@@ -4,7 +4,7 @@ class_name HitBox
 
 @onready var health: Health = $"../Health"
 @onready var stats: Stats = $"../Stats"
-@onready var own_hurt_box: HurtBox = $"../HurtBox"
+#@onready var own_hurt_box: HurtBox = $"../HurtBox"
 @export var just_attacked:= false
 var target: HurtBox
 var attack_timer: SceneTreeTimer
@@ -17,13 +17,11 @@ func can_attack() -> bool:
 func filter_enemies(area: Area2D) -> bool:
 	if area is not HurtBox:
 		return false
-	if area == own_hurt_box:
-		return false
-	if not area.get_parent().collision_mask & get_parent().collision_mask:
+	if area.owner == owner:
 		return false
 	if not area.health.is_alive():
 		return false
-	return true
+	return WorldLayerManager.both_on_same_layer(area, self)
 
 func attack(enemy: HurtBox) -> void:
 	just_attacked = true 
