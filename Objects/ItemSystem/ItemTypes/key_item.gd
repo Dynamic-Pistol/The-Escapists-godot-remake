@@ -1,6 +1,7 @@
 extends UsableItem
 class_name KeyItem
 
+const KeyType = Door.KeyType
 
-@export var key_type: PlayerManager.KeyType = 0
+@export var key_type: KeyType = KeyType.NONE
 @export var fake: bool

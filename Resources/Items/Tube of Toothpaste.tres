@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bnu60w1se4ogl"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_i7j15"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_i7j15"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ehr6c"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_60sn7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7j15"]
 atlas = ExtResource("2_ehr6c")
 region = Rect2(704, 128, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_i7j15")
 name = &"Tube of Toothpaste"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_60sn7")
+texture = SubResource("AtlasTexture_i7j15")
 is_contraband = false

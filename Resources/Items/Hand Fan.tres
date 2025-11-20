@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c8ebjao3lgg2u"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_i7q0i"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_i7q0i"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_to6b6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ohwt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7q0i"]
 atlas = ExtResource("2_to6b6")
 region = Rect2(896, 512, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_i7q0i")
 name = &"Hand Fan"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_4ohwt")
+texture = SubResource("AtlasTexture_i7q0i")
 is_contraband = false

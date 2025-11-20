@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bioanmgi5lad6"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_3hrrx"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_3hrrx"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_eknj1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_suodb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hrrx"]
 atlas = ExtResource("2_eknj1")
 region = Rect2(512, 0, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_3hrrx")
 name = &"Lighter"
 base_price = 25
 opinion_inc = 1
-texture = SubResource("AtlasTexture_suodb")
+texture = SubResource("AtlasTexture_3hrrx")
 is_contraband = false

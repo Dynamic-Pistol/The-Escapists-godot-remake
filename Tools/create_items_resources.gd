@@ -1,19 +1,18 @@
 @tool
-extends Node
+extends EditorScript
 
-const KeyType = PlayerManager.KeyType
+const KeyType = Door.KeyType
 
-@export
-var item_sheet: Texture2D
+var item_sheet: Texture2D = preload("res://Sprites/items.png")
 var index: Rect2i
 
-@onready
 var config := ConfigFile.new()
 var id: String
 
 const OFFSET = 64
 
-@export_tool_button("Create Items") var begin = _begin
+func _run() -> void:
+	_begin()
 
 # Called when the node enters the scene tree for the first time.
 func _begin() -> void:

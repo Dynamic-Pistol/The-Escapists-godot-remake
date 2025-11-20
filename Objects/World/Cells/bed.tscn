@@ -10,10 +10,11 @@ region = Rect2(256, 128, 64, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_guam1"]
 size = Vector2(64, 120)
 
-[node name="Bed" type="StaticBody2D" groups=["ground"]]
+[node name="Bed" type="StaticBody2D" node_paths=PackedStringArray("drop_off") groups=["ground"]]
 y_sort_enabled = true
 collision_mask = 0
 script = ExtResource("1_c8jk7")
+drop_off = NodePath("DropOff")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_c8jk7")
@@ -21,3 +22,6 @@ texture = SubResource("AtlasTexture_c8jk7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_guam1")
+
+[node name="DropOff" type="Marker2D" parent="."]
+position = Vector2(64, 0)

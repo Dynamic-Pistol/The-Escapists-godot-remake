@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ggyeu6yafw5n"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_puwd0"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_puwd0"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_yriq5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mjyam"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_puwd0"]
 atlas = ExtResource("2_yriq5")
 region = Rect2(192, 896, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_puwd0")
 name = &"Nice Letter"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_mjyam")
+texture = SubResource("AtlasTexture_puwd0")
 is_contraband = false

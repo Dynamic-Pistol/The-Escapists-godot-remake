@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ch3ukkgi18gj0"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_5ksix"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_5ksix"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2w63m"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ndbe"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ksix"]
 atlas = ExtResource("2_2w63m")
 region = Rect2(1024, 704, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_5ksix")
 name = &"Blue Putty"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_8ndbe")
+texture = SubResource("AtlasTexture_5ksix")
 is_contraband = false

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://du8sc332kc1uc"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_qoeon"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_qoeon"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_y2cyg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xti1d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoeon"]
 atlas = ExtResource("2_y2cyg")
 region = Rect2(384, 320, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_qoeon")
 name = &"Poster"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_xti1d")
+texture = SubResource("AtlasTexture_qoeon")
 is_contraband = false

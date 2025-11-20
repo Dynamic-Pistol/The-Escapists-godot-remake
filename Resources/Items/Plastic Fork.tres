@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dhfhhh1vbgmxu"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_6mghh"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_6mghh"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7herg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tcjqh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mghh"]
 atlas = ExtResource("2_7herg")
 region = Rect2(704, 64, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_6mghh")
 name = &"Plastic Fork"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_tcjqh")
+texture = SubResource("AtlasTexture_6mghh")
 is_contraband = false

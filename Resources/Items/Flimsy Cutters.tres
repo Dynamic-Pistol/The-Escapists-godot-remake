@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bhf1v0yjk852f"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_h605f"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_h605f"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_0tirh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4hq8i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h605f"]
 atlas = ExtResource("2_0tirh")
 region = Rect2(512, 384, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_h605f")
 name = &"Flimsy Cutters"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_4hq8i")
+texture = SubResource("AtlasTexture_h605f")
 is_contraband = true

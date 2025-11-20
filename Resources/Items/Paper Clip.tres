@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d0ws7iiub56jf"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_7fmin"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_7fmin"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_byoox"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eifv8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fmin"]
 atlas = ExtResource("2_byoox")
 region = Rect2(0, 320, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_7fmin")
 name = &"Paper Clip"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_eifv8")
+texture = SubResource("AtlasTexture_7fmin")
 is_contraband = false

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://yjpn84ajaown"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_sgs31"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_sgs31"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ssujf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0h61d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgs31"]
 atlas = ExtResource("2_ssujf")
 region = Rect2(960, 128, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_sgs31")
 name = &"Pack of Playing Cards"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_0h61d")
+texture = SubResource("AtlasTexture_sgs31")
 is_contraband = false

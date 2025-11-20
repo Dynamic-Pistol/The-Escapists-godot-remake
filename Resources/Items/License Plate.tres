@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://vufwlmlucgjf"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_dcak5"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_dcak5"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_dayyj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rqhip"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcak5"]
 atlas = ExtResource("2_dayyj")
 region = Rect2(384, 256, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_dcak5")
 name = &"License Plate"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_rqhip")
+texture = SubResource("AtlasTexture_dcak5")
 is_contraband = true

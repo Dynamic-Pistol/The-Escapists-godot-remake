@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dgv0j3uwu81xc"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_lbnsp"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_lbnsp"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_qipn5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nkf0c"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbnsp"]
 atlas = ExtResource("2_qipn5")
 region = Rect2(960, 896, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_lbnsp")
 name = &"High Beam Flashlight"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_nkf0c")
+texture = SubResource("AtlasTexture_lbnsp")
 is_contraband = true

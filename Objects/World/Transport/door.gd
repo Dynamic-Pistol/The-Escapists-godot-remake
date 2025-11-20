@@ -1,38 +1,45 @@
 @tool
 extends StaticBody2D
+class_name Door
 
-const KeyType = PlayerManager.KeyType
+enum KeyType{
+	NONE = 0,
+	CELL = 1 << 0,
+	ENTERANCE = 1 << 1,
+	UTILITY = 1 << 2,
+	WORK = 1 << 3,
+	STAFF = 1 << 4,
+	GUARD = 1 << 5,
+	WARDEN = 1 << 6
+}
 
 @onready var _visual: Sprite2D = $Visual
 
-@export var key_type: KeyType = KeyType.NONE:
+@export var _key_type: KeyType = KeyType.NONE:
 	set(new_val):
 		if not is_node_ready():
 			await ready
-		key_type = new_val
-		_visual.frame = int(log(key_type) / log(2))
-		if key_type == 1:
-			$NavigationObstacle2D.affect_navigation_mesh = false
-			$NavigationObstacle2D.carve_navigation_mesh = false
+		_key_type = new_val
+		if _key_type == 0 or _key_type == 1:
+			_visual.frame = _key_type
 		else:
-			$NavigationObstacle2D.affect_navigation_mesh = true
-			$NavigationObstacle2D.carve_navigation_mesh = true
+			_visual.frame = int(log(_key_type) / log(2)) + 1
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if not _visual.visible:
 		return
-	if not (body.collision_mask & collision_layer):
+	if not WorldLayerManager.both_on_same_layer(body, self):
 		return
-	if body is Player and key_type != KeyType.NONE:
+	if body is Player and _key_type != KeyType.NONE:
 		const Routine = TimeManager.Routine
-		if key_type == KeyType.CELL:
-			if TimeManager.current_routine == Routine.LIGHTS_OUT and not (body.current_keys & key_type):
+		if _key_type == KeyType.CELL:
+			if TimeManager.current_routine == Routine.LIGHTS_OUT and not (body.current_keys & _key_type):
 				return
-		elif key_type == KeyType.ENTERANCE:
-			if not (TimeManager.hours >= 10 and TimeManager.hours <= 22) and not (body.current_keys & key_type):
+		elif _key_type == KeyType.ENTERANCE:
+			if not (TimeManager.hours >= 10 and TimeManager.hours <= 22) and not (body.current_keys & _key_type):
 				return
 		else:
-			if not (body.current_keys & key_type):
+			if not (body.current_keys & _key_type):
 				return
 			
 	$DoorCollider.set_deferred(&"disabled", true)
@@ -42,7 +49,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if _visual.visible:
 		return
-	if not (body.collision_mask & collision_layer):
+	if not WorldLayerManager.both_on_same_layer(body, self):
 		return
 	if $EntityCheck.get_overlapping_bodies().size() > 0:
 		return

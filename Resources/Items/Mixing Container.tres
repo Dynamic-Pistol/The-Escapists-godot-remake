@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://1jcdw7b2k2ig"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_cw1nm"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_cw1nm"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_f8mvx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fooog"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw1nm"]
 atlas = ExtResource("2_f8mvx")
 region = Rect2(576, 640, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_cw1nm")
 name = &"Mixing Container"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_fooog")
+texture = SubResource("AtlasTexture_cw1nm")
 is_contraband = true

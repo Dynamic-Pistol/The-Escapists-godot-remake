@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://gmxinfmb0bxg"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rx5ut"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_rx5ut"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_m4hbw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_swywr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx5ut"]
 atlas = ExtResource("2_m4hbw")
 region = Rect2(512, 192, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_rx5ut")
 name = &"Flashlight"
 base_price = 30
 opinion_inc = 2
-texture = SubResource("AtlasTexture_swywr")
+texture = SubResource("AtlasTexture_rx5ut")
 is_contraband = false

@@ -14,6 +14,8 @@ const MUSIC = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	TimeManager.routine_changed.connect(routine_changed)
+
+func game_started() -> void:
 	routine_changed()
 
 func routine_changed() -> void:

@@ -8,7 +8,7 @@ var target: HurtBox:
 		target = new_val
 		if target:
 			visible = true
-			$TargetHPBar.max_value = target.health.get_max_health()
+			$TargetHPBar.max_value = target.owner.get_max_health()
 		else:
 			visible = false
 
@@ -20,10 +20,10 @@ func _on_visibility_changed() -> void:
 		await get_tree().create_timer(FRAMES_PER_SECOND).timeout
 		texture = TARGET_2
 		await get_tree().create_timer(FRAMES_PER_SECOND).timeout
-		if not target or not target.health.is_alive():
+		if not target or not target.owner.is_alive():
 			target = null
 
 func _process(_delta: float) -> void:
 	if target:
 		global_position = target.global_position
-		$TargetHPBar.value = target.health.health
+		$TargetHPBar.value = target.owner.get_health()

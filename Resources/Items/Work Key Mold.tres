@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://7i7uv3d4ymel"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_kdgig"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_kdgig"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_2bosl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tstbo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdgig"]
 atlas = ExtResource("2_2bosl")
 region = Rect2(448, 192, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_kdgig")
 name = &"Work Key Mold"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_tstbo")
+texture = SubResource("AtlasTexture_kdgig")
 is_contraband = true

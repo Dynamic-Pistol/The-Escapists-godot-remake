@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bwebbu2wvrkef"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_hje78"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_hje78"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_duuqc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a0q64"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hje78"]
 atlas = ExtResource("2_duuqc")
 region = Rect2(128, 256, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_hje78")
 name = &"Battery"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_a0q64")
+texture = SubResource("AtlasTexture_hje78")
 is_contraband = false

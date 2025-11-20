@@ -1,13 +1,15 @@
 extends Area2D
 class_name HurtBox
 
-@export var health: Health
-@onready var entity: InteractableEntity = get_parent()
 var blocking := false
 
-func damage(amount: int) -> void:
-	if health and not blocking:
-		health.damage(amount)
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"Secondary Action") and not blocking:
+		block()
+
+func damage(amount: int, _attacker: Object = null) -> void:
+	if not blocking:
+		owner.damage(amount)
 
 func block() -> void:
 	const BLOCK_FRAMES = 20

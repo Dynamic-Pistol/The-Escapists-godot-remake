@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_ts7lj"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7m3m2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lg7ff"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts7lj"]
 atlas = ExtResource("2_7m3m2")
 region = Rect2(768, 448, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 4
 name = &"Plated POW Outfit"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_lg7ff")
+texture = SubResource("AtlasTexture_ts7lj")
 is_contraband = true

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bbe8rmv358hxe"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_lfyo7"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_lfyo7"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_32cut"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iekkt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfyo7"]
 atlas = ExtResource("2_32cut")
 region = Rect2(832, 576, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_lfyo7")
 name = &"Nails"
 base_price = 40
 opinion_inc = 1
-texture = SubResource("AtlasTexture_iekkt")
+texture = SubResource("AtlasTexture_lfyo7")
 is_contraband = false

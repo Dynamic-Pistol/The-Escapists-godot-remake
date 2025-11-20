@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bu33a8lxyo7po"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_t1xyw"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_t1xyw"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_cfq01"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w7i6c"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1xyw"]
 atlas = ExtResource("2_cfq01")
 region = Rect2(0, 64, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_t1xyw")
 name = &"Comb"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_w7i6c")
+texture = SubResource("AtlasTexture_t1xyw")
 is_contraband = false

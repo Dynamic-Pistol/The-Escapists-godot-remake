@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://drjr6vro7yumh"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_4efj0"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_4efj0"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_05mag"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cu3f4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4efj0"]
 atlas = ExtResource("2_05mag")
 region = Rect2(448, 320, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_4efj0")
 name = &"Foil"
 base_price = 30
 opinion_inc = 1
-texture = SubResource("AtlasTexture_cu3f4")
+texture = SubResource("AtlasTexture_4efj0")
 is_contraband = true

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dd6btffsuugv7"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_0dy8q"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_0dy8q"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_xfuo3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cyk4h"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dy8q"]
 atlas = ExtResource("2_xfuo3")
 region = Rect2(704, 832, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_0dy8q")
 name = &"Presents"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_cyk4h")
+texture = SubResource("AtlasTexture_0dy8q")
 is_contraband = true

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dcan82j54mp2a"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_3yvqc"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_3yvqc"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_1ogtj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xapdq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yvqc"]
 atlas = ExtResource("2_1ogtj")
 region = Rect2(512, 576, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_3yvqc")
 name = &"Fake Fence"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_xapdq")
+texture = SubResource("AtlasTexture_3yvqc")
 is_contraband = true

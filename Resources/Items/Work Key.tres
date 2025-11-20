@@ -3,18 +3,17 @@
 [ext_resource type="Script" uid="uid://c07xtuv08l3cg" path="res://Objects/ItemSystem/ItemTypes/key_item.gd" id="1_wcwed"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_gocj6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6xpvr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcwed"]
 atlas = ExtResource("2_gocj6")
 region = Rect2(576, 128, 64, 64)
 
 [resource]
 script = ExtResource("1_wcwed")
-key_type = 16
+key_type = 8
 fake = false
 decay = 10
-durability = 100
 name = &"Work Key"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_6xpvr")
+texture = SubResource("AtlasTexture_wcwed")
 is_contraband = true

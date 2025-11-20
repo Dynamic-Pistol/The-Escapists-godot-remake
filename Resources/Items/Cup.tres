@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://biejqix4miecu"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_vt647"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_vt647"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_sdjt1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1t6b6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt647"]
 atlas = ExtResource("2_sdjt1")
 region = Rect2(896, 256, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_vt647")
 name = &"Cup"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_1t6b6")
+texture = SubResource("AtlasTexture_vt647")
 is_contraband = false

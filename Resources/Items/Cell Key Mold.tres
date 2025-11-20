@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dyqrjdjrqi5hp"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_fcghp"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ir0mw"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_4dxiv"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_3fdju"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4dxiv"]
-atlas = ExtResource("2_ir0mw")
+atlas = ExtResource("2_3fdju")
 region = Rect2(704, 256, 64, 64)
 
 [resource]
-script = ExtResource("1_fcghp")
+script = ExtResource("1_4dxiv")
 name = &"Cell Key Mold"
 base_price = 0
 opinion_inc = 0

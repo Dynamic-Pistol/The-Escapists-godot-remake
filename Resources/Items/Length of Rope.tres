@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dpopvjsbkf4sj"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_8wm6q"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_up4br"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_lcbdx"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_anutl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcbdx"]
-atlas = ExtResource("2_up4br")
+atlas = ExtResource("2_anutl")
 region = Rect2(640, 128, 64, 64)
 
 [resource]
-script = ExtResource("1_8wm6q")
+script = ExtResource("1_lcbdx")
 name = &"Length of Rope"
 base_price = 60
 opinion_inc = 1

@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d1ask1wibccly"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_5i00h"]
-[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_7chrv"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_jgvcu"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_4cmeo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgvcu"]
-atlas = ExtResource("2_7chrv")
+atlas = ExtResource("2_4cmeo")
 region = Rect2(512, 64, 64, 64)
 
 [resource]
-script = ExtResource("1_5i00h")
+script = ExtResource("1_jgvcu")
 name = &"Crowbar"
 base_price = 75
 opinion_inc = 3

@@ -25,4 +25,4 @@ func _ready() -> void:
 	own_layer = world_layer.layer
 
 func interact(_entity: Entity) -> void:
-	WorldLayerManager.switch_layer(target_layer as int , global_position)
+	owner.switch_layer(target_layer as int , global_position)

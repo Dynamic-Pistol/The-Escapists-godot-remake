@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://1dyenyr7xqqv"]
+[gd_scene load_steps=77 format=3 uid="uid://1dyenyr7xqqv"]
 
 [ext_resource type="Script" uid="uid://d4f4uvypapqgv" path="res://Objects/Entities/Player/player.gd" id="2_aw2ag"]
 [ext_resource type="Texture2D" uid="uid://dfsaw6h8dcle3" path="res://Sprites/Entities/Inmates/rabbit.png" id="2_kmwgw"]
@@ -8,10 +8,31 @@
 [ext_resource type="AudioStream" uid="uid://dkh4nl36qtsj3" path="res://Audio/Sfx/Combat/combat_hit.tres" id="5_u7612"]
 [ext_resource type="Script" uid="uid://cmomkiibi166" path="res://Objects/Entities/Player/player_hit_box.gd" id="8_msdba"]
 [ext_resource type="Script" uid="uid://c58h43x0v55mu" path="res://Objects/Entities/Components/hurt_box.gd" id="8_no2i2"]
-[ext_resource type="Script" uid="uid://rgwqec3igro8" path="res://Objects/Entities/Components/health.gd" id="10_df1xx"]
-[ext_resource type="Script" uid="uid://dmi8w0rhb5016" path="res://Objects/Entities/Player/player_stats.gd" id="10_msdba"]
-[ext_resource type="Texture2D" uid="uid://c37b0mcfyyo2i" path="res://Sprites/Entities/Minimap/player_mini_icon.png" id="12_8rwlj"]
+[ext_resource type="Script" uid="uid://bhn3sgguivtho" path="res://Objects/UI/Player/hotbar.gd" id="12_cojay"]
 [ext_resource type="PackedScene" uid="uid://b7yn5omkiopxr" path="res://Objects/Entities/Visuals/target.tscn" id="12_no2i2"]
+[ext_resource type="PackedScene" uid="uid://d3dfu3d7j1uh6" path="res://Objects/UI/Player/item_slot.tscn" id="13_7w4d4"]
+[ext_resource type="InputEventKey" uid="uid://brl6fu6xb7y0i" path="res://Resources/InputEvents/hotbar_1.tres" id="15_urfop"]
+[ext_resource type="InputEventKey" uid="uid://cyyq7fehavuji" path="res://Resources/InputEvents/hotbar_2.tres" id="16_syg6p"]
+[ext_resource type="Script" uid="uid://ck8ugyadn84an" path="res://Objects/UI/time_label.gd" id="17_qq5j8"]
+[ext_resource type="InputEventKey" uid="uid://cea4ape7fg4p6" path="res://Resources/InputEvents/hotbar_3.tres" id="17_tn8q0"]
+[ext_resource type="Script" uid="uid://drhvktf6xp2yd" path="res://Objects/UI/info_bar.gd" id="17_uglo2"]
+[ext_resource type="InputEventKey" uid="uid://btjeuua8c41sf" path="res://Resources/InputEvents/hotbar_4.tres" id="18_wau0g"]
+[ext_resource type="InputEventKey" uid="uid://bln0ecc1g4pi8" path="res://Resources/InputEvents/hotbar_5.tres" id="19_dolhp"]
+[ext_resource type="ButtonGroup" uid="uid://2ndsbv7jpe5u" path="res://Resources/player_inventory_button_group.tres" id="19_hugir"]
+[ext_resource type="InputEventKey" uid="uid://cudlemduc4sx7" path="res://Resources/InputEvents/hotbar_6.tres" id="20_5e1f5"]
+[ext_resource type="Script" uid="uid://ckh65kl3nkjc2" path="res://Objects/UI/Player/drop_area.gd" id="21_5e1f5"]
+[ext_resource type="Texture2D" uid="uid://rac5bbpfkyso" path="res://Sprites/icon.png" id="23_dolhp"]
+[ext_resource type="Texture2D" uid="uid://ckidttedeio86" path="res://Sprites/UI/Menus/BarBG_X.png" id="23_wau0g"]
+[ext_resource type="Texture2D" uid="uid://di5na1b4ymu6c" path="res://Sprites/UI/Menus/BarFill_X.png" id="24_dolhp"]
+[ext_resource type="Script" uid="uid://b13d2s034pqo0" path="res://Objects/UI/Player/equipment_container.gd" id="27_dolhp"]
+[ext_resource type="Script" uid="uid://bh4x0j0oso3e6" path="res://Objects/Entities/Player/inventory_container.gd" id="29_h2tji"]
+[ext_resource type="Script" uid="uid://bxakq5s0ujlcy" path="res://Objects/UI/ui_hide.gd" id="57_has1o"]
+[ext_resource type="Script" uid="uid://ddjr7sorspuib" path="res://Objects/UI/desk_inventory.gd" id="60_vj664"]
+[ext_resource type="Shader" uid="uid://dutfhjy57k2pl" path="res://Shaders/copy_player_screen.gdshader" id="62_8td0t"]
+[ext_resource type="Script" uid="uid://dwicj5anhg0ad" path="res://Objects/UI/radial_menu.gd" id="62_c1ss0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uw43a"]
+shader = ExtResource("62_8td0t")
 
 [sub_resource type="Animation" id="Animation_f5mcn"]
 resource_name = "Knocked out"
@@ -502,11 +523,11 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n4rbh"]
 advance_mode = 2
-advance_expression = "not health.is_alive() or sleeping"
+advance_expression = "not is_alive() or sleeping"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w3fyx"]
 advance_mode = 2
-advance_expression = "health.is_alive() and not sleeping"
+advance_expression = "is_alive() and not sleeping"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ske02"]
 advance_mode = 2
@@ -545,12 +566,61 @@ radius = 48.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_no2i2"]
 size = Vector2(48, 64)
 
+[sub_resource type="LabelSettings" id="LabelSettings_xecul"]
+font_size = 80
+
+[sub_resource type="Shortcut" id="Shortcut_ixaa6"]
+events = [ExtResource("15_urfop")]
+
+[sub_resource type="Shortcut" id="Shortcut_h2tji"]
+events = [ExtResource("16_syg6p")]
+
+[sub_resource type="Shortcut" id="Shortcut_g5lo0"]
+events = [ExtResource("17_tn8q0")]
+
+[sub_resource type="Shortcut" id="Shortcut_tn466"]
+events = [ExtResource("18_wau0g")]
+
+[sub_resource type="Shortcut" id="Shortcut_utdl8"]
+events = [ExtResource("19_dolhp")]
+
+[sub_resource type="Shortcut" id="Shortcut_vsyqs"]
+events = [ExtResource("20_5e1f5")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5e1f5"]
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_it54l"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_dolhp"]
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_en7ci"]
+font_size = 65
+
+[sub_resource type="Gradient" id="Gradient_wojap"]
+offsets = PackedFloat32Array(0.005, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wtff2"]
+gradient = SubResource("Gradient_wojap")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("anim_tree") groups=["player"]]
 z_index = 1
 y_sort_enabled = true
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("2_aw2ag")
+rect_mat = SubResource("ShaderMaterial_uw43a")
+intellect = 32
+strength = 100
+speed = 25
 anim_tree = NodePath("EntityTree")
 
 [node name="Body" type="Sprite2D" parent="."]
@@ -562,6 +632,8 @@ vframes = 10
 texture = ExtResource("3_35es6")
 hframes = 11
 vframes = 10
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -583,9 +655,8 @@ position = Vector2(0, 8)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_ar6wn")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="AudioListener2D" type="AudioListener2D" parent="Camera2D"]
+[node name="HealTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [node name="InteractionRange" type="Area2D" parent="."]
 collision_layer = 0
@@ -604,11 +675,10 @@ script = ExtResource("8_msdba")
 shape = SubResource("CircleShape2D_u7612")
 debug_color = Color(0.707071, 0.485471, 0.131149, 0.42)
 
-[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
+[node name="HurtBox" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("8_no2i2")
-health = NodePath("../Health")
 metadata/_custom_type_script = "uid://c58h43x0v55mu"
 
 [node name="Area2D" type="CollisionShape2D" parent="HurtBox"]
@@ -620,18 +690,6 @@ monitorable = true
 [node name="HitSfx" type="AudioStreamPlayer2D" parent="."]
 bus = &"Sfx"
 
-[node name="Health" type="Node" parent="." node_paths=PackedStringArray("stats")]
-script = ExtResource("10_df1xx")
-stats = NodePath("../Stats")
-metadata/_custom_type_script = "uid://rgwqec3igro8"
-
-[node name="Stats" type="Node" parent="."]
-script = ExtResource("10_msdba")
-intellect = 100
-strength = 100
-speed = 100
-metadata/_custom_type_script = "uid://biwehqk6yigj3"
-
 [node name="Target Visual" parent="." instance=ExtResource("12_no2i2")]
 unique_name_in_owner = true
 visible = false
@@ -640,8 +698,681 @@ visible = false
 position = Vector2(-4.76837e-07, -1.90735e-06)
 scale = Vector2(2.4, 3.2)
 
-[node name="PlayerMiniIcon" type="Sprite2D" parent="."]
-visibility_layer = 2
-texture = ExtResource("12_8rwlj")
+[node name="Player UI" type="CanvasLayer" parent="."]
 
-[connection signal="knocked_out" from="Health" to="Health" method="set_process_input" binds= [false]]
+[node name="TimePanel" type="Panel" parent="Player UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_right = 320.0
+offset_bottom = 64.0
+grow_horizontal = 2
+
+[node name="Time" type="Label" parent="Player UI/TimePanel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -64.0
+offset_right = 142.0
+grow_vertical = 0
+text = "10:30"
+label_settings = SubResource("LabelSettings_xecul")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("17_qq5j8")
+
+[node name="Hotbar Panel" type="Panel" parent="Player UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -272.0
+offset_top = -112.0
+offset_right = 272.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Player UI/Hotbar Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -96.0
+offset_right = 252.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("12_cojay")
+button_group = ExtResource("19_hugir")
+metadata/_edit_group_ = true
+
+[node name="Slot1" parent="Player UI/Hotbar Panel/HBoxContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot2" parent="Player UI/Hotbar Panel/HBoxContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_h2tji")
+
+[node name="Slot3" parent="Player UI/Hotbar Panel/HBoxContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_g5lo0")
+
+[node name="Slot4" parent="Player UI/Hotbar Panel/HBoxContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_tn466")
+
+[node name="Slot5" parent="Player UI/Hotbar Panel/HBoxContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_utdl8")
+
+[node name="Slot6" parent="Player UI/Hotbar Panel/HBoxContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_vsyqs")
+
+[node name="DropArea" type="Panel" parent="Player UI/Hotbar Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.029
+anchor_right = 0.971
+offset_left = 0.223999
+offset_top = -80.0
+offset_right = -0.22406
+grow_horizontal = 2
+focus_mode = 1
+script = ExtResource("21_5e1f5")
+
+[node name="Label" type="Label" parent="Player UI/Hotbar Panel/DropArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -5.5
+offset_right = 21.0
+offset_bottom = 5.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Drop Here"
+label_settings = SubResource("LabelSettings_5e1f5")
+
+[node name="RadialMenu" type="Control" parent="Player UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("62_c1ss0")
+metadata/_custom_type_script = "uid://dwicj5anhg0ad"
+
+[node name="TabContainer" type="TabContainer" parent="Player UI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.5
+offset_top = -204.0
+offset_right = 330.5
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+current_tab = 2
+script = ExtResource("57_has1o")
+
+[node name="Info" type="Control" parent="Player UI/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="TextureRect" type="TextureRect" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 46.5
+offset_top = 13.0
+offset_right = 174.5
+offset_bottom = 141.0
+texture = ExtResource("23_dolhp")
+expand_mode = 1
+
+[node name="INT Text" type="Label" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 238.5
+offset_top = 21.0
+offset_right = 358.5
+offset_bottom = 53.0
+text = "Intelligence:"
+label_settings = SubResource("LabelSettings_it54l")
+
+[node name="INT Bar" type="TextureProgressBar" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 21.0
+offset_right = 595.0
+offset_bottom = 53.0
+value = 100.0
+rounded = true
+texture_under = ExtResource("23_wau0g")
+texture_progress = ExtResource("24_dolhp")
+tint_under = Color(0.172833, 0.172833, 0.172833, 1)
+tint_progress = Color(0, 1, 1, 1)
+script = ExtResource("17_uglo2")
+info_name = &"intellect"
+
+[node name="STR Text" type="Label" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 238.5
+offset_top = 61.0
+offset_right = 358.5
+offset_bottom = 93.0
+text = "Strength"
+label_settings = SubResource("LabelSettings_it54l")
+
+[node name="STR Bar" type="TextureProgressBar" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 61.0
+offset_right = 595.0
+offset_bottom = 93.0
+value = 100.0
+texture_under = ExtResource("23_wau0g")
+texture_progress = ExtResource("24_dolhp")
+tint_under = Color(0.172833, 0.172833, 0.172833, 1)
+tint_progress = Color(1, 0.360784, 0, 1)
+script = ExtResource("17_uglo2")
+info_name = &"strength"
+
+[node name="SPD Text" type="Label" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 238.5
+offset_top = 101.0
+offset_right = 358.5
+offset_bottom = 133.0
+text = "Speed"
+label_settings = SubResource("LabelSettings_it54l")
+
+[node name="SPD Bar" type="TextureProgressBar" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 101.0
+offset_right = 595.0
+offset_bottom = 133.0
+value = 100.0
+texture_under = ExtResource("23_wau0g")
+texture_progress = ExtResource("24_dolhp")
+tint_under = Color(0.172833, 0.172833, 0.172833, 1)
+tint_progress = Color(0.6, 1, 0, 1)
+script = ExtResource("17_uglo2")
+info_name = &"speed"
+
+[node name="Outfit Container" type="CenterContainer" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 30.5
+offset_top = 197.0
+offset_right = 110.5
+offset_bottom = 277.0
+script = ExtResource("27_dolhp")
+
+[node name="Outfit Slot" parent="Player UI/TabContainer/Info/Outfit Container" node_paths=PackedStringArray("owning_container") instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 1
+owning_container = NodePath("../../../../..")
+
+[node name="Weapon Container" type="CenterContainer" parent="Player UI/TabContainer/Info"]
+layout_mode = 0
+offset_left = 142.5
+offset_top = 197.0
+offset_right = 222.5
+offset_bottom = 277.0
+
+[node name="Weapon Slot" parent="Player UI/TabContainer/Info/Weapon Container" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 2
+
+[node name="Tasks" type="Control" parent="Player UI/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Player UI/TabContainer/Tasks"]
+layout_mode = 0
+offset_right = 303.0
+offset_bottom = 301.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Player UI/TabContainer/Tasks/ScrollContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(275, 75)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 72.0
+text = "Beat up Brandon for Jason"
+label_settings = SubResource("LabelSettings_dolhp")
+autowrap_mode = 3
+
+[node name="Panel2" type="Panel" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(275, 75)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 72.0
+text = "Beat up Brandon for Jason"
+label_settings = SubResource("LabelSettings_dolhp")
+autowrap_mode = 3
+
+[node name="Panel3" type="Panel" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(275, 75)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer/Panel3"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 72.0
+text = "Beat up Brandon for Jason"
+label_settings = SubResource("LabelSettings_dolhp")
+autowrap_mode = 3
+
+[node name="Panel4" type="Panel" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(275, 75)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer/Panel4"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 72.0
+text = "Beat up Brandon for Jason"
+label_settings = SubResource("LabelSettings_dolhp")
+autowrap_mode = 3
+
+[node name="Panel5" type="Panel" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(275, 75)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer/Panel5"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 72.0
+text = "Beat up Brandon for Jason"
+label_settings = SubResource("LabelSettings_dolhp")
+autowrap_mode = 3
+
+[node name="Panel6" type="Panel" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(275, 75)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player UI/TabContainer/Tasks/ScrollContainer/VBoxContainer/Panel6"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 72.0
+text = "Beat up Brandon for Jason"
+label_settings = SubResource("LabelSettings_dolhp")
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Player UI/TabContainer/Tasks"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -113.5
+offset_right = -45.0
+offset_bottom = -92.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Cancel"
+
+[node name="Inventory" type="Control" parent="Player UI/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="InventoryContainer" type="GridContainer" parent="Player UI/TabContainer/Inventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_top = 32.0
+offset_right = -46.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+script = ExtResource("29_h2tji")
+
+[node name="Control" type="Control" parent="Player UI/TabContainer/Inventory/InventoryContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Player UI/TabContainer/Inventory/InventoryContainer"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="Player UI/TabContainer/Inventory/InventoryContainer"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="Player UI/TabContainer/Inventory/InventoryContainer"]
+layout_mode = 2
+
+[node name="Control5" type="Control" parent="Player UI/TabContainer/Inventory/InventoryContainer"]
+layout_mode = 2
+
+[node name="Control6" type="Control" parent="Player UI/TabContainer/Inventory/InventoryContainer"]
+layout_mode = 2
+
+[node name="Slot1" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot2" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot3" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot4" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot5" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot6" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot7" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot8" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot9" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot10" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot11" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot12" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot13" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot14" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot15" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot16" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot17" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Slot18" parent="Player UI/TabContainer/Inventory/InventoryContainer" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+button_group = ExtResource("19_hugir")
+shortcut = SubResource("Shortcut_ixaa6")
+
+[node name="Crafting" type="Control" parent="Player UI/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="DeskPanel" type="Panel" parent="Player UI"]
+visible = false
+offset_left = 292.0
+offset_top = 180.0
+offset_right = 892.0
+offset_bottom = 715.0
+
+[node name="DeskInventory" type="GridContainer" parent="Player UI/DeskPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -204.5
+offset_right = 252.0
+offset_bottom = 215.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 6
+script = ExtResource("60_vj664")
+metadata/_edit_group_ = true
+
+[node name="DeskSlot1" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot2" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot3" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot4" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot5" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot6" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot7" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot8" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot9" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot10" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot11" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot12" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot13" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot14" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot15" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot16" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot17" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot18" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot19" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot20" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot21" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot22" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot23" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot24" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot25" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot26" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot27" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot28" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot29" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="DeskSlot30" parent="Player UI/DeskPanel/DeskInventory" instance=ExtResource("13_7w4d4")]
+layout_mode = 2
+slot_type = 6
+
+[node name="Label" type="Label" parent="Player UI/DeskPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 12.0
+offset_bottom = 60.0
+grow_horizontal = 2
+text = "Player's Desk"
+label_settings = SubResource("LabelSettings_en7ci")
+horizontal_alignment = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(0, 8)
+blend_mode = 2
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_wtff2")
+texture_scale = 5.0
+
+[connection signal="damaged" from="." to="." method="_on_damaged"]
+[connection signal="desk_closed" from="." to="Player UI/DeskPanel/DeskInventory" method="_on_player_desk_closed"]
+[connection signal="desk_opened" from="." to="Player UI/DeskPanel/DeskInventory" method="desk_opened"]
+[connection signal="equipment_changed" from="." to="Player UI/TabContainer/Info/Outfit Container" method="_on_outfit_slot_item_changed"]
+[connection signal="healed" from="." to="." method="_on_healed"]
+[connection signal="inventory_changed" from="." to="Player UI/Hotbar Panel/HBoxContainer" method="_on_inventory_changed"]
+[connection signal="inventory_changed" from="." to="Player UI/TabContainer/Inventory/InventoryContainer" method="_on_inventory_changed"]
+[connection signal="item_added" from="." to="." method="_on_item_added"]
+[connection signal="item_removed" from="." to="." method="_on_item_removed"]
+[connection signal="player_mode_changed" from="." to="PlayerCursor" method="_on_player_mode_changed"]
+[connection signal="timeout" from="HealTimer" to="." method="_on_heal_timer_timeout"]
+[connection signal="visibility_changed" from="Player UI/TabContainer/Info/INT Bar" to="Player UI/TabContainer/Info/INT Bar" method="_on_visibility_changed"]
+[connection signal="visibility_changed" from="Player UI/TabContainer/Info/STR Bar" to="Player UI/TabContainer/Info/STR Bar" method="_on_visibility_changed"]
+[connection signal="visibility_changed" from="Player UI/TabContainer/Info/SPD Bar" to="Player UI/TabContainer/Info/SPD Bar" method="_on_visibility_changed"]

@@ -13,7 +13,7 @@ var item:Item:
 func pick_up(picker: Entity) -> bool:
 	if not WorldLayerManager.both_on_same_layer(picker, self):
 		return false
-	if PlayerManager.add_item(item):
+	if picker.add_item(item):
 		queue_free()
 		return true
 	return false

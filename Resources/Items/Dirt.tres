@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dxt2df5vvum7i"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_iym82"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_iym82"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_5fdsa"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8nr4i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_iym82"]
 atlas = ExtResource("2_5fdsa")
 region = Rect2(576, 64, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_iym82")
 name = &"Dirt"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_8nr4i")
+texture = SubResource("AtlasTexture_iym82")
 is_contraband = true

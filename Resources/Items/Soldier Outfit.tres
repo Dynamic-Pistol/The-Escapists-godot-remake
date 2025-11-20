@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_k4nct"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_0q72a"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mht7r"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4nct"]
 atlas = ExtResource("2_0q72a")
 region = Rect2(640, 704, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 1
 name = &"Soldier Outfit"
 base_price = 50
 opinion_inc = 1
-texture = SubResource("AtlasTexture_mht7r")
+texture = SubResource("AtlasTexture_k4nct")
 is_contraband = true

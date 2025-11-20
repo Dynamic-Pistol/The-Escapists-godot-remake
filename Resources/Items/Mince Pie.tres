@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://yqa7uhki27qn"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ou1uk"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_ou1uk"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ml3fl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ml24u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou1uk"]
 atlas = ExtResource("2_ml3fl")
 region = Rect2(640, 832, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_ou1uk")
 name = &"Mince Pie"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_ml24u")
+texture = SubResource("AtlasTexture_ou1uk")
 is_contraband = false

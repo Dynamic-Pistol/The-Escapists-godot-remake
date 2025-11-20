@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_f05gk"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_48cyt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fic0g"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f05gk"]
 atlas = ExtResource("2_48cyt")
 region = Rect2(256, 128, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 1
 name = &"Infirmary Overalls"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_fic0g")
+texture = SubResource("AtlasTexture_f05gk")
 is_contraband = true

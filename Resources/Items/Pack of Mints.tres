@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://yfsfhkysetl6"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_q761q"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_q761q"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_sxko3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xx4dk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q761q"]
 atlas = ExtResource("2_sxko3")
 region = Rect2(128, 0, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_q761q")
 name = &"Pack of Mints"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_xx4dk")
+texture = SubResource("AtlasTexture_q761q")
 is_contraband = false

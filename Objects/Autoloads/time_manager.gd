@@ -25,12 +25,13 @@ var time_speed: float = 1
 var routines: PackedInt32Array
 
 func _ready() -> void:
+	set_process(false)
 	var text = FileAccess.get_file_as_string("res://Resources/routines.json")
 	var json = JSON.new()
 	var err = json.parse(text)
 	if err != OK:
 		return
-	routines = json.data as PackedInt32Array                                           
+	routines = json.data as PackedInt32Array                                    
 
 func _process(delta: float) -> void:
 	minutes += delta * time_speed

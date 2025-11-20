@@ -1,10 +1,9 @@
 extends Label
 class_name DialogueBox
 
-@export var health: Health
 
 func _on_timer_timeout() -> void:
-	if not health.is_alive() or visible:
+	if not owner.is_alive() or visible:
 		return
 	$BanterTimer.wait_time = randf_range(8, 25)
 	text = DialogueManager.get_basic()

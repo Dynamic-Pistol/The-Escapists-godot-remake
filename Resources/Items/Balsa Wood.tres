@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://daf31pxjkfacv"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_bsbqm"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_bsbqm"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_cyc64"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oldg7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsbqm"]
 atlas = ExtResource("2_cyc64")
 region = Rect2(320, 192, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_bsbqm")
 name = &"Balsa Wood"
 base_price = 50
 opinion_inc = 0
-texture = SubResource("AtlasTexture_oldg7")
+texture = SubResource("AtlasTexture_bsbqm")
 is_contraband = true

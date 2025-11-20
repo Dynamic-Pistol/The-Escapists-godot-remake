@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://uujhro23na8c"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_eoi32"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_eoi32"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_wh6ig"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_16nt7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoi32"]
 atlas = ExtResource("2_wh6ig")
 region = Rect2(448, 576, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_eoi32")
 name = &"Sombrero"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_16nt7")
+texture = SubResource("AtlasTexture_eoi32")
 is_contraband = false

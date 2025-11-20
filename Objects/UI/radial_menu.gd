@@ -14,15 +14,6 @@ const LINE_WIDTH  = 4
 
 var selection := 0
 
-#
-#func _ready() -> void:
-	#if Engine.is_editor_hint():
-		#return
-	#PlayerManager.player.inventory.inventory_changed.connect(_on_inventory_changed)
-#
-#func _on_inventory_changed(index: int, item: Item) -> void:
-	#pass
-
 func _draw() -> void:
 	draw_circle(Vector2(), INNER_RADIUS, BG_COLOR)
 	draw_circle(Vector2(), OUTER_RADIUS, LINE_COLOR, false, LINE_WIDTH, true)
@@ -30,10 +21,10 @@ func _draw() -> void:
 	if selection == -1:
 		draw_circle(Vector2(), INNER_RADIUS, HIGHTLIGHT_COLOR)
 		
-	var items_count := 6
+	const ITEMS_COUNT := 6
 	
-	for i in items_count:
-		var rads = i * TAU / items_count
+	for i in ITEMS_COUNT:
+		var rads = i * TAU / ITEMS_COUNT
 		var point = Vector2.from_angle(rads)
 		draw_line(point * INNER_RADIUS,
 		point * OUTER_RADIUS, 
@@ -44,10 +35,10 @@ func _draw() -> void:
 	const CLEAR_TEXTURE = preload("res://Sprites/UI/Icons/Cancel.png")
 	draw_texture(CLEAR_TEXTURE, Vector2(-26, -26))
 	
-	for i in items_count + 1:
+	for i in ITEMS_COUNT + 1:
 		const OFFSET = SPRITE_SIZE / -2
-		var start_rads := TAU * (i - 1) / items_count
-		var end_rads := TAU * i / items_count
+		var start_rads := TAU * (i - 1) / ITEMS_COUNT
+		var end_rads := TAU * i / ITEMS_COUNT
 		var mid_rads := (start_rads + end_rads) / -2.0
 		var mid_radius := (INNER_RADIUS + OUTER_RADIUS) / 2.0
 		
@@ -72,7 +63,7 @@ func _draw() -> void:
 		var rect: Rect2
 		rect.position = draw_position
 		rect.size = 128 * Vector2.ONE
-		var item = PlayerManager.items[i - 1]
+		var item = owner.items[i - 1]
 		if item:
 			draw_texture_rect(item.texture, rect, false)
 
@@ -85,12 +76,12 @@ func _input(event: InputEvent) -> void:
 			selection = -1
 		else:
 			var mouse_rads = fposmod(-mouse_pos.angle(), TAU)
-			selection = ceili((mouse_rads / TAU) * PlayerManager.items.size())
+			selection = ceili((mouse_rads / TAU) * 6)
 		queue_redraw()
 		
 	if event.is_action_pressed(&"Quick Wheel"):
 		show()
 	elif event.is_action_released(&"Quick Wheel"):
 		hide()
-		if PlayerManager.has_item_at(selection - 1):
-			PlayerManager.drop_item(selection - 1)
+		if owner.has_item_at(selection - 1):
+			owner.drop_item(selection - 1)

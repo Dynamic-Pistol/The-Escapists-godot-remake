@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://m7fti7x3g830"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_labtn"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_labtn"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_jeikg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bk1yd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_labtn"]
 atlas = ExtResource("2_jeikg")
 region = Rect2(896, 448, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_labtn")
 name = &"Sponge"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_bk1yd")
+texture = SubResource("AtlasTexture_labtn")
 is_contraband = false

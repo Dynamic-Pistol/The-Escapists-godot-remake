@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="OutfitItem" load_steps=5 format=3 uid="uid://dpscjcaf4aclm"]
+
+[ext_resource type="Texture2D" uid="uid://c8idp5g5v314p" path="res://Sprites/Entities/Overlay/inmate_outfit.png" id="1_0xlb4"]
+[ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_nnn2l"]
+[ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_prha5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xlb4"]
+atlas = ExtResource("2_prha5")
+region = Rect2(256, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_nnn2l")
+outfit_visual = ExtResource("1_0xlb4")
+name = &"Inmate Outfit"
+texture = SubResource("AtlasTexture_0xlb4")
+metadata/_custom_type_script = "uid://bxbdh18hjgpv7"

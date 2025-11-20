@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ckjl18drbjl41"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_qrg4u"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_qrg4u"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_65axn"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w5mml"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrg4u"]
 atlas = ExtResource("2_65axn")
 region = Rect2(448, 64, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_qrg4u")
 name = &"Screwdriver"
 base_price = 75
 opinion_inc = 2
-texture = SubResource("AtlasTexture_w5mml")
+texture = SubResource("AtlasTexture_qrg4u")
 is_contraband = true

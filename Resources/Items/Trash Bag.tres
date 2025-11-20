@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d1q4my8vmj078"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_df3al"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_df3al"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_pv3pt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fcky8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_df3al"]
 atlas = ExtResource("2_pv3pt")
 region = Rect2(448, 704, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_df3al")
 name = &"Trash Bag"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_fcky8")
+texture = SubResource("AtlasTexture_df3al")
 is_contraband = false

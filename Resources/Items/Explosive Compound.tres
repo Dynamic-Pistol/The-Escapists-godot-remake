@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://hijnkcj33ybg"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_p6nci"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_p6nci"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_n1xfv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jk00v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6nci"]
 atlas = ExtResource("2_n1xfv")
 region = Rect2(896, 640, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_p6nci")
 name = &"Explosive Compound"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_jk00v")
+texture = SubResource("AtlasTexture_p6nci")
 is_contraband = true

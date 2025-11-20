@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://df8kvgslmohj6"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_hrikq"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_hrikq"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_8ejks"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rcij0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrikq"]
 atlas = ExtResource("2_8ejks")
 region = Rect2(768, 320, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_hrikq")
 name = &"Game Set"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_rcij0")
+texture = SubResource("AtlasTexture_hrikq")
 is_contraband = false

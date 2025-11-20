@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://jqevgfwanvy5"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ixi0h"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_ixi0h"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_8surl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_58ajg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixi0h"]
 atlas = ExtResource("2_8surl")
 region = Rect2(128, 896, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_ixi0h")
 name = &"Naughty Letter"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_58ajg")
+texture = SubResource("AtlasTexture_ixi0h")
 is_contraband = false

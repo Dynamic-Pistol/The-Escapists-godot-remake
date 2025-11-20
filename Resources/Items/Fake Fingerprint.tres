@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://casy65esu6hdg"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_t5j6d"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_t5j6d"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_kiifs"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wxqjs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5j6d"]
 atlas = ExtResource("2_kiifs")
 region = Rect2(192, 768, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_t5j6d")
 name = &"Fake Fingerprint"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_wxqjs")
+texture = SubResource("AtlasTexture_t5j6d")
 is_contraband = true

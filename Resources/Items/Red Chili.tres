@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c5qhehf5tevqu"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_42p48"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_42p48"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_o7548"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kgqyf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_42p48"]
 atlas = ExtResource("2_o7548")
 region = Rect2(320, 576, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_42p48")
 name = &"Red Chili"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_kgqyf")
+texture = SubResource("AtlasTexture_42p48")
 is_contraband = false

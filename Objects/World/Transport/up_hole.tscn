@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmgufj1occbm1"]
+[gd_scene load_steps=5 format=3 uid="uid://bmgufj1occbm1"]
 
 [ext_resource type="Texture2D" uid="uid://r63k1t3ypjkt" path="res://Sprites/World/Hole_up.png" id="1_0tuu1"]
 [ext_resource type="Script" uid="uid://ud6l7ap23roe" path="res://Objects/World/Transport/hole.gd" id="1_xi13v"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xi13v"]
+blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgve6"]
 size = Vector2(64, 64)
@@ -11,6 +14,8 @@ collision_mask = 0
 script = ExtResource("1_xi13v")
 
 [node name="Visual" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.498039)
+material = SubResource("CanvasItemMaterial_xi13v")
 texture = ExtResource("1_0tuu1")
 vframes = 5
 frame = 4

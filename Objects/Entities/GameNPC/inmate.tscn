@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bjb4wwmkxk6fw"]
+[gd_scene load_steps=45 format=3 uid="uid://bjb4wwmkxk6fw"]
 
 [ext_resource type="Script" uid="uid://cerjb8xgvgu6f" path="res://Objects/Entities/GameNPC/inmate.gd" id="2_2kc1r"]
 [ext_resource type="Texture2D" uid="uid://dfsaw6h8dcle3" path="res://Sprites/Entities/Inmates/rabbit.png" id="2_frngm"]
@@ -7,8 +7,6 @@
 [ext_resource type="Script" uid="uid://cr7yasloq1nmh" path="res://Objects/Entities/GameNPC/npc_hit_box.gd" id="4_rtmo7"]
 [ext_resource type="AudioStream" uid="uid://coy0n166dqeq4" path="res://Audio/Sfx/Combat/lose.wav" id="5_f2pbd"]
 [ext_resource type="AudioStream" uid="uid://dkh4nl36qtsj3" path="res://Audio/Sfx/Combat/combat_hit.tres" id="6_o5wn3"]
-[ext_resource type="Script" uid="uid://uk1ekgceibbg" path="res://Objects/Entities/GameNPC/npc_stats.gd" id="7_frngm"]
-[ext_resource type="Script" uid="uid://rgwqec3igro8" path="res://Objects/Entities/Components/health.gd" id="8_dx83p"]
 [ext_resource type="Script" uid="uid://cxqnrkbup5f30" path="res://Objects/Entities/GameNPC/interactable_range.gd" id="9_f2pbd"]
 [ext_resource type="Script" uid="uid://c58h43x0v55mu" path="res://Objects/Entities/Components/hurt_box.gd" id="9_j3whk"]
 [ext_resource type="Texture2D" uid="uid://cstmna8k1u172" path="res://Sprites/Entities/Effects/spritesheet.png" id="10_w7mkk"]
@@ -503,11 +501,11 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n4rbh"]
 advance_mode = 2
-advance_expression = "not health.is_alive()"
+advance_expression = "not is_alive()"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w3fyx"]
 advance_mode = 2
-advance_expression = "health.is_alive()"
+advance_expression = "is_alive()"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ske02"]
 advance_mode = 2
@@ -545,12 +543,13 @@ size = Vector2(48, 64)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ddnnr"]
 radius = 48.0
 
-[node name="Inmate" type="CharacterBody2D" node_paths=PackedStringArray("nav_agent", "anim_tree")]
+[node name="Inmate" type="CharacterBody2D" node_paths=PackedStringArray("nav_agent", "hit_box", "anim_tree")]
 y_sort_enabled = true
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("2_2kc1r")
 nav_agent = NodePath("NavigationAgent2D")
+hit_box = NodePath("HitBox")
 anim_tree = NodePath("EntityTree")
 
 [node name="Body" type="Sprite2D" parent="."]
@@ -563,8 +562,7 @@ texture = ExtResource("4_fn8jg")
 hframes = 11
 vframes = 10
 
-[node name="Dialogue Box" parent="." node_paths=PackedStringArray("health") instance=ExtResource("4_48rc6")]
-health = NodePath("../Health")
+[node name="Dialogue Box" parent="." instance=ExtResource("4_48rc6")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 active = false
@@ -594,15 +592,6 @@ path_postprocessing = 1
 simplify_path = true
 debug_enabled = true
 
-[node name="Stats" type="Node" parent="."]
-script = ExtResource("7_frngm")
-metadata/_custom_type_script = "uid://biwehqk6yigj3"
-
-[node name="Health" type="Node" parent="." node_paths=PackedStringArray("stats")]
-script = ExtResource("8_dx83p")
-stats = NodePath("../Stats")
-metadata/_custom_type_script = "uid://rgwqec3igro8"
-
 [node name="InteractableRange" type="Area2D" parent="." groups=["hintable"]]
 collision_mask = 0
 monitoring = false
@@ -612,11 +601,10 @@ script = ExtResource("9_f2pbd")
 shape = SubResource("CircleShape2D_fn8jg")
 debug_color = Color(0.684632, 0.499866, 0.0905798, 0.42)
 
-[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
+[node name="HurtBox" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("9_j3whk")
-health = NodePath("../Health")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("RectangleShape2D_tiueb")
@@ -630,7 +618,6 @@ hframes = 5
 script = ExtResource("11_annox")
 
 [node name="HitBox" type="Area2D" parent="."]
-unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("4_rtmo7")
@@ -645,7 +632,7 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(0, -16)
 texture = ExtResource("13_fn8jg")
 
+[connection signal="knocked_out" from="." to="." method="_on_knocked_out"]
+[connection signal="knocked_out" from="." to="HitBox" method="_on_knocked_out"]
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
-[connection signal="damaged" from="Health" to="HurtBox/HitVfX" method="_on_health_damaged"]
-[connection signal="knocked_out" from="Health" to="." method="_on_health_knocked_out"]
-[connection signal="knocked_out" from="Health" to="HitBox" method="_on_health_knocked_out"]
+[connection signal="body_entered" from="HitBox" to="HitBox" method="_on_body_entered"]

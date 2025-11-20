@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://knxlyb0w2rkn"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_yimlq"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_yimlq"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_je0x1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3fw5r"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yimlq"]
 atlas = ExtResource("2_je0x1")
 region = Rect2(320, 512, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_yimlq")
 name = &"Green Herb"
 base_price = 15
 opinion_inc = 0
-texture = SubResource("AtlasTexture_3fw5r")
+texture = SubResource("AtlasTexture_yimlq")
 is_contraband = false

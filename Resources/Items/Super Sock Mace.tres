@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c5awc4y2se4wv"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_q6rdf"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_q6rdf"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_lkveb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a6sgn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6rdf"]
 atlas = ExtResource("2_lkveb")
 region = Rect2(704, 320, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_q6rdf")
 name = &"Super Sock Mace"
 base_price = 0
 opinion_inc = 3
-texture = SubResource("AtlasTexture_a6sgn")
+texture = SubResource("AtlasTexture_q6rdf")
 is_contraband = true

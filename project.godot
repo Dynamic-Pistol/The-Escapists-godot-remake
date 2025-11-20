@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="The escapists remake"
-run/main_scene="res://Scenes/test.tscn"
-config/features=PackedStringArray("4.4")
+run/main_scene="uid://dd1osoqfflx6m"
+config/features=PackedStringArray("4.5")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://Sprites/icon.png"
@@ -24,8 +24,6 @@ buses/default_bus_layout="res://Audio/default_bus_layout.tres"
 [autoload]
 
 MusicPlayer="*res://Objects/Autoloads/music_player.tscn"
-PlayerManager="*res://Objects/Autoloads/player_manager.tscn"
-WorldLayerManager="*res://Objects/Autoloads/world_layer_manager.gd"
 TimeManager="*res://Objects/Autoloads/time_manager.gd"
 DialogueManager="*res://Objects/Autoloads/dialogue_manager.gd"
 WayPointManager="*res://Objects/Autoloads/waypoint_manager.gd"
@@ -57,10 +55,13 @@ folder_colors={
 "res://Objects/Autoloads/": "yellow",
 "res://Resources/": "green",
 "res://Scenes/": "yellow",
+"res://Shaders/": "pink",
 "res://Sprites/": "pink",
 "res://Tilesets/": "green",
 "res://Tools/": "gray",
-"res://Videos/": "gray"
+"res://Videos/": "gray",
+"res://addons/": "teal",
+"res://bin/": "teal"
 }
 
 [global_group]
@@ -75,12 +76,18 @@ ground=""
 [gui]
 
 timers/tooltip_delay_sec=0.3
-theme/custom="res://escapists.tres"
-theme/custom_font="res://Escapists.ttf"
 theme/default_font_multichannel_signed_distance_field=true
+theme/custom="uid://c6yfytnuj4b80"
+theme/custom_font="res://Resources/Escapists.ttf"
 
 [input]
 
+ui_accept={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194310,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
 Back={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
@@ -101,32 +108,22 @@ Right={
 "events": [null, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
 ]
 }
-Interact={
-"deadzone": 0.5,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(115, 24),"global_position":Vector2(124, 70),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
-]
-}
-Pickup={
-"deadzone": 0.5,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(179, 5),"global_position":Vector2(188, 51),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
-]
-}
 "To Attack"={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
-Punch={
+"Main Action"={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(118, 5),"global_position":Vector2(127, 53),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
-Block={
+"Secondary Action"={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(31, 3),"global_position":Vector2(40, 51),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
-Target={
+"Misc Action"={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":4,"position":Vector2(387, 24),"global_position":Vector2(396, 72),"factor":1.0,"button_index":3,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
@@ -149,6 +146,11 @@ Target={
 Pause={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+"Interact | Attack"={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(45, 9),"global_position":Vector2(54, 57),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
 

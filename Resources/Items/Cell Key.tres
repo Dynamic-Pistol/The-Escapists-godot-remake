@@ -9,11 +9,9 @@ region = Rect2(0, 0, 64, 64)
 
 [resource]
 script = ExtResource("1_ilk61")
-key_type = 2
-fake = false
+key_type = 1
 decay = 10
 name = &"Cell Key"
-base_price = 0
 opinion_inc = 2
 texture = SubResource("AtlasTexture_oekvc")
 is_contraband = true

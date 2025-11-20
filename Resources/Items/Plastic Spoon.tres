@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d3iiyurlh8afr"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_pn7q0"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_pn7q0"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_stelo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bsohh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn7q0"]
 atlas = ExtResource("2_stelo")
 region = Rect2(384, 64, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_pn7q0")
 name = &"Plastic Spoon"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_bsohh")
+texture = SubResource("AtlasTexture_pn7q0")
 is_contraband = false

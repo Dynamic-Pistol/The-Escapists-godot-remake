@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://burahamlj5raa"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_46cas"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_46cas"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_rrfjo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rmlhc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_46cas"]
 atlas = ExtResource("2_rrfjo")
 region = Rect2(448, 512, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_46cas")
 name = &"Silk Handkerchief"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_rmlhc")
+texture = SubResource("AtlasTexture_46cas")
 is_contraband = false

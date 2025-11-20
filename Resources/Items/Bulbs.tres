@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dk1mgydaldd2e"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_dnmlv"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_dnmlv"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_83tom"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0mcvo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnmlv"]
 atlas = ExtResource("2_83tom")
 region = Rect2(256, 832, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_dnmlv")
 name = &"Bulbs"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_0mcvo")
+texture = SubResource("AtlasTexture_dnmlv")
 is_contraband = true

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_fptnl"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_6dgdm"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t6rbv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fptnl"]
 atlas = ExtResource("2_6dgdm")
 region = Rect2(640, 448, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 2
 name = &"Cushioned POW Outfit"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_t6rbv")
+texture = SubResource("AtlasTexture_fptnl")
 is_contraband = true

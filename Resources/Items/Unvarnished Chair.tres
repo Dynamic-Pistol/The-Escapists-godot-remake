@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cej6q0uk3eah0"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_w4qhn"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_w4qhn"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_3gklm"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vo6eh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4qhn"]
 atlas = ExtResource("2_3gklm")
 region = Rect2(256, 256, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_w4qhn")
 name = &"Unvarnished Chair"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_vo6eh")
+texture = SubResource("AtlasTexture_w4qhn")
 is_contraband = false

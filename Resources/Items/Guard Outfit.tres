@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_2a3uk"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_q1age"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mj156"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a3uk"]
 atlas = ExtResource("2_q1age")
 region = Rect2(192, 0, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 2
 name = &"Guard Outfit"
 base_price = 50
 opinion_inc = 1
-texture = SubResource("AtlasTexture_mj156")
+texture = SubResource("AtlasTexture_2a3uk")
 is_contraband = true

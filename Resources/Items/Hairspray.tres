@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c7h3qt55y1u2n"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_d575u"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_d575u"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_ij1t6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sdprw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_d575u"]
 atlas = ExtResource("2_ij1t6")
 region = Rect2(512, 768, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_d575u")
 name = &"Hairspray"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_sdprw")
+texture = SubResource("AtlasTexture_d575u")
 is_contraband = false

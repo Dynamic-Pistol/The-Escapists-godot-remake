@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bvsnkktsh8hgq"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ulx82"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_ulx82"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_guv6e"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dtysx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulx82"]
 atlas = ExtResource("2_guv6e")
 region = Rect2(192, 576, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_ulx82")
 name = &"Coconut"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_dtysx")
+texture = SubResource("AtlasTexture_ulx82")
 is_contraband = false

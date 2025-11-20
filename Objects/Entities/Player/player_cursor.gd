@@ -1,14 +1,12 @@
 extends Area2D
+class_name PlayerCursor
 
-const PlayerMode = preload("res://Objects/Autoloads/player_manager.gd").PlayerMode;
+const PlayerMode = Player.PlayerMode
 
-
-func _ready() -> void:
-	PlayerManager.player_mode_changed.connect(_on_player_mode_changed)
 
 func _on_player_mode_changed(new_mode: PlayerMode):
 	%"Target Visual".target = null
-	PlayerManager.player.hit_box.target = null
+	$"../HitBox".target = null
 	match new_mode:
 		PlayerMode.NORMAL:
 			const NORMAL_CURSOR_TEX = preload("res://Sprites/UI/Cursor/Cursor_Normal.png")
@@ -34,7 +32,7 @@ func _draw_cursor(player_mode: PlayerMode, textures: Array) -> void:
 	const FRAME_RATE = 15
 	const FRAMES_PER_SECOND = FRAME_RATE / 60.0
 	var cursor_index: int = 0
-	while PlayerManager.player_mode == player_mode:
+	while owner.player_mode == player_mode:
 		Input.set_custom_mouse_cursor(textures[cursor_index])
 		await get_tree().create_timer(FRAMES_PER_SECOND).timeout
 		cursor_index = wrapi(cursor_index + 1, 0, 4)
@@ -54,13 +52,13 @@ func _physics_process(_delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not event.is_pressed():
 		return
-	var player_mode = PlayerManager.player_mode
-	var player = PlayerManager.player
-	var selected_item :Item = PlayerManager.get_selected_item()
+	var player_mode = owner.player_mode
+	var player = owner
+	var selected_item :Item = owner.get_selected_item()
 	var current_layer :WorldLayer = WorldLayerManager.current_layer
 	match  player_mode:
 		PlayerMode.NORMAL:
-			if event.is_action(&"Interact"):
+			if event.is_action(&"Main Action"):
 				for body in get_overlapping_bodies():
 					if not player.interaction_range.overlaps_body(body):
 						continue
@@ -78,7 +76,7 @@ func _unhandled_input(event: InputEvent) -> void:
 						area.interact(player)
 						return
 		PlayerMode.USE_ITEM:
-			if event.is_action(&"Interact"):
+			if event.is_action(&"Main Action"):
 				for area in get_overlapping_areas():
 					if selected_item is ToolItem:
 						if area is Hole:
@@ -109,21 +107,21 @@ func _unhandled_input(event: InputEvent) -> void:
 					_dig_hole(selected_item)
 					return
 		PlayerMode.ATTACK:
-			if Input.is_action_just_pressed(&"Target"):
+			if Input.is_action_just_pressed(&"Misc Action"):
 				for area in get_overlapping_areas():
 					if area.owner == owner:
 						continue
 					if not WorldLayerManager.both_on_same_layer(area, self):
 						continue
-					if area is HurtBox and area.health.is_alive():
+					if area is HurtBox and area.owner.is_alive():
 						player.hit_box.target = area
 						%"Target Visual".target = area
 						return
 			
-	if event.is_action(&"Pickup") and player_mode == PlayerMode.NORMAL:
-		if player.picked_up_item != null and player.interaction_range.overlaps_area(self):
+	if event.is_action(&"Secondary Action") and player_mode == PlayerMode.NORMAL:
+		if player.picked_up_item != null:
 			player.picked_up_item.reparent(WorldLayerManager.current_layer)
-			player.picked_up_item.global_position = (round(global_position / 32) * 32)
+			player.picked_up_item.global_position = owner.global_position + global_position.direction_to(owner.global_position).normalized() * 8
 				
 			for shape in player.picked_up_item.get_shape_owners():
 				player.picked_up_item.shape_owner_set_disabled(shape, false)
@@ -139,12 +137,17 @@ func _unhandled_input(event: InputEvent) -> void:
 			if not player.interaction_range.overlaps_body(body) or body == player:
 				continue
 			if body.is_in_group(&"pickable"):
-				for shape in body.get_shape_owners():
-					body.shape_owner_set_disabled(shape, true)
-				body.reparent(player)
-				body.position = Vector2.ZERO
+				_pick_up_object(body)
 				player.picked_up_item = body
 				break
+
+func _pick_up_object(body: Node2D) -> void:
+	for shape in body.get_shape_owners():
+		body.shape_owner_set_disabled(shape, true)
+		body.reparent(owner)
+		body.position = Vector2.ZERO
+		owner.picked_up_item = body
+
 
 func _dig_hole(dig_tool: ToolItem) -> void:
 	dig_tool.degrade()

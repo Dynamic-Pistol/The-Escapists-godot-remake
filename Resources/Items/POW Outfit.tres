@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_25n4j"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_bpobr"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vn7ob"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_25n4j"]
 atlas = ExtResource("2_bpobr")
 region = Rect2(768, 384, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 1
 name = &"POW Outfit"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_vn7ob")
+texture = SubResource("AtlasTexture_25n4j")
 is_contraband = false

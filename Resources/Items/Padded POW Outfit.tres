@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_m2fy4"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_4hvb2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_44u6n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2fy4"]
 atlas = ExtResource("2_4hvb2")
 region = Rect2(704, 448, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 3
 name = &"Padded POW Outfit"
 base_price = 0
 opinion_inc = 1
-texture = SubResource("AtlasTexture_44u6n")
+texture = SubResource("AtlasTexture_m2fy4")
 is_contraband = true

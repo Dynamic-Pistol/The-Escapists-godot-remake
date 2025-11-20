@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cb6kydfeirc5g"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_i2fld"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_i2fld"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_nf1e0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_542j2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2fld"]
 atlas = ExtResource("2_nf1e0")
 region = Rect2(704, 768, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_i2fld")
 name = &"Shoe Knife"
 base_price = 0
 opinion_inc = 2
-texture = SubResource("AtlasTexture_542j2")
+texture = SubResource("AtlasTexture_i2fld")
 is_contraband = true

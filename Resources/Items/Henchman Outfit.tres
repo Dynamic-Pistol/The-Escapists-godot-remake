@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_pseip"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_g0t5u"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2riry"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pseip"]
 atlas = ExtResource("2_g0t5u")
 region = Rect2(576, 768, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 1
 name = &"Henchman Outfit"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_2riry")
+texture = SubResource("AtlasTexture_pseip")
 is_contraband = true

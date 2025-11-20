@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bfrccanpibjlx"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_rocdv"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_rocdv"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_vcc5k"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_02gda"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rocdv"]
 atlas = ExtResource("2_vcc5k")
 region = Rect2(128, 768, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_rocdv")
 name = &"Keycard"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_02gda")
+texture = SubResource("AtlasTexture_rocdv")
 is_contraband = true

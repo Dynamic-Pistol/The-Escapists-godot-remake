@@ -1,23 +1,20 @@
 extends Control
 
-@onready var player_info: Panel = $PlayerInfo
-@onready var desk_inventory: Panel = $DeskInventory
+@onready var desk_inventory: Panel = $"../DeskPanel"
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"Pause"):
 		hide()
 		if desk_inventory.visible:
-			PlayerManager.close_desk()
+			owner.close_desk()
 	if event.is_action_pressed(&"Show Info") and not desk_inventory.visible:
-		show_player_info()
+		visible = not visible
 
-func show_player_info() -> void:
-	show()
-	hide_all_except(player_info)
 
-func show_desk_inventory() -> void:
+func show_desk_inventory(desk: Desk) -> void:
 	show()
 	hide_all_except(desk_inventory)
+	desk_inventory.desk_opened(desk)
 
 func hide_all_except(control: Control) -> void:
 	for child in get_children():

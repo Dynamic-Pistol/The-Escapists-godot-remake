@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://pjag41cp8fw3"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_1ukml"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_1ukml"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_an30v"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jd5uk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ukml"]
 atlas = ExtResource("2_an30v")
 region = Rect2(960, 576, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_1ukml")
 name = &"Multitool"
 base_price = 0
 opinion_inc = 3
-texture = SubResource("AtlasTexture_jd5uk")
+texture = SubResource("AtlasTexture_1ukml")
 is_contraband = true

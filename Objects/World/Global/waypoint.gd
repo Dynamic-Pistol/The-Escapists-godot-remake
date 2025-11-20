@@ -11,3 +11,4 @@ enum WayPointType{
 }
 
 @export var waypoint_type: WayPointType
+@export var is_guard: bool

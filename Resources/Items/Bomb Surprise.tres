@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://wvk6af0motb6"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_ubrjp"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_ubrjp"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_yj204"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hmviq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubrjp"]
 atlas = ExtResource("2_yj204")
 region = Rect2(256, 768, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_ubrjp")
 name = &"Bomb Surprise"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_hmviq")
+texture = SubResource("AtlasTexture_ubrjp")
 is_contraband = true

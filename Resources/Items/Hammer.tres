@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://3uhqxsy40h6e"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_3b8xi"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_3b8xi"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_wsvgh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ism2p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b8xi"]
 atlas = ExtResource("2_wsvgh")
 region = Rect2(0, 128, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_3b8xi")
 name = &"Hammer"
 base_price = 70
 opinion_inc = 2
-texture = SubResource("AtlasTexture_ism2p")
+texture = SubResource("AtlasTexture_3b8xi")
 is_contraband = true

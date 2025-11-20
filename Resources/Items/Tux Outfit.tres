@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_vnw2s"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_hxbgx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_58pcb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnw2s"]
 atlas = ExtResource("2_hxbgx")
 region = Rect2(896, 704, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 1
 name = &"Tux Outfit"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_58pcb")
+texture = SubResource("AtlasTexture_vnw2s")
 is_contraband = false

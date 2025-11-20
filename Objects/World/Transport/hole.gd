@@ -9,9 +9,9 @@ func interact(_entity: Entity) -> void:
 	if not can_go_down():
 		return
 	if is_down:
-		WorldLayerManager.switch_layer(0, global_position)
+		owner.switch_layer(0, global_position)
 	else:
-		WorldLayerManager.switch_layer(1, global_position)
+		owner.switch_layer(1, global_position)
 
 func can_go_down() -> bool:
 	return owning_point.progress >= 100

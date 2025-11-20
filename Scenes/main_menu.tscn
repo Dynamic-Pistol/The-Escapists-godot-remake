@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd1osoqfflx6m"]
+
+[ext_resource type="Texture2D" uid="uid://b45gj4youcovw" path="res://Sprites/UI/Title/Quick Backdrop.png" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://b3w5tgao1vioq" path="res://Sprites/UI/close.png" id="2_48xlc"]
+[ext_resource type="Script" uid="uid://bvlats8rq25cb" path="res://Objects/UI/MainMenu/play.gd" id="2_ce3w2"]
+[ext_resource type="Script" uid="uid://bb5vks8l18jn5" path="res://Objects/UI/MainMenu/close_game.gd" id="3_1ehe0"]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="QuickBackdrop" type="TextureRect" parent="."]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_28flt")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 56
+text = "Play"
+script = ExtResource("2_ce3w2")
+
+[node name="CloseGame" type="TextureButton" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -52.0
+offset_bottom = 52.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_48xlc")
+script = ExtResource("3_1ehe0")

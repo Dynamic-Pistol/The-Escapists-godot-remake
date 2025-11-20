@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://covh4new74uq6"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_0myd7"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_0myd7"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_vaq73"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fnjog"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0myd7"]
 atlas = ExtResource("2_vaq73")
 region = Rect2(320, 896, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_0myd7")
 name = &"Wooden Joystick"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_fnjog")
+texture = SubResource("AtlasTexture_0myd7")
 is_contraband = false

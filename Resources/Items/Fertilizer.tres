@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c18h6ar3tftjl"]
 
-[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/item.gd" id="1_myy7x"]
+[ext_resource type="Script" uid="uid://dvafdtehdacfu" path="res://Objects/ItemSystem/ItemTypes/item.gd" id="1_myy7x"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_g7vqe"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_47f8i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_myy7x"]
 atlas = ExtResource("2_g7vqe")
 region = Rect2(768, 640, 64, 64)
 
@@ -12,5 +12,5 @@ script = ExtResource("1_myy7x")
 name = &"Fertilizer"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_47f8i")
+texture = SubResource("AtlasTexture_myy7x")
 is_contraband = true

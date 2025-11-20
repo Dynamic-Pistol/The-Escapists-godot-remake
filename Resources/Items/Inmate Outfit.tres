@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bxbdh18hjgpv7" path="res://Objects/ItemSystem/ItemTypes/outfit_item.gd" id="1_eic7t"]
 [ext_resource type="Texture2D" uid="uid://do2iwyit1rcq" path="res://Sprites/items.png" id="2_m4hi8"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pcbmx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_eic7t"]
 atlas = ExtResource("2_m4hi8")
 region = Rect2(256, 0, 64, 64)
 
@@ -14,5 +14,5 @@ defense = 1
 name = &"Inmate Outfit"
 base_price = 0
 opinion_inc = 0
-texture = SubResource("AtlasTexture_pcbmx")
+texture = SubResource("AtlasTexture_eic7t")
 is_contraband = false
